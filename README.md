@@ -7,6 +7,6 @@ The UML CIM profile for the different use cases of the I-NERGY project was devel
 The ontology development is implemented with the Protege desktop application.  Sparx Interprise Architect (Academic version) was used in the UML CIM Profile development for each use case.
 Existing NGSI-LD compatible data model for some of the component from standard body or previous project will be used for  data harmonization while new ones will be generated using the open source tool: Entirety, which has Orion Broker for validation of the context information.
 
-The image below shows the first version of the I-NERGY OWL Visual Notation Ontology.
+The image below is the OWL Visual Notation of the first version of the I-NERGY Ontology.
 
 <img width="959" alt="I-NERGY OWL Visual Notation Ontology" src="https://user-images.githubusercontent.com/87437869/168423444-84ff7008-13d0-427f-9da3-c1db1643142e.PNG">
