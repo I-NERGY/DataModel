@@ -1,11 +1,11 @@
 # I-NERGY Data Model
 
-This is the web space for the development of the I-NERGY project Data Model and its ontology. It is composed of the data models developed for the first technical and second technical release of the I-NERGY project.
-The first release comprise of the different possible data models and ontologies to take care of the energy and non-energy related use cases in 15 use cases across 9 pilots.
-To take care of some common terms, some axioms in SARGON and the current version of SAREF4Energy was used to develop the I-NERGY ontology.
-The UML CIM profile for the different use cases of the I-NERGY project was developed to take care of the system components, network topology, functional and non-functional requirement, IEC CIM standards and the data provided by the pilot partners. The UML CIM Profile captures the grid domain entity and attributes needed for the data model and ontology development. 
-The ontology development is implemented with the Protege desktop application  Sparx Interprise Architect (Academic version) was used in the UML CIM Profile development for each use case.
-Existing NGSI-LD compatible data model for some of the component from standard body or previous project will be used for  data harmonization while new ones will be genertaed using the open source tool: Entirety which has Orion Broker for validation of the context information.
+This is the web space for the development of the I-NERGY European Union project Data Model and its ontology. It is composed of the data models developed for the first technical and second technical release of the I-NERGY project.
+The first release comprise of the different possible data models and ontologies to take care of the energy and non-energy related use cases in the 15 use cases across 9 pilots.
+To take care of some common terms, some axioms in SARGON and the current version of SAREF4Energy was added to develop the I-NERGY ontology.
+The UML CIM profile for the different use cases of the I-NERGY project was developed to take care of the system components, network topology, functional and non-functional requirement, IEC CIM standards and the data provided by the pilot partners. The UML CIM Profile captures the grid domain entity and attributes overview needed for the data model and ontology development. 
+The ontology development is implemented with the Protege desktop application.  Sparx Interprise Architect (Academic version) was used in the UML CIM Profile development for each use case.
+Existing NGSI-LD compatible data model for some of the component from standard body or previous project will be used for  data harmonization while new ones will be generated using the open source tool: Entirety, which has Orion Broker for validation of the context information.
 
 The image below shows the first version of the I-NERGY OWL Visual Notation Ontology.
 
