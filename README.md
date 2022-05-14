@@ -1,5 +1,4 @@
 # I-NERGY Data Model
-This is the Data Model and Ontology development web space for the I-NERGY project.
 
 This is the web space for the development of the I-NERGY project Data Model and its ontology. It is composed of the data models developed for the first technical and second technical release of the I-NERGY project.
 The first release comprise of the different possible data models and ontologies to take care of the energy and non-energy related use cases in 15 use cases across 9 pilots.
