@@ -1,6 +1,6 @@
 {
 "@context": {
-    "inergy": "https://...",
+    "inergy": "https://raw.githubusercontent.com/I-NERGY/DataModel/main/DataModel/inergyVocabularies.json",
     "name": "inergy:nm",
     "AQI": "smart-data:airQualityIndex"
 },
