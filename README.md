@@ -1,11 +1,15 @@
 # I-NERGY Data Model
 
-This is the web space for the development of the I-NERGY European Union project Data Model and its ontology. It is composed of the data models developed for the first technical and second technical release of the I-NERGY project.
+This Github web space design and develop the I-NERGY Data Model and its ontology. It is composed of the data models developed for the first technical and second technical release of the I-NERGY project.
 The first release comprise of the different possible data models and ontologies to take care of the energy and non-energy related use cases in the 15 use cases across 9 pilots.
 To take care of some common terms, some axioms in SARGON and the current version of SAREF4Energy was added to develop the I-NERGY ontology.
-The UML CIM profile for the different use cases of the I-NERGY project was developed to take care of the system components, network topology, functional and non-functional requirement, IEC CIM standards and the data provided by the pilot partners. The UML CIM Profile captures the grid domain entity and attributes overview needed for the data model and ontology development. 
+
+The UML CIM (Common Information Model) profile for the different use cases of the I-NERGY project is developed to serve as a guide for the analysis of the entities, attributes and associations of the power components in the project use cases. The creation of the UML CIM profile depends on the system interface, network topology, functional and non-functional requirement, IEC (International Electrotechnical Commission) CIM standards and the data provided by the pilot partners. The UML CIM Profile tries to captures most of the grid domain entity and attributes needed for the data model and ontology development. 
+
 The ontology development is implemented with the Protege desktop application.  Sparx Interprise Architect (Academic version) was used in the UML CIM Profile development for each use case.
 Existing NGSI-LD compatible data model for some of the component from standard body or previous project will be used for  data harmonization while new ones will be generated using the open source tool: Entirety, which has Orion Broker for validation of the context information.
+
+The Data model for the project adopts the smart data model based on the JSON-LD and conforms to the ETSI NGSI standard. This is chosen to safe guide the future of the projects regarding change in use case data and requirements.
 
 The image below is the OWL Visual Notation of the first version of the I-NERGY Ontology.
 
