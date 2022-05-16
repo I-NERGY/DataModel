@@ -1,4 +1,4 @@
-# I-NERGY Data Model
+# I-NERGY Data Model First Step
 
 Pilot requirement ananlysis and data identification process are usually iterative and when concluded will provide a complete information of the domain and scope of the data model and ontology for the I-NERGY AI resources. The identification of pilot data will be carried out iteratively as shown in Figure below and the result populated in an excel sheet and and UML CIM profile created afterwards. UML CIM profile for all pilot will be created to capture all the identified entities and attributes. However, a preliminary and high-level common data model and ontology schema, involving heterogeneous data from different pilot will be defined as a first step while the pilot data production and updating will always be carried out as new data becomes upstream.
 
