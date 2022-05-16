@@ -9,7 +9,7 @@ The UML CIM (Common Information Model) profile for the different use cases of th
 The ontology development is implemented with the Protege desktop application.  Sparx Interprise Architect (Academic version) was used in the UML CIM Profile development for each use case.
 Existing NGSI-LD compatible data model for some of the component from standard body or previous project will be used for  data harmonization while new ones will be generated using the open source tool: Entirety, which has Orion Broker for validation of the context information.
 
-The Data model for the project adopts the smart data model based on the JSON-LD and conforms to the ETSI NGSI standard. This is chosen to safe guide the future of the projects regarding change in use case data and requirements.
+The Data model for the project adopts the smart data model based on JSON-LD and conforms to the ETSI NGSI standard. This is chosen to safe guide the future of the projects regarding changes in use case data, metada and requirements.
 
 The image below is the OWL Visual Notation of the first version of the I-NERGY Ontology.
 
