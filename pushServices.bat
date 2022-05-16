@@ -5,5 +5,5 @@ echo 'pushing update to I-NERGY GitHub'
 
 git status
 git add .
-git commit -a -m "inergyUupdate"
+git commit -a -m "DataModelUpdate"
 git push
