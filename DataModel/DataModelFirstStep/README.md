@@ -1,0 +1,15 @@
+# I-NERGY Data Model
+
+Pilot requirement ananlysis and data identification process are usually iterative and when concluded will provide a complete information of the domain and scope of the data model and ontology for the I-NERGY AI resources. The identification of pilot data will be carried out iteratively as shown in Figure below and the result populated in an excel sheet and and UML CIM profile created afterwards. UML CIM profile for all pilot will be created to capture all the identified entities and attributes. However, a preliminary and high-level common data model and ontology schema, involving heterogeneous data from different pilot will be defined as a first step while the pilot data production and updating will always be carried out as new data becomes upstream.
+
+
+The common data model defined on the left is a preliminary model that should be extended as the pilot data becomes more explicit based on the use cases. These pilot data will be mapped to the Common Information Model (CIM) or IEC61970/IEC61968, which IEC62325 standards will rely on as a high-level model for energy marketplace information exchange. This common data model will address the data model for the Intelligence Electronic Devices at the Electrical substation, ensure an Application Programming Interface for energy management system, allow application software to exchange information among electrical network and enable B2B wholesale energy market place transactions. This will help in harmonizing the data from the pilots to achieve a common data model for first database staging at the Data Service Layer.
+The data will be harmonized to a common JSON model and stored as a collection in a NoSQL database, for example MongoDB or an RDBMS like MySQL, as the first staging storage in the data pipeline.
+
+
+Ontology or relation-based data model is a way of linking data in a model to have sematic dimension to the data and having a knowledge base with different ways of representing knowledge. Ontology model, though having a philosophical background, will help man and machine to interpret data in a more concise way; most especially in a multi-domain application of a project. It is a way of modelling data as a graph with entity and relationships between the entities. It gives a formal and shared reasoning across domains for faster classification of entities. It helps non-subject matter experts to represent knowledge and build applications that solves multi-domain problems. Figure on the left will serve as a guide for ontology definition in the smart data model.
+
+The identified ontologies mapping on the left were selected from a thorough analysis of the so far identified data in all the pilots for the 15 I-NERGY use cases as well as the recommendation from the grant agreement and the service description. This will give a complete picture of the knowledge base database in the upper layer for the full knowledge representation. It will serve as a guide for the consideration of other ontologies, which can be mapped to, extended or integrated, into the proposed ontologies. 
+
+
+
