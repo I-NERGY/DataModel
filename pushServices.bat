@@ -1,4 +1,4 @@
-:: #!/bin/bash
+#!/bin/bash
 @echo off
 
 echo 'pushing update to I-NERGY GitHub'
