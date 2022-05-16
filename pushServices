@@ -1,0 +1,6 @@
+@echo off
+
+git status
+git add .
+git commit -a -m "inergyUupdate"
+git push

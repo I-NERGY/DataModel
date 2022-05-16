@@ -1,5 +1,5 @@
 {
-"id": "urn:ngsi-ld:bfp:uc9:stringbox01",
+"id": "urn:ngsi-ld:bfp:uc9:stringbox:stringbox01",
 "type": "stringbox",
-"source": "",
+"source": "BFP"
 }

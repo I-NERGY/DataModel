@@ -1760,9 +1760,16 @@ The range of this property is not specified, so can be replaced by any specific 
                <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:12:54Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Breaker
+:Breaker rdf:type owl:Class ;
+         rdfs:subClassOf :GridActuator ;
+         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+         <http://purl.org/dc/elements/1.1/date> "2022-05-15T23:11:45Z"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#CircuitBreaker
 :CircuitBreaker rdf:type owl:Class ;
-                rdfs:subClassOf :GridActuator ;
+                rdfs:subClassOf :Breaker ;
                 <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                 <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:47:17Z"^^xsd:dateTime .
 
@@ -1785,7 +1792,15 @@ The range of this property is not specified, so can be replaced by any specific 
 :CurrentTransformer rdf:type owl:Class ;
                     rdfs:subClassOf :GridSensor ;
                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                    <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:51:42Z"^^xsd:dateTime .
+                    <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:51:42Z"^^xsd:dateTime ;
+                    rdfs:comment "This device is an instrument transformer used to measure electric current in a substation. It is typically used as a current transducer for the purpose of monitoring, measuring, protection, billing or automation."@en .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Current_unit
+:Current_unit rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/saref#Measurement> ;
+              <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2022-05-15T23:28:34Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#DCLineSegment
@@ -1821,6 +1836,13 @@ The range of this property is not specified, so can be replaced by any specific 
             rdfs:subClassOf :Equipment ;
             <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
             <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:50:42Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IrradianceSensor
+:IrradianceSensor rdf:type owl:Class ;
+                  rdfs:subClassOf :GridSensor ;
+                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2022-05-15T23:20:48Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IrradianceUnit
@@ -1876,7 +1898,15 @@ The range of this property is not specified, so can be replaced by any specific 
 :VoltageTransformer rdf:type owl:Class ;
                     rdfs:subClassOf :GridSensor ;
                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                    <http://purl.org/dc/elements/1.1/date> "2022-05-15T07:13:08Z"^^xsd:dateTime .
+                    <http://purl.org/dc/elements/1.1/date> "2022-05-15T07:13:08Z"^^xsd:dateTime ;
+                    rdfs:comment "This device is an instrument transformer used to measure electric voltage in a substation. It is typically used as a voltage transducer for the purpose of monitoring, measuring, protection, billing or automation."@en .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Voltage_unit
+:Voltage_unit rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/saref#Measurement> ;
+              <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2022-05-15T23:28:55Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'Irradiance_sensor'
@@ -3182,6 +3212,28 @@ It is deprecated in this edition of OWL-Time. """ ;
                                                            rdfs:label "PV"^^xsd:string .
 
 
+###  https://sargon-n5geh.netlify.app/ontology/1.0/classes/PowerTransformer
+<https://sargon-n5geh.netlify.app/ontology/1.0/classes/PowerTransformer> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :Equipment ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <https://w3id.org/saref#controlsProperty> ;
+                                                                                           owl:someValuesFrom <https://sargon-n5geh.netlify.app/ontology/1.0/classes/Tap_position>
+                                                                                         ] ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <https://w3id.org/saref#hasFunction> ;
+                                                                                           owl:someValuesFrom <https://w3id.org/saref#ActuatingFunction>
+                                                                                         ] ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <https://w3id.org/saref#measuresProperty> ;
+                                                                                           owl:someValuesFrom <https://w3id.org/saref#Measurement>
+                                                                                         ] ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <https://sargon-n5geh.netlify.app/ontology/1.0/data_properties/voltage_level> ;
+                                                                                           owl:someValuesFrom xsd:string
+                                                                                         ] ;
+                                                                         rdfs:label "Transformer" .
+
+
 ###  https://sargon-n5geh.netlify.app/ontology/1.0/classes/Power_meter
 <https://sargon-n5geh.netlify.app/ontology/1.0/classes/Power_meter> rdf:type owl:Class ;
                                                                     rdfs:subClassOf <https://w3id.org/saref#Meter> ,
@@ -3332,28 +3384,6 @@ It is deprecated in this edition of OWL-Time. """ ;
 <https://sargon-n5geh.netlify.app/ontology/1.0/classes/Timestamp> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <https://sargon-n5geh.netlify.app/ontology/1.0/classes/Channel> ;
                                                                   rdfs:label "Timestamp" .
-
-
-###  https://sargon-n5geh.netlify.app/ontology/1.0/classes/Transformer
-<https://sargon-n5geh.netlify.app/ontology/1.0/classes/Transformer> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf :Equipment ,
-                                                                                    [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <https://w3id.org/saref#controlsProperty> ;
-                                                                                      owl:someValuesFrom <https://sargon-n5geh.netlify.app/ontology/1.0/classes/Tap_position>
-                                                                                    ] ,
-                                                                                    [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <https://w3id.org/saref#hasFunction> ;
-                                                                                      owl:someValuesFrom <https://w3id.org/saref#ActuatingFunction>
-                                                                                    ] ,
-                                                                                    [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <https://w3id.org/saref#measuresProperty> ;
-                                                                                      owl:someValuesFrom <https://w3id.org/saref#Measurement>
-                                                                                    ] ,
-                                                                                    [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <https://sargon-n5geh.netlify.app/ontology/1.0/data_properties/voltage_level> ;
-                                                                                      owl:someValuesFrom xsd:string
-                                                                                    ] ;
-                                                                    rdfs:label "Transformer" .
 
 
 ###  https://sargon-n5geh.netlify.app/ontology/1.0/classes/Tube_bundle
