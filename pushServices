@@ -1,0 +1,11 @@
+#!/bin/bash
+@echo off
+
+echo 'pushing update to I-NERGY GitHub'
+
+git status
+git add .
+git commit -a -m "inergyUupdate"
+git push
+echo '.....'
+echo 'done!'
