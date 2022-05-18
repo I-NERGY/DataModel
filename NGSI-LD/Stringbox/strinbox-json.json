@@ -16,7 +16,7 @@ NGSI-V2
             },
             "providedBy": {
                 "type": "relationship",
-                "value": "urn:ngsi-ld:Person:John"
+                "value": "urn:ngsi-ld:PilotPartner:BFP"
             }
         }
     }
