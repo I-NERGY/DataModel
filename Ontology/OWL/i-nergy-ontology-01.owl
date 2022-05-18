@@ -1767,6 +1767,20 @@ The range of this property is not specified, so can be replaced by any specific 
          <http://purl.org/dc/elements/1.1/date> "2022-05-15T23:11:45Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Cable
+:Cable rdf:type owl:Class ;
+       rdfs:subClassOf :EquipmentContainer ;
+       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/date> "2022-05-18T10:18:26Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Circuit
+:Circuit rdf:type owl:Class ;
+         rdfs:subClassOf :Line ;
+         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+         <http://purl.org/dc/elements/1.1/date> "2022-05-18T10:07:56Z"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#CircuitBreaker
 :CircuitBreaker rdf:type owl:Class ;
                 rdfs:subClassOf :Breaker ;
@@ -1779,6 +1793,13 @@ The range of this property is not specified, so can be replaced by any specific 
                      rdfs:subClassOf :Equipment ;
                      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                      <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:10:38Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNodeContainer
+:ConnectivityNodeContainer rdf:type owl:Class ;
+                           rdfs:subClassOf :PowerSystemResource ;
+                           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                           <http://purl.org/dc/elements/1.1/date> "2022-05-18T10:05:03Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Connector
@@ -1819,9 +1840,16 @@ The range of this property is not specified, so can be replaced by any specific 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer
 :EquipmentContainer rdf:type owl:Class ;
-                    rdfs:subClassOf <https://w3id.org/saref#EnergyRelated> ;
+                    rdfs:subClassOf :ConnectivityNodeContainer ;
                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                     <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:33:19Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Feeder
+:Feeder rdf:type owl:Class ;
+        rdfs:subClassOf :EquipmentContainer ;
+        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/date> "2022-05-18T09:56:04Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridActuator
@@ -1836,6 +1864,13 @@ The range of this property is not specified, so can be replaced by any specific 
             rdfs:subClassOf :Equipment ;
             <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
             <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:50:42Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject
+:IdentifiedObject rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/saref#EnergyRelated> ;
+                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2022-05-18T10:02:33Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IrradianceSensor
@@ -1859,9 +1894,16 @@ The range of this property is not specified, so can be replaced by any specific 
                          <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:45:06Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#PowerElectronicUnit
+:PowerElectronicUnit rdf:type owl:Class ;
+                     rdfs:subClassOf :Equipment ;
+                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                     <http://purl.org/dc/elements/1.1/date> "2022-05-18T09:52:01Z"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#PowerSystemResource
 :PowerSystemResource rdf:type owl:Class ;
-                     rdfs:subClassOf <https://w3id.org/saref#EnergyRelated> ;
+                     rdfs:subClassOf :IdentifiedObject ;
                      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                      <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:41:57Z"^^xsd:dateTime .
 
@@ -1885,6 +1927,13 @@ The range of this property is not specified, so can be replaced by any specific 
        rdfs:subClassOf :Equipment ;
        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
        <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:53:27Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation
+:Substation rdf:type owl:Class ;
+            rdfs:subClassOf :EquipmentContainer ;
+            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+            <http://purl.org/dc/elements/1.1/date> "2022-05-18T09:56:20Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#TransformerWinding
@@ -1918,7 +1967,7 @@ The range of this property is not specified, so can be replaced by any specific 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'
 <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'> rdf:type owl:Class ;
-                                                                                        rdfs:subClassOf :DCLineSegment ;
+                                                                                        rdfs:subClassOf :Cable ;
                                                                                         rdfs:comment "A conductor material  that connects PV panels to sringbox."@en ;
                                                                                         rdfs:label "PV Cable"@en .
 

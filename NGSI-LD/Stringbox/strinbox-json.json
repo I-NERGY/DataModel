@@ -1,0 +1,24 @@
+NGSI-V2
+{
+    "id": "urn:ngsi-ld:EquipmentContainer:bfpuc9stringbox01",
+    "type": "EquipmentContainer",
+    "Name": {
+        "type": "property",
+        "value": "stringbox"
+    },
+    "combines": {
+        "type": "relationship",
+        "value": "urn:ngsi-ld:DCLineSegment:bfpuc9PVCable:",
+        "metadata": {
+            "timestamp": {
+                "type": "DateTime",
+                "value": "2022-05-18T13:45:30Z"
+            },
+            "providedBy": {
+                "type": "relationship",
+                "value": "urn:ngsi-ld:Person:John"
+            }
+        }
+    }
+}
+
