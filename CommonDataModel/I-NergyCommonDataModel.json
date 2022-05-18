@@ -1,5 +1,5 @@
 {
-"id": "urn:ngsi-ld:i-nergy",
-"type": "model",
+"id": "urn:ngsi-ld:i-nergy-common-data-model",
+"type": "DataModel",
 "": ""
 }
