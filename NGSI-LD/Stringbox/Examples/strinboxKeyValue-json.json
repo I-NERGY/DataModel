@@ -1,9 +1,9 @@
 {
-    "id": "urn:ngsi-ld:EquipmentContainer:bfpuc9stringbox01",
-    "type": "EquipmentContainer",
+    "id": "urn:ngsi-ld:Stringbox:bfpuc9stringbox01",
+    "type": "Stringbox",
     "Name": {
         "type": "property",
-        "value": "stringbox"
+        "value": "bfpuc9stringbox01"
     },
     "combines": {
         "type": "relationship",
