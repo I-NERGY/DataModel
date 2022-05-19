@@ -7,7 +7,7 @@
     },
     "combines": {
         "type": "relationship",
-        "value": "urn:ngsi-ld:DCLineSegment:bfpuc9PVCable:",
+        "value": "urn:ngsi-ld:Cable:bfpuc9PVCable:",
         "metadata": {
             "timestamp": {
                 "type": "DateTime",
