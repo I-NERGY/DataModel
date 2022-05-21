@@ -77,7 +77,8 @@
                                                                                            "SARGON: Information about changes compared to version 1.1.1: (1)The classes and properties related to how to represent devices in building spaces (such as the saref:BuildingSpace class,  saref:BuildingObject class and saref:isLocatedIn property) have been removed from SAREF and incorporated  into the SAREF4BLDG extension related to buildings (https://w3id.org/def/saref4bldg), including the reuse of the W3C® WGS84 geo positioning vocabulary; (2)The saref:DeviceCategory and saref:FunctionCategory classes have been removed. Instead, the hierarchy of device categories has been implemented directly as subclasses of the saref:Device class; (3)The information specific for energy efficiency has been moved to the SAREF4ENER extension (https://w3id.org/saref4ener). For example, the saref:Profile class has been redefined to accommodate only the properties that are general enough for any type of profile, not only for energy and power. Details on how to specifically model a power profile can be found in the SAREF4ENER extension (https://w3id.org/saref4ener); (4) The subclasses of the saref:Energy class  have been removed (i.e., Average Energy, Maximum Energy, Minimum Energy, Total Energy, HVAC Energy, Hot Water Energy and Lighting Energy); (5)The saref:Property class has been split into two classes (saref:Property and saref:Measurement), as it is done in the SAREF4ENVI extension (https://w3id.org/def/saref4envi), in order to properly accommodate the distinction between the concept of property (an observable quality of something) and the concept of measurement (a concrete value observed for a property); (6)Too restrictive cardinality restrictions have been revised, sometimes making them optional rather than mandatory (better to make properties mandatory in the extensions that specialize SAREF for a specific purpose, rather than restricting SAREF, whose purpose is more general). For example, definitions of units of measurement using an enumeration (owl:oneOf) were too restrictive because they did not allow using other units than those enumerated. Therefore, the individuals of each class are still there, but the owl:oneOf enumeration has been removed; (7)The saref:UnitOfMeasure subclassesre use individuals from the OM ontology for unit of measures (http://www.wurvoc.org/vocabularies/om-1.6/), but this is not the only solution. It has been clarified in the comments that the OM ontology is an example, but other ontologies can be used; (8)The global restrictions (rdfs:domain and rdfs:range) in object properties have been completely removed not to hinder interoperability. Object properties are now only restricted locally in the classes; (9)The subclasses of saref:Task have been transormed in individuals; (10)The saref:hasTask property has been removed from the saref:Profile class to resolve an ambiguity with the saref:Task class."@en ,
                                                                                            "The I-NERGY Ontology which extends the SARGON whos base ontology is SAREF."@en ;
                                                                               rdfs:label "OWL-Time"@en ,
-                                                                                         "The I-NERGY Ontology is an ontology which extends the SARGON. New classes, object properties, data properties, annotation properties and individuals have been added based on the the new terms from the use cases in the project. Constant update will done as new requrements and data emanates from the use cases."@en ;
+                                                                                         """The I-NERGY Ontology is an ontology which extends the SARGON. New classes, object properties, data properties, annotation properties and individuals have been added based on the the new terms from the use cases in the project. Constant update will done as new requrements and data emanates from the use cases.
+The I-NERGY ontology is riding on the base standard of IEC61970, IEC61968 and IEC62325."""@en ;
                                                                               rdfs:seeAlso <http://dx.doi.org/10.3233/SW-150187> ,
                                                                                            <http://www.semantic-web-journal.net/content/time-ontology-extended-non-gregorian-calendar-applications> ,
                                                                                            <http://www.w3.org/TR/owl-time> ,
@@ -1753,11 +1754,65 @@ The range of this property is not specified, so can be replaced by any specific 
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ACDCTerminal
+:ACDCTerminal rdf:type owl:Class ;
+              rdfs:subClassOf :IdentifiedObject ;
+              <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:34:24Z"^^xsd:dateTime ;
+              rdfs:comment "An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#BaseFrequency
+:BaseFrequency rdf:type owl:Class ;
+               rdfs:subClassOf :IdentifiedObject ;
+               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:33:44Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Bay
+:Bay rdf:type owl:Class ;
+     rdfs:subClassOf :EquipmentContainer ;
+     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+     <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:26:14Z"^^xsd:dateTime ;
+     rdfs:comment "A collection of power system resources (within a given substation) including conducting equipment, protection relays, measurements, and telemetry. A bay typically represents a physical grouping related to modularization of equipment."@en .
+
+
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Cable
 :Cable rdf:type owl:Class ;
        rdfs:subClassOf :EquipmentContainer ;
        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-       <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:52:25Z"^^xsd:dateTime .
+       <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:52:25Z"^^xsd:dateTime ;
+       rdfs:comment "A conducting material made of copper or alumunium with an insulating material for carying AC or DC current."@en .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNode
+:ConnectivityNode rdf:type owl:Class ;
+                  rdfs:subClassOf :IdentifiedObject ;
+                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:29:29Z"^^xsd:dateTime ;
+                  rdfs:comment "Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance."@en .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNodeContainer
+:ConnectivityNodeContainer rdf:type owl:Class ;
+                           rdfs:subClassOf :PowerSystemResource ;
+                           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                           <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:36:58Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#DCEquipmentContainer
+:DCEquipmentContainer rdf:type owl:Class ;
+                      rdfs:subClassOf :EquipmentContainer ;
+                      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                      <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:46:20Z"^^xsd:dateTime ;
+                      rdfs:comment "A modelling construct to provide a root class for containment of DC as well as AC equipment. The class differ from the EquipmentContaner for AC in that it may also contain DCNode-s. Hence it can contain both AC and DC equipment."@en .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Feeder
+:Feeder rdf:type owl:Class ;
+        rdfs:subClassOf :EquipmentContainer ;
+        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:39:38Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject
@@ -1767,11 +1822,42 @@ The range of this property is not specified, so can be replaced by any specific 
                   <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:44:41Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Plant
+:Plant rdf:type owl:Class ;
+       rdfs:subClassOf :EquipmentContainer ;
+       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:40:56Z"^^xsd:dateTime ;
+       rdfs:comment "A Plant is a collection of equipment for purposes of generation."@en .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionEquipment
+:ProtectionEquipment rdf:type owl:Class ;
+                     rdfs:subClassOf :Equipment ;
+                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                     <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:28:17Z"^^xsd:dateTime ;
+                     rdfs:comment "An electrical device designed to respond to input conditions in a prescribed manner and after specified conditions are met to cause contact operation or similar abrupt change in associated electric control circuits, or simply to display the detected condition. Protection equipment is associated with conducting equipment and usually operate circuit breakers."@en .
+
+
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation
 :Substation rdf:type owl:Class ;
             rdfs:subClassOf :EquipmentContainer ;
             <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
             <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:43:02Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Terminal
+:Terminal rdf:type owl:Class ;
+          rdfs:subClassOf :ACDCTerminal ;
+          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+          <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:35:22Z"^^xsd:dateTime ;
+          rdfs:comment "An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
+
+
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#VoltageTransformer
+:VoltageTransformer rdf:type owl:Class ;
+                    rdfs:subClassOf :GridSensor ;
+                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                    <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:00:34Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'Irradiance_sensor'
@@ -1784,7 +1870,8 @@ The range of this property is not specified, so can be replaced by any specific 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'
 <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'> rdf:type owl:Class ;
                                                                                         rdfs:subClassOf :Cable ;
-                                                                                        rdfs:comment "A conductor material  that connects PV panels to sringbox."@en ;
+                                                                                        rdfs:comment "A conductor material  that connects PV panels to sringbox."@en ,
+                                                                                                     "PV Cable for connecting PV panels to Solar Charge Controllers, PV Inverters or Converters with inbuilt charge controllers."@en ;
                                                                                         rdfs:label "PV Cable"@en .
 
 
@@ -1877,7 +1964,7 @@ The range of this property is not specified, so can be replaced by any specific 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer
 :EquipmentContainer rdf:type owl:Class ;
-                    rdfs:subClassOf <https://w3id.org/saref#EnergyRelated> ;
+                    rdfs:subClassOf :ConnectivityNodeContainer ;
                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                     <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:33:19Z"^^xsd:dateTime .
 
@@ -1933,14 +2020,14 @@ The range of this property is not specified, so can be replaced by any specific 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionIED
 :ProtectionIED rdf:type owl:Class ;
-               rdfs:subClassOf :EquipmentContainer ;
+               rdfs:subClassOf :ProtectionEquipment ;
                <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:42:45Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionRelay
 :ProtectionRelay rdf:type owl:Class ;
-                 rdfs:subClassOf :Relay ;
+                 rdfs:subClassOf :ProtectionEquipment ;
                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                  <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:54:05Z"^^xsd:dateTime .
 
