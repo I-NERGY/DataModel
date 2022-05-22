@@ -1,6 +1,6 @@
 {
     "@context": {
-        "inergy": "https://raw.githubusercontent.com/I-NERGY/DataModel/main/DataModel/inergyVocabularies.json",
+        "inergy": "https://raw.githubusercontent.com/I-NERGY/DataModel/main/inergyVocabularies.json?token=GHSAT0AAAAAABTTN74UKYRQFKITH2G5UQVYYUKKSCA",
         "name": "inergy:nm",
         "AQI": "smart-data:airQualityIndex"
     },
