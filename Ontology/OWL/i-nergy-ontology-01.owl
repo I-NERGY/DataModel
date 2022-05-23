@@ -295,8 +295,11 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#combines
 :combines rdf:type owl:ObjectProperty ;
+          rdfs:domain :Stringbox ;
+          rdfs:range <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'> ;
           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-          <http://purl.org/dc/elements/1.1/date> "2022-05-08T13:02:02Z"^^xsd:dateTime .
+          <http://purl.org/dc/elements/1.1/date> "2022-05-08T13:02:02Z"^^xsd:dateTime ;
+          rdfs:comment "Stringbox combines PV Cables."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#conducts
@@ -1756,133 +1759,6 @@ The range of this property is not specified, so can be replaced by any specific 
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ACDCTerminal
-:ACDCTerminal rdf:type owl:Class ;
-              rdfs:subClassOf :IdentifiedObject ;
-              <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-              <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:34:24Z"^^xsd:dateTime ;
-              rdfs:comment "An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#BaseFrequency
-:BaseFrequency rdf:type owl:Class ;
-               rdfs:subClassOf :IdentifiedObject ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:33:44Z"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Bay
-:Bay rdf:type owl:Class ;
-     rdfs:subClassOf :EquipmentContainer ;
-     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-     <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:26:14Z"^^xsd:dateTime ;
-     rdfs:comment "A collection of power system resources (within a given substation) including conducting equipment, protection relays, measurements, and telemetry. A bay typically represents a physical grouping related to modularization of equipment."@en .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Cable
-:Cable rdf:type owl:Class ;
-       rdfs:subClassOf :EquipmentContainer ;
-       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-       <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:52:25Z"^^xsd:dateTime ;
-       rdfs:comment "A conducting material made of copper or alumunium with an insulating material for carying AC or DC current."@en .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNode
-:ConnectivityNode rdf:type owl:Class ;
-                  rdfs:subClassOf :IdentifiedObject ;
-                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                  <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:29:29Z"^^xsd:dateTime ;
-                  rdfs:comment "Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance."@en .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNodeContainer
-:ConnectivityNodeContainer rdf:type owl:Class ;
-                           rdfs:subClassOf :PowerSystemResource ;
-                           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                           <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:36:58Z"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#DCEquipmentContainer
-:DCEquipmentContainer rdf:type owl:Class ;
-                      rdfs:subClassOf :EquipmentContainer ;
-                      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                      <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:46:20Z"^^xsd:dateTime ;
-                      rdfs:comment "A modelling construct to provide a root class for containment of DC as well as AC equipment. The class differ from the EquipmentContaner for AC in that it may also contain DCNode-s. Hence it can contain both AC and DC equipment."@en .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Feeder
-:Feeder rdf:type owl:Class ;
-        rdfs:subClassOf :EquipmentContainer ;
-        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-        <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:39:38Z"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#HV_Substation
-:HV_Substation rdf:type owl:Class ;
-               rdfs:subClassOf :Substation ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:16:56Z"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject
-:IdentifiedObject rdf:type owl:Class ;
-                  rdfs:subClassOf <https://w3id.org/saref#EnergyRelated> ;
-                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                  <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:44:41Z"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#LV_Substation
-:LV_Substation rdf:type owl:Class ;
-               rdfs:subClassOf :Substation ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:17:44Z"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#MV_Substation
-:MV_Substation rdf:type owl:Class ;
-               rdfs:subClassOf :Substation ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:17:23Z"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Plant
-:Plant rdf:type owl:Class ;
-       rdfs:subClassOf :EquipmentContainer ;
-       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-       <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:40:56Z"^^xsd:dateTime ;
-       rdfs:comment "A Plant is a collection of equipment for purposes of generation."@en .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionEquipment
-:ProtectionEquipment rdf:type owl:Class ;
-                     rdfs:subClassOf :Equipment ;
-                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                     <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:28:17Z"^^xsd:dateTime ;
-                     rdfs:comment "An electrical device designed to respond to input conditions in a prescribed manner and after specified conditions are met to cause contact operation or similar abrupt change in associated electric control circuits, or simply to display the detected condition. Protection equipment is associated with conducting equipment and usually operate circuit breakers."@en .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation
-:Substation rdf:type owl:Class ;
-            rdfs:subClassOf :EquipmentContainer ;
-            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-            <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:43:02Z"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Terminal
-:Terminal rdf:type owl:Class ;
-          rdfs:subClassOf :ACDCTerminal ;
-          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-          <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:35:22Z"^^xsd:dateTime ;
-          rdfs:comment "An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
-
-
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#VoltageTransformer
-:VoltageTransformer rdf:type owl:Class ;
-                    rdfs:subClassOf :GridSensor ;
-                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                    <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:00:34Z"^^xsd:dateTime .
-
-
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'Irradiance_sensor'
 <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'Irradiance_sensor'> rdf:type owl:Class ;
                                                                                                  rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
@@ -1898,6 +1774,14 @@ The range of this property is not specified, so can be replaced by any specific 
                                                                                         rdfs:label "PV Cable"@en .
 
 
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ACDCTerminal
+:ACDCTerminal rdf:type owl:Class ;
+              rdfs:subClassOf :IdentifiedObject ;
+              <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:34:24Z"^^xsd:dateTime ;
+              rdfs:comment "An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
+
+
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ACLineSegment
 :ACLineSegment rdf:type owl:Class ;
                rdfs:subClassOf :Conductor ;
@@ -1905,11 +1789,34 @@ The range of this property is not specified, so can be replaced by any specific 
                <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:12:54Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#BaseFrequency
+:BaseFrequency rdf:type owl:Class ;
+               rdfs:subClassOf :IdentifiedObject ;
+               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:33:44Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Bay
+:Bay rdf:type owl:Class ;
+     rdfs:subClassOf :EquipmentContainer ;
+     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+     <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:26:14Z"^^xsd:dateTime ;
+     rdfs:comment "A collection of power system resources (within a given substation) including conducting equipment, protection relays, measurements, and telemetry. A bay typically represents a physical grouping related to modularization of equipment."@en .
+
+
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Busbar
 :Busbar rdf:type owl:Class ;
         rdfs:subClassOf :Connector ;
         rdfs:comment "An alluminium or copper conductor material that connects electrical components in power systems."@en ;
         rdfs:label "Busbar"@en .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Cable
+:Cable rdf:type owl:Class ;
+       rdfs:subClassOf :EquipmentContainer ;
+       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:52:25Z"^^xsd:dateTime ;
+       rdfs:comment "A conducting material made of copper or alumunium with an insulating material for carying AC or DC current."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#CircuitBreaker
@@ -1957,6 +1864,21 @@ The range of this property is not specified, so can be replaced by any specific 
            rdfs:label "Conductor"@en .
 
 
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNode
+:ConnectivityNode rdf:type owl:Class ;
+                  rdfs:subClassOf :IdentifiedObject ;
+                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:29:29Z"^^xsd:dateTime ;
+                  rdfs:comment "Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance."@en .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNodeContainer
+:ConnectivityNodeContainer rdf:type owl:Class ;
+                           rdfs:subClassOf :PowerSystemResource ;
+                           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                           <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:36:58Z"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Connector
 :Connector rdf:type owl:Class ;
            rdfs:subClassOf :ConductingEquipment ;
@@ -1969,6 +1891,14 @@ The range of this property is not specified, so can be replaced by any specific 
                     rdfs:subClassOf :GridSensor ;
                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                     <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:51:42Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#DCEquipmentContainer
+:DCEquipmentContainer rdf:type owl:Class ;
+                      rdfs:subClassOf :EquipmentContainer ;
+                      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                      <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:46:20Z"^^xsd:dateTime ;
+                      rdfs:comment "A modelling construct to provide a root class for containment of DC as well as AC equipment. The class differ from the EquipmentContaner for AC in that it may also contain DCNode-s. Hence it can contain both AC and DC equipment."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#DCLineSegment
@@ -1992,8 +1922,16 @@ The range of this property is not specified, so can be replaced by any specific 
                     <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:33:19Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Feeder
+:Feeder rdf:type owl:Class ;
+        rdfs:subClassOf :EquipmentContainer ;
+        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:39:38Z"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridActuator
 :GridActuator rdf:type owl:Class ;
+              owl:equivalentClass <https://w3id.org/saref#Actuator> ;
               rdfs:subClassOf :Equipment ;
               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
               <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:51:03Z"^^xsd:dateTime .
@@ -2001,9 +1939,24 @@ The range of this property is not specified, so can be replaced by any specific 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridSensor
 :GridSensor rdf:type owl:Class ;
+            owl:equivalentClass <https://w3id.org/saref#Sensor> ;
             rdfs:subClassOf :Equipment ;
             <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
             <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:50:42Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#HV_Substation
+:HV_Substation rdf:type owl:Class ;
+               rdfs:subClassOf :Substation ;
+               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:16:56Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject
+:IdentifiedObject rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/saref#EnergyRelated> ;
+                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:44:41Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Irradiance
@@ -2020,11 +1973,25 @@ The range of this property is not specified, so can be replaced by any specific 
                 <http://purl.org/dc/elements/1.1/date> "2022-05-14T11:01:54Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#LV_Substation
+:LV_Substation rdf:type owl:Class ;
+               rdfs:subClassOf :Substation ;
+               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:17:44Z"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Line
 :Line rdf:type owl:Class ;
       rdfs:subClassOf :EquipmentContainer ;
       rdfs:comment "A electrical conductor that connets Busbar, trabsformer and grid component in a substation."@en ;
       rdfs:label "Line"@en .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#MV_Substation
+:MV_Substation rdf:type owl:Class ;
+               rdfs:subClassOf :Substation ;
+               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:17:23Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#NetLoadAggregatorDevice
@@ -2034,11 +2001,27 @@ The range of this property is not specified, so can be replaced by any specific 
                          <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:45:06Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Plant
+:Plant rdf:type owl:Class ;
+       rdfs:subClassOf :EquipmentContainer ;
+       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:40:56Z"^^xsd:dateTime ;
+       rdfs:comment "A Plant is a collection of equipment for purposes of generation."@en .
+
+
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#PowerSystemResource
 :PowerSystemResource rdf:type owl:Class ;
                      rdfs:subClassOf :IdentifiedObject ;
                      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                      <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:41:57Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionEquipment
+:ProtectionEquipment rdf:type owl:Class ;
+                     rdfs:subClassOf :Equipment ;
+                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                     <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:28:17Z"^^xsd:dateTime ;
+                     rdfs:comment "An electrical device designed to respond to input conditions in a prescribed manner and after specified conditions are met to cause contact operation or similar abrupt change in associated electric control circuits, or simply to display the detected condition. Protection equipment is associated with conducting equipment and usually operate circuit breakers."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionIED
@@ -2083,11 +2066,33 @@ The range of this property is not specified, so can be replaced by any specific 
            <http://purl.org/dc/elements/1.1/date> "2022-05-07T16:59:08Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation
+:Substation rdf:type owl:Class ;
+            rdfs:subClassOf :EquipmentContainer ;
+            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+            <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:43:02Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Terminal
+:Terminal rdf:type owl:Class ;
+          rdfs:subClassOf :ACDCTerminal ;
+          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+          <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:35:22Z"^^xsd:dateTime ;
+          rdfs:comment "An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
+
+
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#TransformerWinding
 :TransformerWinding rdf:type owl:Class ;
                     rdfs:subClassOf :ConductingEquipment ;
                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                     <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:44:06Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#VoltageTransformer
+:VoltageTransformer rdf:type owl:Class ;
+                    rdfs:subClassOf :GridSensor ;
+                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                    <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:00:34Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Wind
@@ -4792,6 +4797,13 @@ It is deprecated in this edition of OWL-Time. """ ;
                      <http://purl.org/dc/elements/1.1/date> "2022-05-07T18:18:23Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#bfpuc9stringbox01
+:bfpuc9stringbox01 rdf:type owl:NamedIndividual ;
+                   :combines :bfpuc9stringbox01 ;
+                   <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                   <http://purl.org/dc/elements/1.1/date> "2022-05-22T21:15:33Z"^^xsd:dateTime .
+
+
 ###  http://www.w3.org/2006/time#Friday
 <http://www.w3.org/2006/time#Friday> rdf:type owl:NamedIndividual ,
                                               <http://www.w3.org/2006/time#DayOfWeek> ;
@@ -5379,13 +5391,13 @@ It is deprecated in this edition of OWL-Time. """ ;
                                    rdfs:label "watt hour"^^xsd:string .
 
 
-[ xsd:pattern "---(0[1-9]|[1-9][0-9])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
+[ xsd:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
 ] .
 
 [ xsd:pattern "--(0[1-9]|1[0-9]|20)(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
  ] .
 
-[ xsd:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
+[ xsd:pattern "---(0[1-9]|[1-9][0-9])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
  ] .
 
 #################################################################
