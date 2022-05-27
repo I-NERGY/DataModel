@@ -2053,7 +2053,7 @@ The range of this property is not specified, so can be replaced by any specific 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionRelay
 :ProtectionRelay rdf:type owl:Class ;
-                 rdfs:subClassOf :ProtectionEquipment ;
+                 rdfs:subClassOf :Relay ;
                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                  <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:54:05Z"^^xsd:dateTime .
 
