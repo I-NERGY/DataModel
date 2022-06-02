@@ -1,16 +1,31 @@
-{
-    "@context": {
-        "inergy": "https://raw.githubusercontent.com/I-NERGY/DataModel/main/inergyVocabularies.json?token=GHSAT0AAAAAABTTN74UKYRQFKITH2G5UQVYYUKKSCA",
-        "name": "inergy:nm",
-        "AQI": "smart-data:airQualityIndex"
-    },
-    "name": {
-        "unitCode": "ps",
-        "unitText": "surname",
-        "schema": "inergy:Number"
-    }
-    
-
-
+{ 
+    "@context":
+    {
+        "inergy": "https://github.com/I-NERGY/DataModel/blob/main/inergyVocabularies.json",
+        "Person": "http://xmlns.com/foaf/0.1/Person",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "dbr": "http://dbpedia.org/resource/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        
+        "I1": "first Current DC",
+        "I2": "second Current DC",
+        "I3": "third Current DC",
+        "I4": "fourth Current DC",
+        "I5": "fift Current DC",
+        "I6": "sixth Current DC",
+        "I7": "seventh Current DC",
+        "I8": "eight Current DC",
+        "I1_N": "first normalized Current DC",
+        "I2_N": "second normalized Current DC",
+        "I3_N": "third normalized Current DC",
+        "I4_N": "fourth normalized Current DC",
+        "I5_N": "fifth normalized Current DC",
+        "I6_N": "sixth normalized Current DC",
+        "I7_N": "seventh normalized Current DC",
+        "I8_N": "eight normalized Current DC",
+        "U_DC": "first normalized Current DC",
+   }
 
 }
+        
