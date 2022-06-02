@@ -24,7 +24,7 @@
         "I6_N": "sixth normalized Current DC",
         "I7_N": "seventh normalized Current DC",
         "I8_N": "eight normalized Current DC",
-        "U_DC": "first normalized Current DC",
+        "U_DC": "first normalized Current DC"
    }
 
 }
