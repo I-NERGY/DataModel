@@ -1,134 +1,133 @@
-}
+{
     "id": "urn:ngsi-ld:i-nergy-common-data-model",
     "type": "CommonDataModel",
     "createdAt":{
-         "type": "Property",
-         "value": "2017-01-01T01:20:00Z"
+      "type": "Property",
+      "value": "2017-01-01T01:20:00Z"
     },
     "modifiedAt":{
-         "type": "Property",
-         "value":  "2017-05-04T12:30:00Z"
+      "type": "Property",
+      "value":  "2017-05-04T12:30:00Z"
     },
-     "source": {
-         "type": "Property",
-         "value": "https://source.example.com"
+    "source": {
+      "type": "Property",
+      "value": "https://source.example.com"
     },
     "dataProvider": {
-         "type": "Property",
-         "value": "https://provider.example.com"
-    },
-    "entityVersion": {
-         "type": "Property",
-         "value": "2.0"
-    },
-    "deviceCategory":{
-         "type": "Property",
-         "value": "BuildingRelated"
-    },
-    "deviceModel": {
-         "type": "Property",
-         "value": "Sensor"
-    },
-    "serialNumber": {
-         "type": "Property",
-         "value": "X123456789C"
-    },
-    "supplierName": {
-         "type": "Property",
-         "value": "ACME Direct, Inc."
-    },
-    "countryOfManufacture": {
-         "type": "Property",
-         "value": "UK"
-    },
-    "factory": {
-         "type": "Property",
-         "value": "56A8"
-    },
-     "firstUsedAt": {
-         "type": "Property",
-         "value": "2017-05-04T11:18:16Z"
-    },
-    "lastCalibrationAt": {
-         "type": "Property",
-         "value": "2017-05-04T10:18:16Z"
-    },
-    "installedAt": {
         "type": "Property",
-        "value": "2017-05-04T10:18:16Z"
-    },
-    "manufacturedAt": {
-        "type": "Property",
-        "value": "2017-05-04T10:18:16Z"
-    },
-    "description": {
-        "type": "Property",
-        "value": "Thermocouple"
-    },
-    "locatedAt": {
-         "type": "Relationship",
-         "value":"Building:d6d570d4ec"
-    },  
-     
-    "owner": {
-        "type": "Relationship",
-        "value": [
-            "Person:6babd63c-46e6-11e8-aaf6-abd6d570d4ec",
-            "Organization:76f72898-46e6-11e8-8340-53a92642d82a"
-        ]
-    },
-    "hardwareVersion": {
-        "type": "Property",
-        "value": "1.2"
-    },
-    "firmwareVersion": {
-        "type": "Property",
-        "value": "2.8.56"
-    },
-    "softwareVersion": {
-        "type": "Property",
-        "value": "2.5.11"
-    },
-    "osVersion": {
-        "type": "Property",
-        "value": "8.1"
-    },
-    "supportedProtocols": {
-        "type": "Property",
-        "value": [
-            "HTTP",
-            "HTTPS",
-            "FTP"
-    
-    ],
-    "observedAt": {
-        "type": "Relationship",
-        "value":"substation:bfpsubstation001"
+        "value": "https://provider.example.com"
    },
-   "location": {
-         "type": "GeoProperty",
-         "value": {
-             "type": "Point",
-             "coordinates": [
-                 -104.99404,
-                 39.75621
-             ]
-         }
-     },
-     "online": {
-         "type": "Property",
-         "value": true,
-         "observedAt": "2017-05-04T12:30:00Z"
-     },
-     "status": {
-         "type": "Property",
-         "value": "SC1001",
-         "observedAt": "2017-05-04T12:30:00Z"
-     },
-     "batteryLevel": {
-         "type": "Property",
-         "value": 0.7,
-         "observedAt": "2017-05-04T12:30:00Z"
-     }
+   "entityVersion": {
+        "type": "Property",
+        "value": "2.0"
+   },
+   "deviceCategory":{
+       "type": "Property",
+       "value": "BuildingRelated"
+   },
+   "deviceModel": {
+       "type": "Property",
+       "value": "Sensor"
+   },
+   "serialNumber": {
+       "type": "Property",
+       "value": "X123456789C"
+   },
+   "supplierName": {
+       "type": "Property",
+       "value": "ACME Direct, Inc."
+   },
+   "countryOfManufacture": {
+       "type": "Property",
+       "value": "UK"
+   },
+   "factory": {
+       "type": "Property",
+       "value": "56A8"
+   },
+   "firstUsedAt": {
+       "type": "Property",
+       "value": "2017-05-04T11:18:16Z"
+   },
+   "lastCalibrationAt": {
+       "type": "Property",
+       "value": "2017-05-04T10:18:16Z"
+   },
+   "installedAt": {
+      "type": "Property",
+      "value": "2017-05-04T10:18:16Z"
+   },
+   "manufacturedAt": {
+      "type": "Property",
+      "value": "2017-05-04T10:18:16Z"
+   },
+   "description": {
+      "type": "Property",
+      "value": "Thermocouple"
+   },
+   "locatedAt": {
+       "type": "Relationship",
+       "value":"Building:d6d570d4ec"
+   },  
+   
+   "owner": {
+      "type": "Relationship",
+      "value": [
+          "Person:6babd63c-46e6-11e8-aaf6-abd6d570d4ec",
+          "Organization:76f72898-46e6-11e8-8340-53a92642d82a"
+      ]
+   },
+   "hardwareVersion": {
+      "type": "Property",
+      "value": "1.2"
+   },
+   "firmwareVersion": {
+      "type": "Property",
+      "value": "2.8.56"
+   },
+   "softwareVersion": {
+      "type": "Property",
+      "value": "2.5.11"
+   },
+   "osVersion": {
+      "type": "Property",
+      "value": "8.1"
+   },
+   "supportedProtocols": {
+      "type": "Property",
+      "value": [
+        "HTTP",
+        "HTTPS",
+        "FTP"
+      ]
+    },
+    "observedAt": {
+       "type": "Relationship",
+       "value":"substation:bfpsubstation001"
+    },
+    "location": {
+       "type": "GeoProperty",
+       "value": {
+         "type": "Point",
+         "coordinates": [
+             -104.99404,
+             39.75621
+            ]
+        }
+    },
+    "online": {
+       "type": "Property",
+       "value": true,
+       "observedAt": "2017-05-04T12:30:00Z"
+    },
+    "status": {
+       "type": "Property",
+       "value": "SC1001",
+       "observedAt": "2017-05-04T12:30:00Z"
+    },
+    "batteryLevel": {
+       "type": "Property",
+       "value": 0.7,
+       "observedAt": "2017-05-04T12:30:00Z"
+    }
 }
-
