@@ -13,4 +13,4 @@ git add .
 git commit -a -m "DataModelUpdate"
 git push
 
-echo 'done!'
+echo '...done!'

@@ -8,24 +8,95 @@
         "dbr": "http://dbpedia.org/resource/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         
-        "I1": "first Current DC",
-        "I2": "second Current DC",
-        "I3": "third Current DC",
-        "I4": "fourth Current DC",
-        "I5": "fift Current DC",
-        "I6": "sixth Current DC",
-        "I7": "seventh Current DC",
-        "I8": "eight Current DC",
-        "I1_N": "first normalized Current DC",
-        "I2_N": "second normalized Current DC",
-        "I3_N": "third normalized Current DC",
-        "I4_N": "fourth normalized Current DC",
-        "I5_N": "fifth normalized Current DC",
-        "I6_N": "sixth normalized Current DC",
-        "I7_N": "seventh normalized Current DC",
-        "I8_N": "eight normalized Current DC",
-        "U_DC": "first normalized Current DC"
-   }
+        "I1": {
+          "name": "first Current DC",
+          "@type": "xsd:float",
+          "value": 2.0
+        },
+        "I2": {
+          "name": "second Current DC",
+          "@type": "xsd:float",
+          "value": 4.0
+        },
+        "I3": {
+          "name": "third Current DC",
+          "@type": "xsd:float",
+          "value": 6.0
+        },
+        "I4": {
+          "name": "fourth Current DC",
+          "@type": "xsd:float",
+          "value": 8.0
+        },
+        "I5": {
+          "name": "fifth Current DC",
+          "@type": "xsd:float",
+          "value": 10.0
+        },
+        "I6": {
+          "name": "sixt Current DC",
+          "@type": "xsd:float",
+          "value": 12.0
+        },
+        "I7": {
+          "name": "seventh Current DC",
+          "@type": "xsd:float",
+          "value": 14.0
+        },
+        "I8": {
+          "name": "eight Current DC",
+          "@type": "xsd:float",
+          "value": 16.0
+        },
+        "I1_N": {
+          "name": "first normalized Current DC",
+          "@type": "xsd:float",
+          "value": 1.0
+        },
+        "I2_N": {
+          "name": "second normalized Current DC",
+          "@type": "xsd:float",
+          "value": 3.0
+        },
+        "I3_N": {
+          "name": "third normalized Current DC",
+          "@type": "xsd:float",
+          "value": 5.0
+        }, 
+        "I4_N": {
+          "name": "fourth normalized Current DC",
+          "@type": "xsd:float",
+          "value": 7.0
+        },
+        "I5_N": {
+          "name": "fifth normalized Current DC",
+          "@type": "xsd:float",
+          "value": 9.0
+        },
+        "I6_N": {
+          "name": "sixth normalized Current DC",
+          "@type": "xsd:float",
+          "value": 11.0
+        },
+        "I7_N": {
+          "name": "seventh normalized Current DC",
+          "@type": "xsd:float",
+          "value": 13.0
+        },
+        "I8_N": {
+          "name": "eight normalized Current DC",
+          "@type": "xsd:float",
+          "value": 15.0
+        },
+        "U_DC": {
+          "name": "voltage DC",
+          "@type": "xsd:float",
+          "value": 24.0
+        },
+        "combines": "relationship",
 
+       "@vocab": "https://uri.etsi.org/ngsi-ld/default-context"
+    }
 }
+
         
