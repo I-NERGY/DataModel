@@ -5,6 +5,13 @@
       "type": "Property",
       "value": "2017-01-01T01:20:00Z"
     },
+    "lastChangedAt":{
+        "type": "Property",
+        "value": { 
+            "from":"2017-05-04T12:30:00Z",
+            "to": "2017-05-04T12:30:00Z"
+        }
+    },
     "modifiedAt":{
       "type": "Property",
       "value":  "2017-05-04T12:30:00Z"
