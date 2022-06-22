@@ -24,17 +24,44 @@
             }
         }
     },
+    "locatedAt": {
+        "type": "Relationship",
+        "value":"substation:bfpsubstation001"
+     },
     "dateCreated": {
         "name": "date",
         "type": "DateTime",
         "value": "2022-05-18T13:45:30Z",
         "metadata":{}
     },
-    "category": {
-        "name": "category",
-        "type": "number",
-        "value": [23,67],
+    "modifiedAt":{
+        "type": "Property",
+        "value":  "2017-05-04T12:30:00Z"
+    },
+    "entityVersion": {
+        "type": "Property",
+        "value": "2.0"
+    },
+    "deviceCategory":{
+        "type": "Property",
+        "value": "GridRelated",
         "metadata":{}
+    },
+    "serialNumber": {
+        "type": "Property",
+        "value": "X123456789C"
+    },
+    "supplierName": {
+        "type": "Property",
+        "value": "BFP vendor supplier"
+    },
+    "countryOfManufacture": {
+        "type": "Property",
+        "value": "Italy"
+    },
+    "installedAt": {
+        "type": "Property",
+        "value": "2017-05-04T10:18:16Z"
     },
     "dataProvider": {
         "name": "dataProvider",

@@ -1,0 +1,35 @@
+{
+    "id": "urn:ngsi-ld:EquipmentContainer:bfpuc9stringbox01",
+    "type": "EquipmentContainer",
+    "Name": {
+        "type": "property",
+        "value": "stringbox"
+    },
+    "combines": {
+        "type": "relationship",
+        "value": "urn:ngsi-ld:Cable:bfpuc9PVCable:"
+    },
+    "observedAt": "2022-05-18T13:45:30Z",
+    "providedBy": {
+        "type": "relationship",
+        "value": "urn:ngsi-ld:PilotPartner:BFP"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "Coordinates": "[-8.5, 41.2]"
+        }
+    },
+    "CurrentDC": {
+        "type": "property",
+        "value": "20"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1",
+        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/inergyVocabularies.json"
+    ]
+
+}
+
+
