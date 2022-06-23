@@ -1,7 +1,7 @@
 { 
     "@context":
     {
-        "inergy": "https://github.com/I-NERGY/DataModel/blob/main/inergyVocabularies.json",
+        "inergy": "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/inergyVocabularies.json",
         "Person": "http://xmlns.com/foaf/0.1/Person",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "foaf": "http://xmlns.com/foaf/0.1/",
