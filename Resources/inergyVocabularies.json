@@ -1,7 +1,7 @@
 { 
     "@context":
     {
-        "inergy": "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/inergyVocabularies.json",
+        "inergy": "http://semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0",
         "Person": "http://xmlns.com/foaf/0.1/Person",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "foaf": "http://xmlns.com/foaf/0.1/",
@@ -12,86 +12,103 @@
 
            
         "I1": {
+          "type": "property",
           "description": "first Current DC",
           "@type": "xsd:float",
           "value": 2.0
         },
         "I2": {
+          "type": "property",
           "description": "second Current DC",
           "@type": "xsd:float",
           "value": 4.0
         },
         "I3": {
+          "type": "property",
           "description": "third Current DC",
           "@type": "xsd:float",
           "value": 6.0
         },
         "I4": {
+          "type": "property",
           "description": "fourth Current DC",
           "@type": "xsd:float",
           "value": 8.0
         },
         "I5": {
+          "type": "property",
           "description": "fifth Current DC",
           "@type": "xsd:float",
           "value": 10.0
         },
         "I6": {
+          "type": "property",
           "description": "sixt Current DC",
           "@type": "xsd:float",
           "value": 12.0
         },
         "I7": {
+          "type": "property",
           "description": "seventh Current DC",
           "@type": "xsd:float",
           "value": 14.0
         },
         "I8": {
+          "type": "property",
           "description": "eight Current DC",
           "@type": "xsd:float",
           "value": 16.0
         },
         "I1_N": {
+          "type": "property",
           "description": "first normalized Current DC",
           "@type": "xsd:float",
           "value": 1.0
         },
         "I2_N": {
+          "type": "property",
           "description": "second normalized Current DC",
           "@type": "xsd:float",
           "value": 3.0
         },
         "I3_N": {
+          "type": "property",
           "description": "third normalized Current DC",
           "@type": "xsd:float",
           "value": 5.0
         }, 
         "I4_N": {
+          "type": "property",
           "description": "fourth normalized Current DC",
           "@type": "xsd:float",
           "value": 7.0
         },
         "I5_N": {
+          "type": "property",
           "description": "fifth normalized Current DC",
           "@type": "xsd:float",
           "value": 9.0
         },
         "I6_N": {
+          "type": "property",
           "description": "sixth normalized Current DC",
           "@type": "xsd:float",
           "value": 11.0
         },
         "I7_N": {
+          "type": "property",
           "description": "seventh normalized Current DC",
           "@type": "xsd:float",
           "value": 13.0
         },
         "I8_N": {
+          "type": "property",
           "description": "eight normalized Current DC",
           "@type": "xsd:float",
           "value": 15.0
         },
         "U_DC": {
+          "type": "property",
           "description": "voltage DC",
           "@type": "xsd:float",
           "value": 24.0
