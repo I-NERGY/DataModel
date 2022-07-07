@@ -117,7 +117,15 @@
           "type": "relationship",
           "object": "PV Cables"
         },
-
+        "inverter": "fiware",
+        "pmu": "sargon",
+        "meter": "fiware",
+        "sensor": "sargon",
+        "battery": "fiware",
+        "trackers": "inergy",
+        "wally": "inergy",
+        "circuitBreaker": "inergy",
+        
        "@vocab": "https://uri.etsi.org/ngsi-ld/default-context"
     }
 }
