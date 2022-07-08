@@ -10,7 +10,7 @@
         "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "skos" : "http://www.w3.org/2004/02/skos/core#",
 
-        "stringbox": "inergy",
+        "stringbox": ":inergy",
         "I1": {
           "type": "property",
           "description": "first Current DC of stringbox",
@@ -117,15 +117,15 @@
           "type": "relationship",
           "object": "PV Cables"
         },
-        "inverter": "fiware",
-        "pmu": "sargon",
-        "meter": "fiware",
-        "sensor": "sargon",
-        "battery": "fiware",
-        "trackers": "inergy",
-        "wally": "inergy",
-        "circuitBreaker": "inergy",
-        
+        "inverter": ":fiware",
+        "pmu": "sargon:",
+        "meter": "fiware:",
+        "sensor": "sargon:",
+        "battery": "fiware:",
+        "trackers": "inergy:",
+        "wally": "inergy:",
+        "circuitBreaker": "inergy:",
+
        "@vocab": "https://uri.etsi.org/ngsi-ld/default-context"
     }
 }
