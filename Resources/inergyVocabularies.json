@@ -129,6 +129,7 @@
         "trackers": "inergy:",
         "wally": "inergy:",
         "circuitBreaker": "inergy:",
+        "transformer": "fiware:",
 
        "@vocab": "https://uri.etsi.org/ngsi-ld/default-context"
     }
