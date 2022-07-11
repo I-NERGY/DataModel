@@ -119,7 +119,7 @@
         },
         "protects": {
           "type": "relationship",
-          "object": "transformer"
+          "object": ["transformer", "line", "busbar", "load", "generator"]
         },
         "inverter": ":fiware",
         "pmu": "sargon:",
