@@ -115,7 +115,11 @@
         },
         "combines": {
           "type": "relationship",
-          "object": "PV Cables"
+          "object": "PV Cable"
+        },
+        "protects": {
+          "type": "relationship",
+          "object": "transformer"
         },
         "inverter": ":fiware",
         "pmu": "sargon:",
