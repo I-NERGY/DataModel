@@ -284,15 +284,6 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#protects
-:protects rdf:type owl:ObjectProperty ;
-          rdfs:domain :CircuitBreaker ;
-          rdfs:range <https://sargon-n5geh.netlify.app/ontology/1.0/classes/PowerTransformer> ;
-          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-          <http://purl.org/dc/elements/1.1/date> "2022-07-11T12:49:08Z"^^xsd:dateTime ;
-          rdfs:comment "Cicuit Breaker protects substation equipments, eg: Lines, Transformers, Busbars, generators and loads."^^xsd:string .
-
-
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#areCombinedIn
 :areCombinedIn rdf:type owl:ObjectProperty ;
                rdfs:domain <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'> ;
@@ -320,6 +311,15 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
           <http://purl.org/dc/elements/1.1/date> "2022-05-07T17:20:47Z"^^xsd:dateTime ;
           rdfs:comment "Connecting electrical component or devices together"^^xsd:string .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#protects
+:protects rdf:type owl:ObjectProperty ;
+          rdfs:domain :CircuitBreaker ;
+          rdfs:range <https://sargon-n5geh.netlify.app/ontology/1.0/classes/PowerTransformer> ;
+          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+          <http://purl.org/dc/elements/1.1/date> "2022-07-11T12:49:08Z"^^xsd:dateTime ;
+          rdfs:comment "Cicuit Breaker protects substation equipments, eg: Lines, Transformers, Busbars, generators and loads."^^xsd:string .
 
 
 ###  http://www.w3.org/2006/time#after
@@ -1788,6 +1788,13 @@ The range of this property is not specified, so can be replaced by any specific 
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Combiner
+:Combiner rdf:type owl:Class ;
+          rdfs:subClassOf :EquipmentContainer ;
+          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+          <http://purl.org/dc/elements/1.1/date> "2022-09-07T12:09:30Z"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'Irradiance_sensor'
 <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'Irradiance_sensor'> rdf:type owl:Class ;
                                                                                                  rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
@@ -2090,7 +2097,7 @@ The range of this property is not specified, so can be replaced by any specific 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Stringbox
 :Stringbox rdf:type owl:Class ;
-           rdfs:subClassOf :EquipmentContainer ;
+           rdfs:subClassOf :Combiner ;
            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
            <http://purl.org/dc/elements/1.1/date> "2022-05-07T16:59:08Z"^^xsd:dateTime .
 
@@ -5423,10 +5430,10 @@ It is deprecated in this edition of OWL-Time. """ ;
 [ xsd:pattern "--(0[1-9]|1[0-9]|20)(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
 ] .
 
-[ xsd:pattern "---(0[1-9]|[1-9][0-9])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
+[ xsd:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
  ] .
 
-[ xsd:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
+[ xsd:pattern "---(0[1-9]|[1-9][0-9])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
  ] .
 
 #################################################################
