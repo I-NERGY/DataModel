@@ -1792,7 +1792,8 @@ The range of this property is not specified, so can be replaced by any specific 
 :Combiner rdf:type owl:Class ;
           rdfs:subClassOf :EquipmentContainer ;
           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-          <http://purl.org/dc/elements/1.1/date> "2022-09-07T12:09:30Z"^^xsd:dateTime .
+          <http://purl.org/dc/elements/1.1/date> "2022-09-07T12:09:30Z"^^xsd:dateTime ;
+          rdfs:comment "Combiner is a equipment container that is used to house PV cables, cable connectors, isolators and breakers."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'Irradiance_sensor'
@@ -2099,7 +2100,8 @@ The range of this property is not specified, so can be replaced by any specific 
 :Stringbox rdf:type owl:Class ;
            rdfs:subClassOf :Combiner ;
            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-           <http://purl.org/dc/elements/1.1/date> "2022-05-07T16:59:08Z"^^xsd:dateTime .
+           <http://purl.org/dc/elements/1.1/date> "2022-05-07T16:59:08Z"^^xsd:dateTime ;
+           rdfs:comment "A Stringbox is a combiner that connects  PV cables."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation
