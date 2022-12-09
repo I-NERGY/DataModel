@@ -749,7 +749,7 @@ SubObjectPropertyOf(<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2006
 ObjectPropertyDomain(<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2006/time#TemporalEntity>)
 ObjectPropertyRange(<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2006/time#Instant>)
 
-# Object Property: <http://www.w3.org/2006/time#hasTRS> (Temporal reference system used)
+# Object Property: <http://www.w3.org/2006/time#hasTRS> (sistema de referencia temporal utilizado)
 
 AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/time#hasTRS> "El sistema de referencia temporal utilizado por una posición temporal o descripción de extensión."@es)
 AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/time#hasTRS> "The temporal reference system used by a temporal position or extent description. "@en)
@@ -869,7 +869,7 @@ InverseObjectProperties(<http://www.w3.org/2006/time#intervalContains> <http://w
 ObjectPropertyDomain(<http://www.w3.org/2006/time#intervalContains> <http://www.w3.org/2006/time#ProperInterval>)
 ObjectPropertyRange(<http://www.w3.org/2006/time#intervalContains> <http://www.w3.org/2006/time#ProperInterval>)
 
-# Object Property: <http://www.w3.org/2006/time#intervalDisjoint> (intervalo disjunto)
+# Object Property: <http://www.w3.org/2006/time#intervalDisjoint> (interval disjoint)
 
 AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/time#intervalDisjoint> "If a proper interval T1 is intervalDisjoint another proper interval T2, then the beginning of T1 is after the end of T2, or the end of T1 is before the beginning of T2, i.e. the intervals do not overlap in any way, but their ordering relationship is not known."@en)
 AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/time#intervalDisjoint> "Si un intervalo propio T1 es disjunto con otro intervalo propio T2, entonces el principio de T1 está después del final de T2, o el final de T1 está antes que el principio de T2, es decir, los intervalos no se solapan de ninguna forma, aunque su relación de orden no se conozca."@es)
@@ -1585,7 +1585,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www
 DataPropertyDomain(<http://www.w3.org/2006/time#months> <http://www.w3.org/2006/time#GeneralDurationDescription>)
 DataPropertyRange(<http://www.w3.org/2006/time#months> xsd:decimal)
 
-# Data Property: <http://www.w3.org/2006/time#nominalPosition> (Name of temporal position)
+# Data Property: <http://www.w3.org/2006/time#nominalPosition> (nombre de posición temporal)
 
 AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/time#nominalPosition> "El valor (nominal) que indica posición temporal en un sistema de referencia ordinal."@es)
 AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/time#nominalPosition> "The (nominal) value indicating temporal position in an ordinal reference system "@en)
@@ -1936,7 +1936,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/saref#hasValue> "has value"^^xs
 
 AnnotationAssertion(rdfs:label xsd:dateTimeStamp "sello de tiempo"@es)
 
-# Datatype: <http://www.w3.org/2006/time#generalDay> (Generalized day)
+# Datatype: <http://www.w3.org/2006/time#generalDay> (Día generalizado)
 
 AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/time#generalDay> "Day of month - formulated as a text string with a pattern constraint to reproduce the same lexical form as gDay, except that values up to 99 are permitted, in order to support calendars with more than 31 days in a month. 
 Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type."@en)
@@ -4343,7 +4343,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/saref#watt_hour> "watt hour"^^x
 ClassAssertion(<https://w3id.org/saref#EnergyUnit> <https://w3id.org/saref#watt_hour>)
 
 
-AnnotationAssertion(xsd:pattern _:genid2147483648 "--(0[1-9]|1[0-9]|20)(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?")
-AnnotationAssertion(xsd:pattern _:genid2147483649 "-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?")
-AnnotationAssertion(xsd:pattern _:genid2147483650 "---(0[1-9]|[1-9][0-9])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?")
+AnnotationAssertion(xsd:pattern _:genid2147483722 "--(0[1-9]|1[0-9]|20)(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?")
+AnnotationAssertion(xsd:pattern _:genid2147483723 "-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?")
+AnnotationAssertion(xsd:pattern _:genid2147483724 "---(0[1-9]|[1-9][0-9])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?")
 )

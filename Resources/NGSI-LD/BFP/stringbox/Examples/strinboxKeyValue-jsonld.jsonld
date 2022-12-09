@@ -23,7 +23,22 @@
     },
     "CurrentDC": {
         "type": "property",
-        "value": "20"
+        "value": {
+            "Unnormalized" : {"I1" : 2, "I2" : 4, "I3" : 6, "I4" : 8, "I5" : 10, "I6" : 12, "I7" : 14, "I8" : 16
+            },
+            "Normalized" : {"I1_N" : 1, "I2_N" : 3, "I3_N" : 5, "I4_N" : 7, "I5_N" : 9, "I6_N" : 11, "I7_N" : 13, "I8_N" : 15
+            }   
+
+        }
+           
+    },
+    "VoltageDC": {
+        "type": "property",
+        "value": {
+            "U_DC" : 17
+
+        }
+           
     },
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1",
