@@ -1,7 +1,7 @@
 { 
     "@context":
     {
-        "inergy": "http://semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0",
+        "inergy": ["http://semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0", "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/inergyVocabularies.json"],
         "Person": "http://xmlns.com/foaf/0.1/Person",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "foaf": "http://xmlns.com/foaf/0.1/",
