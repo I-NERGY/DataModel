@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0> .
+@base <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0> .
 
 <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0> rdf:type owl:Ontology ;
                                                                               dcterms:contributor <http://purl.org/net/mpoveda> ,
