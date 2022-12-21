@@ -1,45 +1,44 @@
-@prefix : <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#> .
+@prefix : <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0> .
+@base <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0> .
 
 <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0> rdf:type owl:Ontology ;
-                                                                              dcterms:contributor <http://purl.org/net/mpoveda> ,
-                                                                                                  <http://www.garcia-castro.com/foaf.rdf#me> ,
-                                                                                                  <https://orcid.org/0000-0001-8269-8171> ,
-                                                                                                  <mailto:chris.little@metoffice.gov.uk> ;
-                                                                              dcterms:created "2006-09-27"^^xsd:date ,
-                                                                                              "2015-02-10"^^xsd:date ;
-                                                                              dcterms:creator <http://maxime-lefrancois.info/me#> ,
-                                                                                              <http://orcid.org/0000-0002-3884-3420> ,
-                                                                                              <http://www.garcia-castro.com/foaf.rdf#me> ,
-                                                                                              <https://en.wikipedia.org/wiki/Jerry_Hobbs> ,
-                                                                                              <https://w3id.org/people/mpoveda/> ,
-                                                                                              <https://www.linkedin.com/in/lauradaniele> ,
-                                                                                              <mailto:panfeng66@gmail.com> ,
-                                                                                              "This is created and maintained in the ACS institute of RWTH Aachen University: https://github.com/I-NERGY/CommonDataModel"@en ;
-                                                                              dcterms:description "The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The SAREF ontology provides building blocks that allow separation and recombination of different parts of the ontology depending on specific needs. The starting point of SAREF is the concept of device (e.g., a switch). Devices are tangible objects designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs the start and stop function. The SAREF ontology offers a lists of basic functions that can be eventually combined in order to have more complex functions in a single device. For example, a switch offers an actuating function of type 'switching on/off'. Each function has some associated commands, which can also be picked up as building blocks from a list. For example, the 'switching on/off' is associated with the commands 'switch on', 'switch off' and 'toggle'. Depending on the function(s) it accomplishes, a device can be found in some corresponding states that are also listed as building blocks. When connected to a network, a device offers a service, which  is a representation of a function to a network that makes the function discoverable, registerable and remotely controllable by other devices in the network. A service can represent one or more functions. A service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A service must specify the device that is offering the service and the function(s) to be represented. A device in the SAREF ontology is also characterized by a profile that can be used to optimize some property, such as Energy, in a home or office that are part of a building."^^xsd:string ,
-                                                                                                  "The Smart Applications REFerence ontology (SAREF) is intended to enable interoperability between solutions from different providers and among various activity sectors in the Internet of Things (IoT), thus contributing to the development of the global digital market."@en ;
-                                                                              dcterms:isVersionOf <http://www.w3.org/TR/owl-time> ;
-                                                                              dcterms:issued "2015-04-01"^^xsd:date ,
-                                                                                             "2020-02-11"^^xsd:date ;
-                                                                              dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ,
-                                                                                              <https://creativecommons.org/licenses/by/4.0/> ,
-                                                                                              <https://forge.etsi.org/etsi-software-license> ;
-                                                                              dcterms:modified "2017-04-06"^^xsd:date ,
-                                                                                               "2018-05-02"^^xsd:date ,
-                                                                                               "2020-05-29"^^xsd:date ;
-                                                                              dcterms:publisher <https://www.tno.nl> ,
-                                                                                                <https://www.etsi.org/> ;
-                                                                              dcterms:rights "Copyright © 2006-2017 W3C, OGC. W3C and OGC liability, trademark and document use rules apply."@en ;
-                                                                              dcterms:source <http://www.etsi.org/deliver/etsi_ts/103200_103299/103264/02.01.01_60/ts_103264v020101p.pdf> ,
-                                                                                             <https://saref.etsi.org/sources/saref-core/> ;
-                                                                              dcterms:title "SAREF: the Smart Appliances REFerence ontology"^^xsd:string ,
-                                                                                            "SAREF: the Smart Applications REFerence ontology"@en ;
+                                                                              <http://purl.org/dc/terms/contributor> <http://purl.org/net/mpoveda> ,
+                                                                                                                     <http://www.garcia-castro.com/foaf.rdf#me> ,
+                                                                                                                     <https://orcid.org/0000-0001-8269-8171> ,
+                                                                                                                     <mailto:chris.little@metoffice.gov.uk> ;
+                                                                              <http://purl.org/dc/terms/created> "2006-09-27"^^xsd:date ,
+                                                                                                                 "2015-02-10"^^xsd:date ;
+                                                                              <http://purl.org/dc/terms/creator> <http://maxime-lefrancois.info/me#> ,
+                                                                                                                 <http://orcid.org/0000-0002-3884-3420> ,
+                                                                                                                 <http://www.garcia-castro.com/foaf.rdf#me> ,
+                                                                                                                 <https://en.wikipedia.org/wiki/Jerry_Hobbs> ,
+                                                                                                                 <https://w3id.org/people/mpoveda/> ,
+                                                                                                                 <https://www.linkedin.com/in/lauradaniele> ,
+                                                                                                                 <mailto:panfeng66@gmail.com> ,
+                                                                                                                 "This is created and maintained in the ACS institute of RWTH Aachen University: https://github.com/I-NERGY/CommonDataModel"@en ;
+                                                                              <http://purl.org/dc/terms/description> "The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The SAREF ontology provides building blocks that allow separation and recombination of different parts of the ontology depending on specific needs. The starting point of SAREF is the concept of device (e.g., a switch). Devices are tangible objects designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs the start and stop function. The SAREF ontology offers a lists of basic functions that can be eventually combined in order to have more complex functions in a single device. For example, a switch offers an actuating function of type 'switching on/off'. Each function has some associated commands, which can also be picked up as building blocks from a list. For example, the 'switching on/off' is associated with the commands 'switch on', 'switch off' and 'toggle'. Depending on the function(s) it accomplishes, a device can be found in some corresponding states that are also listed as building blocks. When connected to a network, a device offers a service, which  is a representation of a function to a network that makes the function discoverable, registerable and remotely controllable by other devices in the network. A service can represent one or more functions. A service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A service must specify the device that is offering the service and the function(s) to be represented. A device in the SAREF ontology is also characterized by a profile that can be used to optimize some property, such as Energy, in a home or office that are part of a building."^^xsd:string ,
+                                                                                                                     "The Smart Applications REFerence ontology (SAREF) is intended to enable interoperability between solutions from different providers and among various activity sectors in the Internet of Things (IoT), thus contributing to the development of the global digital market."@en ;
+                                                                              <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/TR/owl-time> ;
+                                                                              <http://purl.org/dc/terms/issued> "2015-04-01"^^xsd:date ,
+                                                                                                                "2020-02-11"^^xsd:date ;
+                                                                              <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ,
+                                                                                                                 <https://creativecommons.org/licenses/by/4.0/> ,
+                                                                                                                 <https://forge.etsi.org/etsi-software-license> ;
+                                                                              <http://purl.org/dc/terms/modified> "2017-04-06"^^xsd:date ,
+                                                                                                                  "2018-05-02"^^xsd:date ,
+                                                                                                                  "2020-05-29"^^xsd:date ;
+                                                                              <http://purl.org/dc/terms/publisher> <https://www.tno.nl> ,
+                                                                                                                   <https://www.etsi.org/> ;
+                                                                              <http://purl.org/dc/terms/rights> "Copyright © 2006-2017 W3C, OGC. W3C and OGC liability, trademark and document use rules apply."@en ;
+                                                                              <http://purl.org/dc/terms/source> <http://www.etsi.org/deliver/etsi_ts/103200_103299/103264/02.01.01_60/ts_103264v020101p.pdf> ,
+                                                                                                                <https://saref.etsi.org/sources/saref-core/> ;
+                                                                              <http://purl.org/dc/terms/title> "SAREF: the Smart Appliances REFerence ontology"^^xsd:string ,
+                                                                                                               "SAREF: the Smart Applications REFerence ontology"@en ;
                                                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "saref" ;
                                                                               <http://purl.org/vocab/vann/preferredNamespaceUri> "https://saref.etsi.org/core/" ;
                                                                               rdfs:comment """Information about changes compared to version 1.1.1:
@@ -109,51 +108,51 @@ Ontology engineering by Simon J D Cox"""@en .
 
 
 ###  http://purl.org/dc/terms/contributor
-dcterms:contributor rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
-dcterms:created rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
-dcterms:description rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/isVersionOf
-dcterms:isVersionOf rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/isVersionOf> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/issued
-dcterms:issued rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/modified
-dcterms:modified rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
-dcterms:publisher rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/rights
-dcterms:rights rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/source
-dcterms:source rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -285,41 +284,41 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 #################################################################
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#areCombinedIn
-:areCombinedIn rdf:type owl:ObjectProperty ;
-               rdfs:domain <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'> ;
-               rdfs:range :Stringbox ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-07T17:43:39Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#areCombinedIn> rdf:type owl:ObjectProperty ;
+                                                                                            rdfs:domain <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'> ;
+                                                                                            rdfs:range <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Stringbox> ;
+                                                                                            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/date> "2022-05-07T17:43:39Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#combines
-:combines rdf:type owl:ObjectProperty ;
-          rdfs:domain :Stringbox ;
-          rdfs:range <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'> ;
-          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-          <http://purl.org/dc/elements/1.1/date> "2022-05-08T13:02:02Z"^^xsd:dateTime ;
-          rdfs:comment "Stringbox combines PV Cables."^^xsd:string .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#combines> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Stringbox> ;
+                                                                                       rdfs:range <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'> ;
+                                                                                       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                       <http://purl.org/dc/elements/1.1/date> "2022-05-08T13:02:02Z"^^xsd:dateTime ;
+                                                                                       rdfs:comment "Stringbox combines PV Cables."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#conducts
-:conducts rdf:type owl:ObjectProperty ;
-          rdfs:comment "conducting of electrical current between electrical components"^^xsd:string .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#conducts> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:comment "conducting of electrical current between electrical components"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#connects
-:connects rdf:type owl:ObjectProperty ;
-          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-          <http://purl.org/dc/elements/1.1/date> "2022-05-07T17:20:47Z"^^xsd:dateTime ;
-          rdfs:comment "Connecting electrical component or devices together"^^xsd:string .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#connects> rdf:type owl:ObjectProperty ;
+                                                                                       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                       <http://purl.org/dc/elements/1.1/date> "2022-05-07T17:20:47Z"^^xsd:dateTime ;
+                                                                                       rdfs:comment "Connecting electrical component or devices together"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#protects
-:protects rdf:type owl:ObjectProperty ;
-          rdfs:domain :CircuitBreaker ;
-          rdfs:range <https://sargon-n5geh.netlify.app/ontology/1.0/classes/PowerTransformer> ;
-          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-          <http://purl.org/dc/elements/1.1/date> "2022-07-11T12:49:08Z"^^xsd:dateTime ;
-          rdfs:comment "Cicuit Breaker protects substation equipments, eg: Lines, Transformers, Busbars, generators and loads."^^xsd:string .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#protects> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#CircuitBreaker> ;
+                                                                                       rdfs:range <https://sargon-n5geh.netlify.app/ontology/1.0/classes/PowerTransformer> ;
+                                                                                       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                       <http://purl.org/dc/elements/1.1/date> "2022-07-11T12:49:08Z"^^xsd:dateTime ;
+                                                                                       rdfs:comment "Cicuit Breaker protects substation equipments, eg: Lines, Transformers, Busbars, generators and loads."^^xsd:string .
 
 
 ###  http://www.w3.org/2006/time#after
@@ -1114,69 +1113,69 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 #################################################################
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#I
-:I rdf:type owl:DatatypeProperty ;
-   <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-   <http://purl.org/dc/elements/1.1/date> "2022-05-23T16:29:50Z"^^xsd:dateTime ;
-   rdfs:comment "Stringbox Current DC: [1..8])."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#I> rdf:type owl:DatatypeProperty ;
+                                                                                <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                <http://purl.org/dc/elements/1.1/date> "2022-05-23T16:29:50Z"^^xsd:dateTime ;
+                                                                                rdfs:comment "Stringbox Current DC: [1..8])."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#I_N
-:I_N rdf:type owl:DatatypeProperty ;
-     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-     <http://purl.org/dc/elements/1.1/date> "2022-05-23T16:30:53Z"^^xsd:dateTime ;
-     rdfs:comment "Stringbox Current DC, Normalized:[1..8] ."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#I_N> rdf:type owl:DatatypeProperty ;
+                                                                                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                  <http://purl.org/dc/elements/1.1/date> "2022-05-23T16:30:53Z"^^xsd:dateTime ;
+                                                                                  rdfs:comment "Stringbox Current DC, Normalized:[1..8] ."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Power_Q_3_7_0
-:Power_Q_3_7_0 rdf:type owl:DatatypeProperty ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-07T18:15:26Z"^^xsd:dateTime ;
-               rdfs:comment "Average reactive power with units kVAR."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Power_Q_3_7_0> rdf:type owl:DatatypeProperty ;
+                                                                                            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/date> "2022-05-07T18:15:26Z"^^xsd:dateTime ;
+                                                                                            rdfs:comment "Average reactive power with units kVAR."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#U_DC
-:U_DC rdf:type owl:DatatypeProperty ;
-      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-      <http://purl.org/dc/elements/1.1/date> "2022-05-23T16:40:29Z"^^xsd:dateTime ;
-      rdfs:comment "Stringbox voltage DC."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#U_DC> rdf:type owl:DatatypeProperty ;
+                                                                                   <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                   <http://purl.org/dc/elements/1.1/date> "2022-05-23T16:40:29Z"^^xsd:dateTime ;
+                                                                                   rdfs:comment "Stringbox voltage DC."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#hasConductance
-:hasConductance rdf:type owl:DatatypeProperty ;
-                <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                <http://purl.org/dc/elements/1.1/date> "2022-05-07T18:08:56Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#hasConductance> rdf:type owl:DatatypeProperty ;
+                                                                                             <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/date> "2022-05-07T18:08:56Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#sameValues
-:sameValues rdf:type owl:DatatypeProperty ;
-            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-            <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:55:12Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#sameValues> rdf:type owl:DatatypeProperty ;
+                                                                                         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                         <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:55:12Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#sysDate
-:sysDate rdf:type owl:DatatypeProperty ;
-         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-         <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:54:01Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#sysDate> rdf:type owl:DatatypeProperty ;
+                                                                                      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                      <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:54:01Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#sysDate-ms
-:sysDate-ms rdf:type owl:DatatypeProperty ;
-            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-            <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:53:06Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#sysDate-ms> rdf:type owl:DatatypeProperty ;
+                                                                                         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                         <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:53:06Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#sysTime-ms
-:sysTime-ms rdf:type owl:DatatypeProperty ;
-            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-            <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:54:25Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#sysTime-ms> rdf:type owl:DatatypeProperty ;
+                                                                                         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                         <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:54:25Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#t
-:t rdf:type owl:DatatypeProperty ;
-   <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-   <http://purl.org/dc/elements/1.1/date> "2022-05-07T18:06:31Z"^^xsd:dateTime ;
-   rdfs:comment "Measurement time and date"@en ,
-                "time and date"@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#t> rdf:type owl:DatatypeProperty ;
+                                                                                <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                <http://purl.org/dc/elements/1.1/date> "2022-05-07T18:06:31Z"^^xsd:dateTime ;
+                                                                                rdfs:comment "Measurement time and date"@en ,
+                                                                                             "time and date"@en .
 
 
 ###  http://www.w3.org/2006/time#day
@@ -1788,14 +1787,6 @@ The range of this property is not specified, so can be replaced by any specific 
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Combiner
-:Combiner rdf:type owl:Class ;
-          rdfs:subClassOf :EquipmentContainer ;
-          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-          <http://purl.org/dc/elements/1.1/date> "2022-09-07T12:09:30Z"^^xsd:dateTime ;
-          rdfs:comment "Combiner is a equipment container that is used to house PV cables, cable connectors, isolators and breakers."^^xsd:string .
-
-
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'Irradiance_sensor'
 <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'Irradiance_sensor'> rdf:type owl:Class ;
                                                                                                  rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
@@ -1805,338 +1796,346 @@ The range of this property is not specified, so can be replaced by any specific 
 
 ###  http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'
 <http://www.semanticweb.org/cem/ontologies/2022/4/i-nergy-ontology-01/1.0.0#'PV_Cable'> rdf:type owl:Class ;
-                                                                                        rdfs:subClassOf :Cable ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Cable> ;
                                                                                         rdfs:comment "A conductor material  that connects PV panels to sringbox."@en ,
                                                                                                      "PV Cable for connecting PV panels to Solar Charge Controllers, PV Inverters or Converters with inbuilt charge controllers."@en ;
                                                                                         rdfs:label "PV Cable"@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ACDCTerminal
-:ACDCTerminal rdf:type owl:Class ;
-              rdfs:subClassOf :IdentifiedObject ;
-              <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-              <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:34:24Z"^^xsd:dateTime ;
-              rdfs:comment "An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ACDCTerminal> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject> ;
+                                                                                           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                           <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:34:24Z"^^xsd:dateTime ;
+                                                                                           rdfs:comment "An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ACLineSegment
-:ACLineSegment rdf:type owl:Class ;
-               rdfs:subClassOf :Conductor ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:12:54Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ACLineSegment> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Conductor> ;
+                                                                                            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:12:54Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#BaseFrequency
-:BaseFrequency rdf:type owl:Class ;
-               rdfs:subClassOf :IdentifiedObject ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:33:44Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#BaseFrequency> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject> ;
+                                                                                            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:33:44Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Bay
-:Bay rdf:type owl:Class ;
-     rdfs:subClassOf :EquipmentContainer ;
-     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-     <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:26:14Z"^^xsd:dateTime ;
-     rdfs:comment "A collection of power system resources (within a given substation) including conducting equipment, protection relays, measurements, and telemetry. A bay typically represents a physical grouping related to modularization of equipment."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Bay> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> ;
+                                                                                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                  <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:26:14Z"^^xsd:dateTime ;
+                                                                                  rdfs:comment "A collection of power system resources (within a given substation) including conducting equipment, protection relays, measurements, and telemetry. A bay typically represents a physical grouping related to modularization of equipment."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Busbar
-:Busbar rdf:type owl:Class ;
-        rdfs:subClassOf :Connector ;
-        rdfs:comment "An alluminium or copper conductor material that connects electrical components in power systems."@en ;
-        rdfs:label "Busbar"@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Busbar> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Connector> ;
+                                                                                     rdfs:comment "An alluminium or copper conductor material that connects electrical components in power systems."@en ;
+                                                                                     rdfs:label "Busbar"@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Cable
-:Cable rdf:type owl:Class ;
-       rdfs:subClassOf :EquipmentContainer ;
-       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-       <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:52:25Z"^^xsd:dateTime ;
-       rdfs:comment "A conducting material made of copper or alumunium with an insulating material for carying AC or DC current."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Cable> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> ;
+                                                                                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                    <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:52:25Z"^^xsd:dateTime ;
+                                                                                    rdfs:comment "A conducting material made of copper or alumunium with an insulating material for carying AC or DC current."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#CircuitBreaker
-:CircuitBreaker rdf:type owl:Class ;
-                rdfs:subClassOf :GridActuator ;
-                <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:47:17Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#CircuitBreaker> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridActuator> ;
+                                                                                             <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:47:17Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Combiner
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Combiner> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> ;
+                                                                                       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                       <http://purl.org/dc/elements/1.1/date> "2022-09-07T12:09:30Z"^^xsd:dateTime ;
+                                                                                       rdfs:comment "Combiner is a equipment container that is used to house PV cables, cable connectors, isolators and breakers."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Conductance
-:Conductance rdf:type owl:Class ;
-             rdfs:subClassOf <https://w3id.org/saref#Property> ;
-             rdfs:comment "It is a property of a metallic conductor that conducts electricity, and the unit is in mho."@en ;
-             rdfs:label "Conductance."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Conductance> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <https://w3id.org/saref#Property> ;
+                                                                                          rdfs:comment "It is a property of a metallic conductor that conducts electricity, and the unit is in mho."@en ;
+                                                                                          rdfs:label "Conductance."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConductanceUnit
-:ConductanceUnit rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/saref#Measurement> ;
-                 rdfs:comment "The unit of measure of conductance"@en ;
-                 rdfs:label "Conductance unit"@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConductanceUnit> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <https://w3id.org/saref#Measurement> ;
+                                                                                              rdfs:comment "The unit of measure of conductance"@en ;
+                                                                                              rdfs:label "Conductance unit"@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConductingEquipment
-:ConductingEquipment rdf:type owl:Class ;
-                     rdfs:subClassOf :Equipment ;
-                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                     <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:10:38Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConductingEquipment> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment> ;
+                                                                                                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                  <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:10:38Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Conducting_function
-:Conducting_function rdf:type owl:Class ;
-                     rdfs:subClassOf <https://w3id.org/saref#Function> .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Conducting_function> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <https://w3id.org/saref#Function> .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Conductor
-:Conductor rdf:type owl:Class ;
-           rdfs:subClassOf :ConductingEquipment ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :conducts ;
-                             owl:someValuesFrom <https://sargon-n5geh.netlify.app/ontology/1.0/classes/Current>
-                           ] ;
-           owl:disjointWith :Stringbox ;
-           rdfs:comment "A metalic material that conducts electricity"@en ;
-           rdfs:label "Conductor"@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Conductor> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConductingEquipment> ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#conducts> ;
+                                                                                                          owl:someValuesFrom <https://sargon-n5geh.netlify.app/ontology/1.0/classes/Current>
+                                                                                                        ] ;
+                                                                                        owl:disjointWith <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Stringbox> ;
+                                                                                        rdfs:comment "A metalic material that conducts electricity"@en ;
+                                                                                        rdfs:label "Conductor"@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNode
-:ConnectivityNode rdf:type owl:Class ;
-                  rdfs:subClassOf :IdentifiedObject ;
-                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                  <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:29:29Z"^^xsd:dateTime ;
-                  rdfs:comment "Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNode> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject> ;
+                                                                                               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                               <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:29:29Z"^^xsd:dateTime ;
+                                                                                               rdfs:comment "Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNodeContainer
-:ConnectivityNodeContainer rdf:type owl:Class ;
-                           rdfs:subClassOf :PowerSystemResource ;
-                           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                           <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:36:58Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNodeContainer> rdf:type owl:Class ;
+                                                                                                        rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#PowerSystemResource> ;
+                                                                                                        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                        <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:36:58Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Connector
-:Connector rdf:type owl:Class ;
-           rdfs:subClassOf :ConductingEquipment ;
-           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-           <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:27:19Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Connector> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConductingEquipment> ;
+                                                                                        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                        <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:27:19Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#CurrentTransformer
-:CurrentTransformer rdf:type owl:Class ;
-                    rdfs:subClassOf :GridSensor ;
-                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                    <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:51:42Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#CurrentTransformer> rdf:type owl:Class ;
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridSensor> ;
+                                                                                                 <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                 <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:51:42Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#DCEquipmentContainer
-:DCEquipmentContainer rdf:type owl:Class ;
-                      rdfs:subClassOf :EquipmentContainer ;
-                      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                      <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:46:20Z"^^xsd:dateTime ;
-                      rdfs:comment "A modelling construct to provide a root class for containment of DC as well as AC equipment. The class differ from the EquipmentContaner for AC in that it may also contain DCNode-s. Hence it can contain both AC and DC equipment."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#DCEquipmentContainer> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> ;
+                                                                                                   <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                   <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:46:20Z"^^xsd:dateTime ;
+                                                                                                   rdfs:comment "A modelling construct to provide a root class for containment of DC as well as AC equipment. The class differ from the EquipmentContaner for AC in that it may also contain DCNode-s. Hence it can contain both AC and DC equipment."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#DCLineSegment
-:DCLineSegment rdf:type owl:Class ;
-               rdfs:subClassOf :Conductor ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:15:35Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#DCLineSegment> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Conductor> ;
+                                                                                            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:15:35Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment
-:Equipment rdf:type owl:Class ;
-           rdfs:subClassOf :PowerSystemResource ;
-           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-           <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:43:02Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#PowerSystemResource> ;
+                                                                                        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                        <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:43:02Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer
-:EquipmentContainer rdf:type owl:Class ;
-                    rdfs:subClassOf :ConnectivityNodeContainer ;
-                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                    <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:33:19Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> rdf:type owl:Class ;
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConnectivityNodeContainer> ;
+                                                                                                 <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                 <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:33:19Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Feeder
-:Feeder rdf:type owl:Class ;
-        rdfs:subClassOf :EquipmentContainer ;
-        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-        <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:39:38Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Feeder> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> ;
+                                                                                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                     <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:39:38Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridActuator
-:GridActuator rdf:type owl:Class ;
-              owl:equivalentClass <https://w3id.org/saref#Actuator> ;
-              rdfs:subClassOf :Equipment ;
-              <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-              <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:51:03Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridActuator> rdf:type owl:Class ;
+                                                                                           owl:equivalentClass <https://w3id.org/saref#Actuator> ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment> ;
+                                                                                           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                           <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:51:03Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridSensor
-:GridSensor rdf:type owl:Class ;
-            owl:equivalentClass <https://w3id.org/saref#Sensor> ;
-            rdfs:subClassOf :Equipment ;
-            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-            <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:50:42Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridSensor> rdf:type owl:Class ;
+                                                                                         owl:equivalentClass <https://w3id.org/saref#Sensor> ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment> ;
+                                                                                         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                         <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:50:42Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#HV_Substation
-:HV_Substation rdf:type owl:Class ;
-               rdfs:subClassOf :Substation ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:16:56Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#HV_Substation> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation> ;
+                                                                                            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:16:56Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject
-:IdentifiedObject rdf:type owl:Class ;
-                  rdfs:subClassOf <https://w3id.org/saref#EnergyRelated> ;
-                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                  <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:44:41Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <https://w3id.org/saref#EnergyRelated> ;
+                                                                                               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                               <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:44:41Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Irradiance
-:Irradiance rdf:type owl:Class ;
-            rdfs:subClassOf <https://w3id.org/saref#Property> ;
-            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-            <http://purl.org/dc/elements/1.1/date> "2022-05-08T16:52:35Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Irradiance> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <https://w3id.org/saref#Property> ;
+                                                                                         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                         <http://purl.org/dc/elements/1.1/date> "2022-05-08T16:52:35Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IrradianceUnit
-:IrradianceUnit rdf:type owl:Class ;
-                rdfs:subClassOf <https://w3id.org/saref#Measurement> ;
-                <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                <http://purl.org/dc/elements/1.1/date> "2022-05-14T11:01:54Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IrradianceUnit> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <https://w3id.org/saref#Measurement> ;
+                                                                                             <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/date> "2022-05-14T11:01:54Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#LV_Substation
-:LV_Substation rdf:type owl:Class ;
-               rdfs:subClassOf :Substation ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:17:44Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#LV_Substation> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation> ;
+                                                                                            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:17:44Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Line
-:Line rdf:type owl:Class ;
-      rdfs:subClassOf :EquipmentContainer ;
-      rdfs:comment "A electrical conductor that connets Busbar, trabsformer and grid component in a substation."@en ;
-      rdfs:label "Line"@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Line> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> ;
+                                                                                   rdfs:comment "A electrical conductor that connets Busbar, trabsformer and grid component in a substation."@en ;
+                                                                                   rdfs:label "Line"@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#MV_Substation
-:MV_Substation rdf:type owl:Class ;
-               rdfs:subClassOf :Substation ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:17:23Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#MV_Substation> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation> ;
+                                                                                            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/date> "2022-05-21T13:17:23Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#NetLoadAggregatorDevice
-:NetLoadAggregatorDevice rdf:type owl:Class ;
-                         rdfs:subClassOf :Equipment ;
-                         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                         <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:45:06Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#NetLoadAggregatorDevice> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment> ;
+                                                                                                      <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                      <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:45:06Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Plant
-:Plant rdf:type owl:Class ;
-       rdfs:subClassOf :EquipmentContainer ;
-       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-       <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:40:56Z"^^xsd:dateTime ;
-       rdfs:comment "A Plant is a collection of equipment for purposes of generation."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Plant> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> ;
+                                                                                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                    <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:40:56Z"^^xsd:dateTime ;
+                                                                                    rdfs:comment "A Plant is a collection of equipment for purposes of generation."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#PowerSystemResource
-:PowerSystemResource rdf:type owl:Class ;
-                     rdfs:subClassOf :IdentifiedObject ;
-                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                     <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:41:57Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#PowerSystemResource> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#IdentifiedObject> ;
+                                                                                                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                  <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:41:57Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionEquipment
-:ProtectionEquipment rdf:type owl:Class ;
-                     rdfs:subClassOf :Equipment ;
-                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                     <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:28:17Z"^^xsd:dateTime ;
-                     rdfs:comment "An electrical device designed to respond to input conditions in a prescribed manner and after specified conditions are met to cause contact operation or similar abrupt change in associated electric control circuits, or simply to display the detected condition. Protection equipment is associated with conducting equipment and usually operate circuit breakers."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionEquipment> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment> ;
+                                                                                                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                  <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:28:17Z"^^xsd:dateTime ;
+                                                                                                  rdfs:comment "An electrical device designed to respond to input conditions in a prescribed manner and after specified conditions are met to cause contact operation or similar abrupt change in associated electric control circuits, or simply to display the detected condition. Protection equipment is associated with conducting equipment and usually operate circuit breakers."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionIED
-:ProtectionIED rdf:type owl:Class ;
-               rdfs:subClassOf :ProtectionEquipment ;
-               <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-               <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:42:45Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionIED> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionEquipment> ;
+                                                                                            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/date> "2022-05-14T10:42:45Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionRelay
-:ProtectionRelay rdf:type owl:Class ;
-                 rdfs:subClassOf :Relay ;
-                 <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                 <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:54:05Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ProtectionRelay> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Relay> ;
+                                                                                              <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                              <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:54:05Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Relay
-:Relay rdf:type owl:Class ;
-       rdfs:subClassOf :Equipment ;
-       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-       <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:53:27Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Relay> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment> ;
+                                                                                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                    <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:53:27Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#SmartMeter
-:SmartMeter rdf:type owl:Class ;
-            rdfs:subClassOf <https://w3id.org/saref#Meter> ;
-            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-            <http://purl.org/dc/elements/1.1/date> "2022-05-07T17:55:15Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#SmartMeter> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <https://w3id.org/saref#Meter> ;
+                                                                                         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                         <http://purl.org/dc/elements/1.1/date> "2022-05-07T17:55:15Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Solar
-:Solar rdf:type owl:Class ;
-       rdfs:subClassOf <https://w3id.org/saref#Commodity> ;
-       rdfs:comment "A free commodity in natural from the sun that is is a source of energy."@en ;
-       rdfs:label "Solar"@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Solar> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <https://w3id.org/saref#Commodity> ;
+                                                                                    rdfs:comment "A free commodity in natural from the sun that is is a source of energy."@en ;
+                                                                                    rdfs:label "Solar"@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Stringbox
-:Stringbox rdf:type owl:Class ;
-           rdfs:subClassOf :Combiner ;
-           <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-           <http://purl.org/dc/elements/1.1/date> "2022-05-07T16:59:08Z"^^xsd:dateTime ;
-           rdfs:comment "A Stringbox is a combiner that connects  PV cables."^^xsd:string .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Stringbox> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Combiner> ;
+                                                                                        <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                        <http://purl.org/dc/elements/1.1/date> "2022-05-07T16:59:08Z"^^xsd:dateTime ;
+                                                                                        rdfs:comment "A Stringbox is a combiner that connects  PV cables."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation
-:Substation rdf:type owl:Class ;
-            rdfs:subClassOf :EquipmentContainer ;
-            <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-            <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:43:02Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Substation> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> ;
+                                                                                         <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                         <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:43:02Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Terminal
-:Terminal rdf:type owl:Class ;
-          rdfs:subClassOf :ACDCTerminal ;
-          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-          <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:35:22Z"^^xsd:dateTime ;
-          rdfs:comment "An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Terminal> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ACDCTerminal> ;
+                                                                                       <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                       <http://purl.org/dc/elements/1.1/date> "2022-05-21T12:35:22Z"^^xsd:dateTime ;
+                                                                                       rdfs:comment "An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes."@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#TransformerWinding
-:TransformerWinding rdf:type owl:Class ;
-                    rdfs:subClassOf :ConductingEquipment ;
-                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                    <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:44:06Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#TransformerWinding> rdf:type owl:Class ;
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#ConductingEquipment> ;
+                                                                                                 <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                 <http://purl.org/dc/elements/1.1/date> "2022-05-14T09:44:06Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#VoltageTransformer
-:VoltageTransformer rdf:type owl:Class ;
-                    rdfs:subClassOf :GridSensor ;
-                    <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                    <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:00:34Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#VoltageTransformer> rdf:type owl:Class ;
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#GridSensor> ;
+                                                                                                 <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                 <http://purl.org/dc/elements/1.1/date> "2022-05-21T11:00:34Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Wind
-:Wind rdf:type owl:Class ;
-      rdfs:subClassOf <https://w3id.org/saref#Commodity> ;
-      rdfs:comment "A free commodity in nature from the air whose speed is a source of energy."@en .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Wind> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <https://w3id.org/saref#Commodity> ;
+                                                                                   rdfs:comment "A free commodity in nature from the air whose speed is a source of energy."@en .
 
 
 ###  http://www.w3.org/2006/time#DateTimeDescription
@@ -3351,7 +3350,7 @@ It is deprecated in this edition of OWL-Time. """ ;
 
 ###  https://sargon-n5geh.netlify.app/ontology/1.0/classes/PowerTransformer
 <https://sargon-n5geh.netlify.app/ontology/1.0/classes/PowerTransformer> rdf:type owl:Class ;
-                                                                         rdfs:subClassOf :Equipment ,
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment> ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty <https://w3id.org/saref#controlsProperty> ;
                                                                                            owl:someValuesFrom <https://sargon-n5geh.netlify.app/ontology/1.0/classes/Tap_position>
@@ -4004,7 +4003,7 @@ It is deprecated in this edition of OWL-Time. """ ;
 
 ###  https://w3id.org/saref#Generator
 <https://w3id.org/saref#Generator> rdf:type owl:Class ;
-                                   rdfs:subClassOf :Equipment ;
+                                   rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Equipment> ;
                                    rdfs:comment "A type of energy-related device that generates energy"^^xsd:string ;
                                    rdfs:label "Generator"^^xsd:string .
 
@@ -4819,27 +4818,27 @@ It is deprecated in this edition of OWL-Time. """ ;
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Log1_SmartMeter_ASM
-:Log1_SmartMeter_ASM rdf:type owl:NamedIndividual ,
-                              :SmartMeter ;
-                     :sysTime-ms "20"@en ;
-                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                     <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:50:36Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Log1_SmartMeter_ASM> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#SmartMeter> ;
+                                                                                                  <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#sysTime-ms> "20"@en ;
+                                                                                                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                  <http://purl.org/dc/elements/1.1/date> "2022-05-07T19:50:36Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#SmartMetersAndWally
-:SmartMetersAndWally rdf:type owl:NamedIndividual ,
-                              :SmartMeter ;
-                     :Power_Q_3_7_0 ""@en ;
-                     :t ""@en ;
-                     <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                     <http://purl.org/dc/elements/1.1/date> "2022-05-07T18:18:23Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#SmartMetersAndWally> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#SmartMeter> ;
+                                                                                                  <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Power_Q_3_7_0> ""@en ;
+                                                                                                  <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#t> ""@en ;
+                                                                                                  <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                  <http://purl.org/dc/elements/1.1/date> "2022-05-07T18:18:23Z"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#bfpuc9stringbox01
-:bfpuc9stringbox01 rdf:type owl:NamedIndividual ;
-                   :combines :bfpuc9stringbox01 ;
-                   <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
-                   <http://purl.org/dc/elements/1.1/date> "2022-05-22T21:15:33Z"^^xsd:dateTime .
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#bfpuc9stringbox01> rdf:type owl:NamedIndividual ;
+                                                                                                <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#combines> <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#bfpuc9stringbox01> ;
+                                                                                                <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
+                                                                                                <http://purl.org/dc/elements/1.1/date> "2022-05-22T21:15:33Z"^^xsd:dateTime .
 
 
 ###  http://www.w3.org/2006/time#Friday
