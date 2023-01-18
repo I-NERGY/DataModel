@@ -1,0 +1,71 @@
+Standalone Timeseries
+
+    "timeseries": {
+        "id": "urn:ngsi-ld:TimeSeriesMeasurement:TimeSeriesMeasurement:TSMDM-TSM-001",
+        "type": "TimeSeriesMeasurement",
+        "format": {
+            "type":  "DateTime",
+            "standard":  "ISO8691",
+            "value": "[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]"
+        },
+        "observedAt": "2019-01-01T00:00:00.000Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "day"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 15,
+            "unit": "minutes"
+        },
+        "times": {
+            "type": "Property",
+            "value": {
+                "t1": "2020-02-24T00:00:00Z",
+                "t2": "2020-02-24T00:00:15Z",
+                "t3": "2020-02-24T00:00:30Z",
+                "t4": "2020-02-24T00:00:45Z",
+                "|": "         |           ",
+                "t96": "2020-02-24T23:59:45Z"
+            }  
+        },
+        
+        "@context": [
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+            "https://raw.githubusercontent.com/smart-data-models/dataModel.Energy/master/context.jsonld"
+        ]
+    }
+
+    Embedded Timeseries
+    "timeseries": {
+        "format": {
+            "type":  "DateTime",
+            "standard":  "ISO8691",
+            "value": "[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]"
+        },
+        "observedAt": "2019-01-01T00:00:00.000Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "day"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 15,
+            "unit": "minutes"
+        },
+        "times": {
+            "type": "Property",
+            "value": {
+                "t1": "2020-02-24T00:00:00Z",
+                "t2": "2020-02-24T00:00:15Z",
+                "t3": "2020-02-24T00:00:30Z",
+                "t4": "2020-02-24T00:00:45Z",
+                "|": "         |           ",
+                "t96": "2020-02-24T23:59:45Z"
+            }  
+        }
+        
+    }
+   
+
+
