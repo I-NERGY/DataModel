@@ -1,4 +1,4 @@
-Standalone Timeseries
+Standalone Timeseries I
 
     "timeseries": {
         "id": "urn:ngsi-ld:TimeSeriesMeasurement:TimeSeriesMeasurement:TSMDM-TSM-001",
@@ -66,6 +66,83 @@ Standalone Timeseries
         }
         
     }
+
+
+    Standalone Timeseries II
+    {
+
+        "id": "urn:ngsi-ld:TimeSeriesMeasurement:TimeSeriesMeasurement:TSMDM-TSM-001",
+      
+        "type": "TimeSeriesMeasurement",
+      
+        "measurementProperty": {
+      
+          "type": "Property",
+      
+          "value": "Power" // Energy, Voltage, etc.
+      
+        },
+      
+        "format": {
+      
+            "type":  "DateTime",
+      
+            "standard":  "ISO8691",
+      
+            "value": "[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]"
+      
+        },
+      
+        "observedAt": "2019-01-01T00:00:00.000Z",
+      
+        "measurementType": {
+      
+            "type": "Property",
+      
+            "value": "day"
+      
+        },
+      
+        "measurementInterval": {
+      
+            "type": "Property",
+      
+            "value": 15,
+      
+            "unit": "minutes"
+      
+        },
+      
+        "timeseries": {
+      
+            "type": "Property",
+      
+            "value": [
+      
+                {"timestamp": "2020-02-24T00:00:00Z", "value": 0.1},
+      
+                {"timestamp": "2020-02-24T00:00:15Z", "value": 0.2},
+      
+                {"timestamp": "2020-02-24T00:00:30Z", "value": 0.8},
+      
+                {"timestamp": "2020-02-24T00:00:45Z", "value": 0.5},
+      
+                {"|": "         |           "},
+      
+                {"timestamp": "2020-02-24T23:59:45Z", "value": 0.11}
+      
+            ]
+      
+        },      
+        "@context": [
+      
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      
+            "https://raw.githubusercontent.com/smart-data-models/dataModel.Energy/master/context.jsonld"
+      
+        ]
+      
+      }
    
 
 
