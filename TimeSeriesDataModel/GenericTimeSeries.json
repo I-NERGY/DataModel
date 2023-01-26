@@ -9,7 +9,7 @@ Standalone Timeseries I
             "value": "[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]"
         },
         "observedAt": "2019-01-01T00:00:00.000Z",
-        "measurementType": {
+        "measurementPeriod": {
             "type": "Property",
             "value": "day"
         },
@@ -21,12 +21,12 @@ Standalone Timeseries I
         "times": {
             "type": "Property",
             "value": {
-                "t1": "2020-02-24T00:00:00Z",
+                "t0": "2020-02-24T00:00:00Z",
                 "t2": "2020-02-24T00:00:15Z",
                 "t3": "2020-02-24T00:00:30Z",
                 "t4": "2020-02-24T00:00:45Z",
                 "|": "         |           ",
-                "t96": "2020-02-24T23:59:45Z"
+                "t95": "2020-02-24T23:59:45Z"
             }  
         },
         
@@ -36,7 +36,25 @@ Standalone Timeseries I
         ]
     }
 
-    Embedded Timeseries
+    Embedded Timeseries I
+    "deviceType": {
+        "type": "Property",
+        "value": "meter"
+    },
+    "deviceAttribute": {
+        "type": "Property",
+        "value": "Power"
+    },
+    "activePower": {
+        "type": "Property",
+        "value": {
+            "L0": 4829.0,
+            "L1": 4809.2,
+            "L2": 4783.6,
+	        "...": "...",
+            "L95": 4903.6
+        }
+    },
     "timeseries": {
         "format": {
             "type":  "DateTime",
@@ -44,7 +62,7 @@ Standalone Timeseries I
             "value": "[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]"
         },
         "observedAt": "2019-01-01T00:00:00.000Z",
-        "measurementType": {
+        "measurementPeriod": {
             "type": "Property",
             "value": "day"
         },
@@ -56,92 +74,56 @@ Standalone Timeseries I
         "times": {
             "type": "Property",
             "value": {
-                "t1": "2020-02-24T00:00:00Z",
+                "t0": "2020-02-24T00:00:00Z",
                 "t2": "2020-02-24T00:00:15Z",
                 "t3": "2020-02-24T00:00:30Z",
                 "t4": "2020-02-24T00:00:45Z",
-                "|": "         |           ",
-                "t96": "2020-02-24T23:59:45Z"
+                "|": "           |         ",
+                "t95": "2020-02-24T23:59:45Z"
             }  
         }
         
     }
 
 
-    Standalone Timeseries II
+    Embedded Timeseries II
     {
-
         "id": "urn:ngsi-ld:TimeSeriesMeasurement:TimeSeriesMeasurement:TSMDM-TSM-001",
-      
         "type": "TimeSeriesMeasurement",
-      
         "measurementProperty": {
-      
           "type": "Property",
-      
           "value": "Power" // Energy, Voltage, etc.
-      
         },
-      
         "format": {
-      
             "type":  "DateTime",
-      
             "standard":  "ISO8691",
-      
             "value": "[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]"
-      
         },
-      
         "observedAt": "2019-01-01T00:00:00.000Z",
-      
-        "measurementType": {
-      
+        "measurementPeriod": {
             "type": "Property",
-      
             "value": "day"
-      
         },
-      
         "measurementInterval": {
-      
             "type": "Property",
-      
             "value": 15,
-      
             "unit": "minutes"
-      
         },
-      
         "timeseries": {
-      
             "type": "Property",
-      
-            "value": [
-      
-                {"timestamp": "2020-02-24T00:00:00Z", "value": 0.1},
-      
-                {"timestamp": "2020-02-24T00:00:15Z", "value": 0.2},
-      
-                {"timestamp": "2020-02-24T00:00:30Z", "value": 0.8},
-      
-                {"timestamp": "2020-02-24T00:00:45Z", "value": 0.5},
-      
-                {"|": "         |           "},
-      
-                {"timestamp": "2020-02-24T23:59:45Z", "value": 0.11}
-      
-            ]
-      
+            "value": [     
+                {"timestamp": "2020-02-24T00:00:00Z", "power": 0.1},      
+                {"timestamp": "2020-02-24T00:00:15Z", "power": 0.2},      
+                {"timestamp": "2020-02-24T00:00:30Z", "power": 0.8},      
+                {"timestamp": "2020-02-24T00:00:45Z", "power": 0.5},      
+                {"|": "                  |                       "},     
+                {"timestamp": "2020-02-24T23:59:45Z", "power": 0.11}     
+            ]     
         },      
-        "@context": [
-      
-            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-      
-            "https://raw.githubusercontent.com/smart-data-models/dataModel.Energy/master/context.jsonld"
-      
-        ]
-      
+        "@context": [      
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",     
+            "https://raw.githubusercontent.com/smart-data-models/dataModel.Energy/master/context.jsonld"     
+        ]     
       }
    
 
