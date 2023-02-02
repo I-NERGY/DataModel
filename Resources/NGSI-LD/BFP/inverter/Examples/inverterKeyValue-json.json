@@ -1,205 +1,307 @@
 {
-    "@context": [
-        "https://github.com/I-NERGY/DataModel/blob/main/inergyVocabularies.json",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-    ],
-    "id": "stringbox:bfpuc9stringbox01",
-    "type": "Stringbox",
-    "name": {
+    "id": "urn:ngsi-ld:DCACInverter:id:BFP:00402073", 
+    "deviceType": "inverter",
+    "dateCreated": "2005-09-09T21:18:44Z", 
+    "dateModified": "2014-04-21T17:52:28Z",
+    "measuredVariables": {
         "type": "property",
-        "value": "bfpuc9stringbox01"
-    },
-    "combines": {
-        "name": "attribute",
-        "type": "relationship",
-        "value": "urn:ngsi-ld:Cable:bfpuc9PVCable:",
-        "metadata": {
-            "timestamp": {
-                "type": "DateTime",
-                "value": "2022-05-18T13:45:30Z"
-            },
-            "providedBy": {
-                "type": "relationship",
-                "value": "urn:ngsi-ld:PilotPartner:BFP"
-            }
+        "values": {
+            "COS_PHI": null, 
+            "E_DAY": 1208.7836636249997, 
+            "E_INT": 0, 
+            "E_INT_N": 0, 
+            "E_TOTAL": 5233110.7, 
+            "ERROR1": 3601, 
+            "F_AC": 50.024, 
+            "FT_AC_TOTAL": 15809.91, 
+            "I_AC": 0, 
+            "I_AC1": 0.49, 
+            "I_AC2": 0.486, 
+            "I_AC3": 0.5, 
+            "I_DC": 0, 
+            "OT_AC_TOTAL": 34659.51, 
+            "P_AC": 0, 
+            "P_AC_N": 0, 
+            "P_DC": 0, 
+            "Q_AC": 0, 
+            "QS_CI": 100, 
+            "QS_RX": 1116, 
+            "QS_TX": 1116, 
+            "R_ISO": 11.400000000000002, 
+            "S_AC": 0, 
+            "STATE1": 455, 
+            "STATE2": 303, 
+            "STATE3": 303, 
+            "T_WR1": 20.128, 
+            "T_WR2": 34.194, 
+            "T_WR3": 15.014000000000001, 
+            "T_WR4": 24.555999999999997, 
+            "U_AC": 352.54200000000003, 
+            "U_AC_L1L2": 351.336, 
+            "U_AC_L2L3": 350.73799999999994, 
+            "U_AC_L3L1": 349.264, 
+            "U_DC": 3.6919999999999997, 
+            "number": "number"
         }
     },
-    "locatedAt": {
-        "type": "Relationship",
-        "value":"substation:bfpsubstation001"
-     },
-    "dateCreated": {
-        "name": "date",
-        "type": "DateTime",
-        "value": "2022-05-18T13:45:30Z",
-        "metadata":{}
-    },
-    "modifiedAt":{
+    "activePower": {
         "type": "Property",
-        "value":  "2017-05-04T12:30:00Z"
-    },
-    "entityVersion": {
-        "type": "Property",
-        "value": "2.0"
-    },
-    "deviceCategory":{
-        "type": "Property",
-        "value": "GridRelated",
-        "metadata":{}
-    },
-    "serialNumber": {
-        "type": "Property",
-        "value": "X123456789C"
-    },
-    "supplierName": {
-        "type": "Property",
-        "value": "BFP vendor supplier"
-    },
-    "countryOfManufacture": {
-        "type": "Property",
-        "value": "Italy"
-    },
-    "installedAt": {
-        "type": "Property",
-        "value": "2017-05-04T10:18:16Z"
-    },
-    "dataProvider": {
-        "name": "dataProvider",
-        "type": "string",
-        "value": "bfp",
-        "metadata":{}
-    },
-    "description": {
-        "name": "description",
-        "type": "string",
-        "value": "Stringbox is used to combine PV cables.",
-        "metadata":{}
-    },
-    "location": {
-        "type": "geo:json",
         "value": {
-            "type": "point",
-            "coordinates": [2.17449278, 41.402942517]
+            "L1": 11996.416016,
+            "L2": 9461.501953,
+            "L3": 10242.351562
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
         }
     },
-    "I1": {
-        "name": "Current DC",
-        "type": "number",
-        "value": 2,
-        "unitcode": "A",
-        "metadata":{}
+    "apparentPower": {
+        "type": "Property",
+        "value": {
+            "L1": 13201.412109,
+            "L2": 10755.304688,
+            "L3": 11941.094727
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I2": {
-        "name": "Current DC",
-        "type": "number",
-        "value": 4,
-        "unitcode": "A",
-        "metadata":{}
+    "reactivePower": {
+        "type": "Property",
+        "value": {
+            "L1": -2612.606934,
+            "L2": -2209.906006,
+            "L3": -3007.81958
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I3": {
-        "name": "Current DC",
-        "type": "number",
-        "value": 6,
-        "unitcode": "A",
-        "metadata":{}
+    "phaseCurrent": {
+        "type": "Property",
+        "value": {
+            "L1": 56.126038,
+            "L2": 45.894356,
+            "L3": 50.872452,
+            "N": 0.0
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "rms"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I4": {
-        "name": "Current DC",
-        "type": "number",
-        "value": 10,
-        "unitcode": "A",
-        "metadata":{}
+    "phaseVoltage": {
+        "type": "Property",
+        "value": {
+            "L1": 234.961304,
+            "L2": 234.563477,
+            "L3": 235.354034
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "rms"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I5": {
-        "name": "Current DC",
-        "type": "number",
-        "value": 12,
-        "unitcode": "A",
-        "metadata":{}
+    "powerFactor": {
+        "type": "Property",
+        "value": {
+            "L1": 0.908817,
+            "L2": 0.879906,
+            "L3": 0.859293
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        },
+        "onlyPositive": {
+            "type": "Property",
+            "value": true
+        }
     },
-    "I6": {
-        "name": "Current DC",
-        "type": "number",
-        "value": 14,
-        "unitcode": "A",
-        "metadata":{}
+    "displacementPowerFactor": {
+        "type": "Property",
+        "value": {
+            "L1": 0.978013,
+            "L2": 0.973317,
+            "L3": 0.960382
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        },
+        "onlyPositive": {
+            "type": "Property",
+            "value": true
+        }
     },
-    "I7": {
-        "name": "Current DC",
-        "type": "number",
-        "value": 16,
-        "unitcode": "A",
-        "metadata":{}
+    "frequency": {
+        "type": "Property",
+        "value": 50.020672,
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I8": {
-        "name": "Current DC",
-        "type": "number",
-        "value": 18,
-        "unitcode": "A",
-        "metadata":{}
+    "phaseToPhaseVoltage": {
+        "type": "Property",
+        "value": {
+            "L12": 406.769196,
+            "L23": 407.081238,
+            "L31": 407.734558
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "rms"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I1_N": {
-        "name": "Current DC (Normalized)",
-        "type": "number",
-        "value": 1,
-        "unitcode": "A",
-        "metadata":{}
+    "cascadedSinglePhaseInverter": {
+        "type": "Property",
+        "value": false
     },
-    "I2_N": {
-        "name": "Current DC (Normalized)",
-        "type": "number",
-        "value": 3,
-        "unitcode": "A",
-        "metadata":{}
+    "thdCurrent": {
+        "type": "Property",
+        "value": {
+            "L1": 0.38497337,
+            "L2": 0.45807529,
+            "L3": 0.4938652
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I3_N": {
-        "name": "Current DC (Normalized)",
-        "type": "number",
-        "value": 5,
-        "unitcode": "A",
-        "metadata":{}
+    "thdVoltage": {
+        "type": "Property",
+        "value": {
+            "L1": 0.01471114,
+            "L2": 0.01600046,
+            "L3": 0.01541459
+        },
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I4_N": {
-        "name": "Current DC (Normalized)",
-        "type": "number",
-        "value": 7,
-        "unitcode": "A",
-        "metadata":{}
+    "totalActiveEnergyExport": {
+        "type": "Property",
+        "value": 1059.80176,
+        "observedAt": "2019-01-24T22:00:00.173Z"
     },
-    "I5_N": {
-        "name": "Current DC (Normalized)",
-        "type": "number",
-        "value": 9,
-        "unitcode": "A",
-        "metadata":{}
+    "totalActiveEnergyImport": {
+        "type": "Property",
+        "value": 150781.96448,
+        "observedAt": "2019-01-24T22:00:00.173Z"
     },
-    "I6_N": {
-        "name": "Current DC (Normalized)",
-        "type": "number",
-        "value": 11,
-        "unitcode": "A",
-        "metadata":{}
+    "totalActivePower": {
+        "type": "Property",
+        "value": 31700.269531,
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I7_N": {
-        "name": "Current DC (Normalized)",
-        "type": "number",
-        "value": 13,
-        "unitcode": "A",
-        "metadata":{}
+    "totalApparentPower": {
+        "type": "Property",
+        "value": 36019.089844,
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
     },
-    "I8_N": {
-        "name": "Current DC (Normalized)",
-        "type": "number",
-        "value": 15,
-        "unitcode": "A",
-        "metadata":{}
+    "totalReactiveEnergyExport": {
+        "type": "Property",
+        "value": 93275.02176,
+        "observedAt": "2019-01-24T22:00:00.173Z"
     },
-    "U_DC": {
-        "name": "Voltage DC",
-        "type": "number",
-        "value": 17,
-        "unitcode": "V",
-        "metadata":{}
-    }
+    "totalReactiveEnergyImport": {
+        "type": "Property",
+        "value": 20490.3392,
+        "observedAt": "2019-01-24T22:00:00.173Z"
+    },
+    "totalReactivePower": {
+        "type": "Property",
+        "value": -7830.332031,
+        "observedAt": "2019-01-24T22:00:00.173Z",
+        "measurementType": {
+            "type": "Property",
+            "value": "average"
+        },
+        "measurementInterval": {
+            "type": "Property",
+            "value": 1
+        }
+    },
+    "@context": [
+        "https://smartdatamodels.org/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/NGSI-LD/BFP/inverter/Examples/inverterKeyValue-jsonld.jsonld"
+    ]
 }
-
