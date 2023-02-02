@@ -7,7 +7,7 @@
     "supplyPhaseNb": 3,
     "description": {
         "type": "Property",
-        "value": "common data model for Inverter with three phase AC measurements, DC measurements with measured variables and static metadata"
+        "value": "common data model for Inverter with three phase AC measurements, DC measurements and measured variables with static metadata"
     },
     "dataProvider": "BFP",
     "owner": [
