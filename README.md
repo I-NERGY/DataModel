@@ -16,4 +16,3 @@ The image below is the OWL Visual Notation of the first version of the I-NERGY O
 <img width="959" alt="I-NERGY OWL Visual Notation Ontology" src="https://user-images.githubusercontent.com/87437869/168423444-84ff7008-13d0-427f-9da3-c1db1643142e.PNG">
                                                  OWL Visual Notation of the I-NERGY Ontology
 
-For more information, please check 
