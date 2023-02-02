@@ -382,6 +382,6 @@
     "@context": [
         "https://smartdatamodels.org/context.jsonld",
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/NGSI-LD/BFP/inverter/Examples/inverterKeyValue-jsonld.jsonld"
+        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/NGSI-LD/BFP/inverter/Examples/inverterKeyValue-json.json"
     ]
 }
