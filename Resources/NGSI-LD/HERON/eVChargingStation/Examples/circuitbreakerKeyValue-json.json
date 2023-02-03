@@ -1,0 +1,205 @@
+{
+    "@context": [
+        "https://github.com/I-NERGY/DataModel/blob/main/inergyVocabularies.json",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "stringbox:bfpuc9stringbox01",
+    "type": "Stringbox",
+    "name": {
+        "type": "property",
+        "value": "bfpuc9stringbox01"
+    },
+    "combines": {
+        "name": "attribute",
+        "type": "relationship",
+        "value": "urn:ngsi-ld:Cable:bfpuc9PVCable:",
+        "metadata": {
+            "timestamp": {
+                "type": "DateTime",
+                "value": "2022-05-18T13:45:30Z"
+            },
+            "providedBy": {
+                "type": "relationship",
+                "value": "urn:ngsi-ld:PilotPartner:BFP"
+            }
+        }
+    },
+    "locatedAt": {
+        "type": "Relationship",
+        "value":"substation:bfpsubstation001"
+     },
+    "dateCreated": {
+        "name": "date",
+        "type": "DateTime",
+        "value": "2022-05-18T13:45:30Z",
+        "metadata":{}
+    },
+    "modifiedAt":{
+        "type": "Property",
+        "value":  "2017-05-04T12:30:00Z"
+    },
+    "entityVersion": {
+        "type": "Property",
+        "value": "2.0"
+    },
+    "deviceCategory":{
+        "type": "Property",
+        "value": "GridRelated",
+        "metadata":{}
+    },
+    "serialNumber": {
+        "type": "Property",
+        "value": "X123456789C"
+    },
+    "supplierName": {
+        "type": "Property",
+        "value": "BFP vendor supplier"
+    },
+    "countryOfManufacture": {
+        "type": "Property",
+        "value": "Italy"
+    },
+    "installedAt": {
+        "type": "Property",
+        "value": "2017-05-04T10:18:16Z"
+    },
+    "dataProvider": {
+        "name": "dataProvider",
+        "type": "string",
+        "value": "bfp",
+        "metadata":{}
+    },
+    "description": {
+        "name": "description",
+        "type": "string",
+        "value": "Stringbox is used to combine PV cables.",
+        "metadata":{}
+    },
+    "location": {
+        "type": "geo:json",
+        "value": {
+            "type": "point",
+            "coordinates": [2.17449278, 41.402942517]
+        }
+    },
+    "I1": {
+        "name": "Current DC",
+        "type": "number",
+        "value": 2,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I2": {
+        "name": "Current DC",
+        "type": "number",
+        "value": 4,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I3": {
+        "name": "Current DC",
+        "type": "number",
+        "value": 6,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I4": {
+        "name": "Current DC",
+        "type": "number",
+        "value": 10,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I5": {
+        "name": "Current DC",
+        "type": "number",
+        "value": 12,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I6": {
+        "name": "Current DC",
+        "type": "number",
+        "value": 14,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I7": {
+        "name": "Current DC",
+        "type": "number",
+        "value": 16,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I8": {
+        "name": "Current DC",
+        "type": "number",
+        "value": 18,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I1_N": {
+        "name": "Current DC (Normalized)",
+        "type": "number",
+        "value": 1,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I2_N": {
+        "name": "Current DC (Normalized)",
+        "type": "number",
+        "value": 3,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I3_N": {
+        "name": "Current DC (Normalized)",
+        "type": "number",
+        "value": 5,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I4_N": {
+        "name": "Current DC (Normalized)",
+        "type": "number",
+        "value": 7,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I5_N": {
+        "name": "Current DC (Normalized)",
+        "type": "number",
+        "value": 9,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I6_N": {
+        "name": "Current DC (Normalized)",
+        "type": "number",
+        "value": 11,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I7_N": {
+        "name": "Current DC (Normalized)",
+        "type": "number",
+        "value": 13,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "I8_N": {
+        "name": "Current DC (Normalized)",
+        "type": "number",
+        "value": 15,
+        "unitcode": "A",
+        "metadata":{}
+    },
+    "U_DC": {
+        "name": "Voltage DC",
+        "type": "number",
+        "value": 17,
+        "unitcode": "V",
+        "metadata":{}
+    }
+}
+
