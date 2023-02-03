@@ -40,6 +40,24 @@
             -124.268822
        ]
     },
+    "refDevice1": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:Device:Device:eVCar"
+        ]
+    },
+    "refDevice2": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:Device:Device:Photovoltaic" 
+        ]
+    },
+    "refDevice3": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:Device:Device:Battery" 
+        ]
+    },
     "capacity": 2,
     "socketType": [
         "Wall_Euro"
@@ -68,6 +86,6 @@
         "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",
         "iudx:EVChargingStation",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld",
-        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/NGSI-LD/BFP/inverter/Examples/inverterKeyValue-jsonld.jsonld"
+        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/NGSI-LD/HERON/eVChargingStation/Examples/EvChargingStationKeyValuejsonld.json"
     ]
 }
