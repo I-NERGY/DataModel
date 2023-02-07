@@ -72,6 +72,27 @@
     "chargeType": [
         "free"
     ],
+    "energyConsumed": {
+        "type": "property",
+        "value": 6.60,
+        "unit": "KWh"
+    },
+    "chargingCost": {
+        "type": "property",
+        "value": 0.00,
+        "currency": "EUR"
+    },
+    "transactionFee": {
+        "type": "property",
+        "value": 0.00,
+        "currency": "EUR"
+    },
+    "reimbursable": {
+        "type": "property",
+        "value": 1.32,
+        "currency": "EUR"
+    },
+    "Charging Type": "Private",
     "source": "https://openchargemap.org/",
     "powerConsumption": 10.0,
     "chargingUnitId": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001",
