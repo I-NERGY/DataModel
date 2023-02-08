@@ -1,0 +1,94 @@
+{
+    "id": "urn:ngsi-ld:EvChargingStation:id:HERON:00402073", 
+    "deviceType": "EVChargingStation",
+    "dateCreated": "2005-09-09T21:18:44Z", 
+    "dateModified": "2014-04-21T17:52:28Z",
+    "Connector ID": "1234",
+    "Card ID": 3,
+    "description": {
+        "type": "Property",
+        "value": "A charging sation with card payment and multiple charger connectors"
+    },
+    "chargeTime": {
+        "type": "Property",
+        "startDate": "2005-09-09T21:18:44Z",
+        "endDate": "2005-09-09T21:18:44Z",
+        "duration": 5,
+        "units": "hours"
+    },
+    "dataProvider": "BFP",
+    "owner": [
+        "urn:ngsi-ld:Inverter:items:KSSI:21376961",
+        "urn:ngsi-ld:Inverter:items:YQQI:56248386"
+    ],
+    "seeAlso": [
+        "urn:ngsi-ld:Inverter:items:STCD:23046259",
+        "urn:ngsi-ld:Inverter:items:UJCA:53322929"
+    ],
+    "address": {
+        "streetAddress": "Grow after much house our.",
+        "addressLocality": "Firm yard answer consider second.",
+        "addressRegion": "Also challenge discover event picture onto. Subject machine into lawyer major hold get.",
+        "addressCountry": "House identify inside student along. See right husband weight education get positive assume. Certain environmental worry specific.",
+        "postalCode": "Pm man born hit crime space kitchen treat. Physical method southern provide.",
+        "postOfficeBoxNumber": "Century treat create pattern voice analysis level. Property newspaper rest."
+    },
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            -88.997438,
+            -124.268822
+       ]
+    },
+    "capacity": 2,
+    "socketType": [
+        "Wall_Euro"
+    ],
+    "contactPoint": {
+        "email": "vehiculoelectrico@ava.es"
+    },
+    "operator": "Iberdrola",
+    "allowedVehicleType": [
+        "car"
+    ],
+    "chargeType": [
+        "free"
+    ],
+    "energyConsumed": {
+        "type": "property",
+        "value": 6.60,
+        "unit": "KWh"
+    },
+    "chargingCost": {
+        "type": "property",
+        "value": 0.00,
+        "currency": "EUR"
+    },
+    "transactionFee": {
+        "type": "property",
+        "value": 0.00,
+        "currency": "EUR"
+    },
+    "reimbursable": {
+        "type": "property",
+        "value": 1.32,
+        "currency": "EUR"
+    },
+    "Charging Type": "Private",
+    "source": "https://openchargemap.org/",
+    "powerConsumption": 10.0,
+    "chargingUnitId": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001",
+    "transactionId": "84068784",
+    "transactionType": "RFID",
+    "stationName": "SmartCityTvmGandhiParkOne",
+    "amountCollected": 0.08,
+    "taxAmountCollected": 0.0,
+    "vehicleType": "e-motorcycle",
+    "observationDateTime": "2022-06-28T20:27:29+05:30",
+    "@context": [
+        "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",
+        "iudx:EVChargingStation",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld",
+        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/NGSI-LD/HERON/eVChargingStation/Examples/EvChargingStationKeyValuejsonld.json"
+    ]
+}
