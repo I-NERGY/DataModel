@@ -1,0 +1,15 @@
+tangibleThing a Thing
+:intangibleThing a Thing
+
+:Data a :intangibleThing
+
+:intangibleThing a :Thing
+:ComtradeData a :intangibleThing
+:ComtradeData rdfs:subClassOf :Data
+RDN101 rdf:type :ComtradeData
+
+
+:intangibleThing a :Thing
+:loadData a :intangibleThing
+:loadData rdfs:subClassOf :Data
+RDN101 rdf:type :ComtradeData
