@@ -1,15 +1,81 @@
-tangibleThing a Thing
-:intangibleThing a Thing
 
-:Data a :intangibleThing
+@prefix :     <http://inergyvocabularies.ttl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sargon: <https://sargon-n5geh.netlify.app/ontologies/Sargon.ttl3> .
+@prefix cim: <https://ontology.tno.nl/IEC_CIM/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:intangibleThing a :Thing
-:ComtradeData a :intangibleThing
-:ComtradeData rdfs:subClassOf :Data
-RDN101 rdf:type :ComtradeData
 
 
-:intangibleThing a :Thing
-:loadData a :intangibleThing
-:loadData rdfs:subClassOf :Data
-RDN101 rdf:type :ComtradeData
+:TangibleThing rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing .
+
+:IntangibleThing rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing .
+
+
+:ComtradeData rdf:type owl:Class ;
+              rdfs:subClassOf :Data .
+
+:Data rdf:type owl:Class ;
+      rdfs:subClassOf :IntangibleThing .
+
+
+:NetLoadData rdf:type owl:Class ;
+             rdfs:subClassOf :LoadData .
+
+:LoadData rdfs:subClassOf :Data .
+
+:Data rdf:type owl:Class ;
+      rdfs:subClassOf :IntangibleThing .
+
+
+:ACMeasurement rdf:type owl:Class ;
+               rdfs:subClassOf :Measurement .
+
+:Measurement rdf:type owl:Class ;
+             rdfs:equivalentClass :Data .
+
+:IntangibleThing rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing .
+
+
+:ACCircuitBreaker rdf:type owl:Class ;
+                  rdfs:subClassOf :ACBreaker .
+
+:ACBreaker rdf:type owl:Class ;
+           rdfs:subClassOf cim:Breaker .
+
+cim:Breaker rdf:type owl:Class ;
+            rdfs:subClassOf cim:ProtectedSwitch .
+
+cim:ProtectedSwitch rdf:type owl:Class ;
+           rdfs:subClassOf cim:Switch .
+
+cim:Switch rdf:type owl:Class ;
+           rdfs:subClassOf cim:ConductingEquipment .
+
+cim:ConductingEquipment rdf:type owl:Class ;
+                        rdfs:subClassOf cim:IdentifiedObject .
+
+cim:IdentifiedObject rdf:type owl:Class ;
+                        rdfs:subClassOf SARGON:GridRelated .
+
+SARGON:GridRelated rdf:type owl:Class ;
+                        rdfs:subClassOf SAREF:Device .
+
+SAREF:Device rdf:type owl:Class ;
+             rdfs:subClassOf :TangibleThing .
+
+
+:produces rdf:type owl:ObjectProperty .
+          rdfs:domain :ACCircuitBreaker ;
+          rdfs:domain :ComtradeData .
+
+
+:urn:ngsi-ld:ACMeasurement:RDN:2efa1fef551044caa90354721dd39fc5 rdf:type :ComtradeData
+:urn:ngsi-ld:ACMeasurement:RDN:bff3c4cc4fc140559bf7cd17be18ec3b rdf:type :LoadData
