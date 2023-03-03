@@ -19,7 +19,15 @@
 
 
 :ComtradeData rdf:type owl:Class ;
-              rdfs:subClassOf :Data .
+              rdfs:subClassOf :ACMeasurement .
+
+:ACMeasurement rdf:type owl:Class ;
+               rdfs:subClassOf :Measurement .
+
+:Measurement rdf:type owl:Class ;
+             rdfs:subClassOf :Data .
+
+
 
 :Data rdf:type owl:Class ;
       rdfs:subClassOf :IntangibleThing .
@@ -34,14 +42,6 @@
       rdfs:subClassOf :IntangibleThing .
 
 
-:ACMeasurement rdf:type owl:Class ;
-               rdfs:subClassOf :Measurement .
-
-:Measurement rdf:type owl:Class ;
-             rdfs:equivalentClass :Data .
-
-:IntangibleThing rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing .
 
 
 :ACCircuitBreaker rdf:type owl:Class ;
@@ -72,10 +72,33 @@ SAREF:Device rdf:type owl:Class ;
              rdfs:subClassOf :TangibleThing .
 
 
-:produces rdf:type owl:ObjectProperty .
+:produces rdf:type owl:ObjectProperty ;
           rdfs:domain :ACCircuitBreaker ;
           rdfs:domain :ComtradeData .
 
 
-:urn:ngsi-ld:ACMeasurement:RDN:2efa1fef551044caa90354721dd39fc5 rdf:type :ComtradeData
-:urn:ngsi-ld:ACMeasurement:RDN:bff3c4cc4fc140559bf7cd17be18ec3b rdf:type :LoadData
+
+:urn:ngsi-ld:ACMeasurement:RDN:ComtradeData rdf:type owl:Class .
+:2efa1fef551044caa90354721dd39fc5 rdf:type :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData .
+:3a50f0fc9eb7412fa751d4fd9ada04ca rdf:type :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData .
+
+:RDN:ComtradeData rdf:type owl:Class ;
+            owl:oneOf
+            ( :2efa1fef551044caa90354721dd39fc5
+              :3a50f0fc9eb7412fa751d4fd9ada04ca ) .
+
+:urn:ngsi-ld:ACMeasurement:RDN:2efa1fef551044caa90354721dd39fc5 rdf:type RDN:ComtradeData
+
+
+
+:urn:ngsi-ld:ACMeasurement:RDN:NetLoadData rdf:type owl:Class .
+:d19d14f164f74fbe94a1ac80df101353 rdf:type :urn:ngsi-ld:ACMeasurement:RDN:NetLoadData .
+:847baec8cd8c4cedb7adba4e1e5b3590 rdf:type :urn:ngsi-ld:ACMeasurement:RDN:NetLoadData .
+
+:RDN:NetLoadData rdf:type owl:Class ;
+            owl:oneOf
+            ( :d19d14f164f74fbe94a1ac80df101353
+              :847baec8cd8c4cedb7adba4e1e5b3590 ) .
+
+
+:urn:ngsi-ld:ACMeasurement:RDN:d19d14f164f74fbe94a1ac80df101353 rdf:type RDN:NetLoadData
