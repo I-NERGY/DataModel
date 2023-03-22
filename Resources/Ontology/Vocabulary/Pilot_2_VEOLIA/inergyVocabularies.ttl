@@ -9,6 +9,17 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@base <http://inergyvocabularies.ttl#> .
+
+
+###############   TBox     ##################
+:TangibleThing rdf:type skos:Concept ;
+               skos:prefLabel "Tangible Thing"@en ;
+               skos:altLabel "greifbar Ding"@de .
+
+:IntangibleThing rdf:type skos:Concept.
+                 skos:prefLabel "Intangible Thing"@en ;
+                 skos:altLabel "Immaterielles Ding"@de .
 
 
 :TangibleThing rdf:type owl:Class ;
@@ -60,6 +71,9 @@ cim:Switch rdf:type owl:Class ;
            rdfs:subClassOf cim:ConductingEquipment .
 
 cim:ConductingEquipment rdf:type owl:Class ;
+                        rdfs:subClassOf cim:PowerSystemResource .           
+
+cim:PowerSystemResource rdf:type owl:Class ;
                         rdfs:subClassOf cim:IdentifiedObject .
 
 cim:IdentifiedObject rdf:type owl:Class ;
@@ -72,11 +86,38 @@ SAREF:Device rdf:type owl:Class ;
              rdfs:subClassOf :TangibleThing .
 
 
+
+cim:ProtectionEquipment rdf:type owl:Class ;
+                        rdfs:subClassOf cim:Equipment ;
+                        :contains :ACBreaker, cim:CurrentTransformer,
+
+
+
+###############   RBox     ##################
+
 :produces rdf:type owl:ObjectProperty ;
-          rdfs:domain :ACCircuitBreaker ;
-          rdfs:range :ComtradeData .
+          rdfs:domain cim:ProtectionEquipment ;
+          rdfs:range :ComtradeData ;
+          owl:equivalentProperty :generates ;
+          owl:inverseOf :isProducedBy .
+
+:provides rdf:type owl:ObjectProperty ;
+          rdfs:domain :ComtradeData ;
+          rdfs:range   cim:Dataset ;
+          owl:inverseOf :isProvidedBy .
+
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:domain :ComtradeData ;
+          rdfs:range  :ACMeasurement ;
+          owl:inverseOf :isContainedBy .
+
+:isPartOf rdf:type owl:ObjectProperty ;
+          rdfs:domain SAREF:Measurement ;
+          rdfs:range  cim:Dataset .
 
 
+
+###############   ABox     ##################
 
 :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData rdf:type owl:Class .
 :2efa1fef551044caa90354721dd39fc5 rdf:type :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData .
@@ -85,7 +126,8 @@ SAREF:Device rdf:type owl:Class ;
 :RDN:ComtradeData rdf:type owl:Class ;
             owl:oneOf
             ( :2efa1fef551044caa90354721dd39fc5
-              :3a50f0fc9eb7412fa751d4fd9ada04ca ) .
+              :3a50f0fc9eb7412fa751d4fd9ada04ca 
+              :................................) .
 
 :urn:ngsi-ld:ACMeasurement:RDN:2efa1fef551044caa90354721dd39fc5 rdf:type RDN:ComtradeData
 

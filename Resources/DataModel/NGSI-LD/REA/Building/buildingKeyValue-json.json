@@ -1,0 +1,350 @@
+{
+    "id": "urn:ngsi-ld:REA:Building:Room:Zone:Tenant:00402073", 
+    "entityType": "Building",
+    "cadastalNumber": "1000702031001",
+    "dateCreated": "2005-09-09T21:18:44Z", 
+    "dateModified": "2014-04-21T17:52:28Z",
+    "description": {
+        "type": "Property",
+        "value": "data model for a building with a building management susystem and building information divided into floors, rooms and zones "
+    },
+    "dataProvider": "REA",
+    "address": {
+        "streetAddress": "Grow after much house our.",
+        "addressLocality": "Firm yard answer consider second.",
+        "addressRegion": "Also challenge discover event picture onto. Subject machine into lawyer major hold get.",
+        "addressCountry": "House identify inside student along. See right husband weight education get positive assume. Certain environmental worry specific.",
+        "postalCode": "Pm man born hit crime space kitchen treat. Physical method southern provide.",
+        "postOfficeBoxNumber": "Century treat create pattern voice analysis level. Property newspaper rest."
+    },
+    "buildingCharacteristicData": {
+        "buildingApartmentType": {
+            "type": "Property",
+            "value": "Čehu projekts",
+            "unit": "text",
+            "language": "Latvia",
+            "AverageIndoorHeight": {
+                "type": "Property",
+                "value": 2.49,
+                "unit": "m"
+            }
+        },
+        "buildingLength": {
+            "type": "Property",
+            "value": "166.65",
+            "unit": "meter"
+        },
+        "buildingWidth": {
+            "type": "Property",
+            "value": "9.78",
+            "unit": "meter"
+        },
+        "buildingHeight": {
+            "type": "Property",
+            "value": "25.7",
+            "unit": "meter"
+        },
+        "averageIndoorHeight": {
+            "type": "Property",
+            "value": "2.49",
+            "unit": "meter"
+        },
+        "heatedArea": {
+            "type": "Property",
+            "value": "2000",
+            "unit": "square meter"
+        },
+        "buildingVolume": {
+            "type": "Property",
+            "value": "4980",
+            "unit": "cubic meter"
+        },
+        "numberOfFloor": {
+            "type": "Property",
+            "value": "9",
+            "unit": "number"
+        },
+        "heatingType": {
+            "type": "Property",
+            "value": "District Heating",
+            "unit": "text"
+        },
+        "buildingOperatingYear": {
+            "type": "Property",
+            "value": "1962",
+            "unit": "text"
+        },
+        "numberOfApartment": {
+            "type": "Property",
+            "value": "252",
+            "unit": "number"
+        },
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -88.997438,
+                -124.268822
+           ]
+        }
+    },
+    "buildingEnvelopData": {
+        "enclosingStructure": {
+            "type": "Property",
+            "building": "1",
+            "zone": {"zone1":"Apartment", "zone2":"Staircase"},
+            "value": "Ārdurvis",
+            "unit": "text"
+        },
+        "enclosingMaterial": {
+            "type": "Property",
+            "building": "1",
+            "zone": {"zone1":"Apartment", "zone2":"Staircase"},
+            "value": "Koks",
+            "unit": "text"
+        },
+        "structureHeatLossCoefficient": {
+            "type": "Property",
+            "building": "1",
+            "zone": {"zone1":"Apartment", "zone2":"Staircase"},
+            "value": "14.91",
+            "unit": "W/K"
+        },
+        "energyConsumption": {
+            "type": "Property",
+            "building": "1",
+            "zone": {"zone1":"Apartment", "zone2":"Staircase"},
+            "value": "1295.92",
+            "unit": "kWh"
+        },
+        "enclosingArea": {
+            "type": "Property",
+            "building": "1",
+            "zone": {"zone1":"Apartment", "zone2":"Staircase"},
+            "value": "4.97",
+            "unit": "square meter"
+        }
+    },
+    "buildingEnergyEfficiencyMeasurementData": {
+        "energyEfficiencyMeasure": {
+            "type": "Property",
+            "value": "Ēkas ārsienu siltināšana ar 150mm biezu siltumizolācijas slāni. Starpsienas, kas norobežo  dzīvokļus un pagraba kāpņu telpas un atkritumu telpas siltināšana ar 50mm biezu slāni. Lodžiju izolācijas aizstiklošana un margas siltināšana. Logu aiļu siltināšana ar vismaz 30 mm biezu siltumizolācijas slāni.",
+            "unit": "text",
+            "language": "Latvia"
+        },
+        "zoneTemperature": {
+            "type": "Property",
+            "value": "18",
+            "unit": "degree centigrade"
+        },
+        "energySavings": {
+            "type": "Property",
+            "value": "506953",
+            "unit": "kWh",
+            "measurementInterval": {
+                "type": "Property",
+                "value": 12,
+                "unit": "months"
+            }
+        },
+        "energySavingsPerSquareMeter": {
+            "type": "Property",
+            "value": "36.43",
+            "unit": "kWh/m^2",
+            "measurementInterval": {
+                "type": "Property",
+                "value": 12,
+                "unit": "months"
+            }
+        },
+        "existingEstimatedEnergyPerformanceOfBuilding": {
+            "type": "Property",
+            "value": "22.3",
+            "unit": "%"
+        },
+        "reductionOfCO2Emissions": {
+            "type": "Property",
+            "value": "53230",
+            "unit": "kgCO2"
+        },
+        "investmentCost": {
+            "type": "Property",
+            "value": "704700",
+            "unit": "EUR"
+        },
+        "investmentCostPerSquareMeter": {
+            "type": "Property",
+            "value": "50.64",
+            "unit": "EUR/m^2"
+        },
+        "investmentCostPerMeasure": {
+            "type": "Property",
+            "value": "48",
+            "unit": "%"
+        }
+    
+    },
+    "energyuseCalculationDataFromEnergyAudit": {
+        "totalArea": {
+            "type": "Property",
+            "value": "804.2",
+            "unit": "m^2",
+            "measurementType": {
+                "type": "Property",
+                "value": "calculated"
+            }
+        },
+        "buildingVolume": {
+            "type": "Property",
+            "value": "2364.35",
+            "unit": "m^3",
+            "measurementType": {
+                "type": "Property",
+                "value": "calculated"
+            }
+        },
+        "premisesTemperature": {
+            "type": "Property",
+            "value": "17.84",
+            "unit": "oC",
+            "measurementType": {
+                "type": "Property",
+                "value": "measured"
+            }
+        },
+        "lengthOfTheHeatingPeriod": {
+            "type": "Property",
+            "value": "203",
+            "unit": "days",
+            "measurementType": {
+                "type": "Property",
+                "value": "measured"
+            }
+        },
+        "airExchange": {
+            "type": "Property",
+            "value": "0.53",
+            "unit": "1/h",
+            "measurementType": {
+                "type": "Property",
+                "value": "measured"
+            }
+        },
+        "heatingSystemType ": {
+            "type": "Property",
+            "value": "Single pipe",
+            "unit": "text",
+            "measurementType": {
+                "type": "Property",
+                "value": "provided"
+            }
+        },
+        "hotWaterSystem": {
+            "type": "Property",
+            "value": "District Heating",
+            "unit": "text",
+            "measurementType": {
+                "type": "Property",
+                "value": "provided"
+            }
+        },
+        "heatingSystemEnergyConsumption": {
+            "type": "Property",
+            "value": "131718.4",
+            "unit": "kWh",
+            "measurementInterval": {
+                "type": "Property",
+                "value": "12",
+                "unit": "months"
+            }
+        },
+        "hotWaterPreparationEnergyConsumption": {
+            "type": "Property",
+            "value": "28881.6",
+            "unit": "kWh",
+            "measurementInterval": {
+                "type": "Property",
+                "value": "12",
+                "unit": "months"
+            }
+        },
+        "totalEnergyConsumption": {
+            "type": "Property",
+            "value": "160600",
+            "unit": "kWh",
+            "measurementInterval": {
+                "type": "Property",
+                "value": "12",
+                "unit": "months"
+            },
+            "measurementType": {
+                "type": "Property",
+                "value": "calculated"
+            }
+        },
+        "benefitUtilizationFactor": {
+            "type": "Property",
+            "value": "0.921",
+            "unit": "coeficient",
+            "measurementType": {
+                "type": "Property",
+                "value": "provided"
+            }
+        },
+        "commonHeatBenefit": {
+            "type": "Property",
+            "value": "19205.53",
+            "unit": "kWh",
+            "measurementInterval": {
+                "type": "Property",
+                "value": "12",
+                "unit": "months"
+            }
+        },
+        "commonHeatBenefitPerSquareMeter": {
+            "type": "Property",
+            "value": "23.88",
+            "unit": "kWh/m^2",
+            "measurementInterval": {
+                "type": "Property",
+                "value": "12",
+                "unit": "months"
+            }
+        },
+        "structureHeatLossCoefficient": {
+            "type": "Property",
+            "value": "1393.76",
+            "unit": "W/K",
+            "measurementInterval": {
+                "type": "Property",
+                "value": "12",
+                "unit": "months"
+            }
+        },
+       
+        "totalRenovationCost": {
+            "type": "Property",
+            "value": "1,466,500.00",
+            "unit": "EUR",
+            "measurementType": {
+                "type": "Property",
+                "value": "calculated"
+            }
+        },
+        "totalRenovationCostPerSquareMeter": {
+            "type": "Property",
+            "value": "70,755.00",
+            "unit": "EUR/m^2",
+            "measurementType": {
+                "type": "Property",
+                "value": "calculated"
+            }
+        }
+
+
+    },
+    "@context": [
+        "https://smartdatamodels.org/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/NGSI-LD/REA/building/Examples/buildingKeyValue-json.json"
+    ]
+}

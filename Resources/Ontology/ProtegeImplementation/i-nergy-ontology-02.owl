@@ -2104,13 +2104,6 @@ The range of this property is not specified, so can be replaced by any specific 
                                                                                          <http://purl.org/dc/elements/1.1/date> "2022-05-07T17:55:15Z"^^xsd:dateTime .
 
 
-###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Solar
-<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Solar> rdf:type owl:Class ;
-                                                                                    rdfs:subClassOf <https://w3id.org/saref#Commodity> ;
-                                                                                    rdfs:comment "A free commodity in natural from the sun that is is a source of energy."@en ;
-                                                                                    rdfs:label "Solar"@en .
-
-
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Stringbox
 <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Stringbox> rdf:type owl:Class ;
                                                                                         rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Combiner> ;
@@ -2124,6 +2117,13 @@ The range of this property is not specified, so can be replaced by any specific 
                                                                                          rdfs:subClassOf <http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#EquipmentContainer> ;
                                                                                          <http://purl.org/dc/elements/1.1/creator> "cem"^^xsd:string ;
                                                                                          <http://purl.org/dc/elements/1.1/date> "2022-05-21T10:43:02Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Sun
+<http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Sun> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <https://w3id.org/saref#Commodity> ;
+                                                                                  rdfs:comment "A free commodity in natural from the sun that is is a source of energy."@en ;
+                                                                                  rdfs:label "Solar"@en .
 
 
 ###  http://www.semanticweb.org/rwth/ontologies/2022/4/i-nergy-ontology-01/1.0.0#Terminal

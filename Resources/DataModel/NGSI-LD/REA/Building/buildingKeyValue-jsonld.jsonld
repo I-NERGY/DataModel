@@ -1,0 +1,399 @@
+{
+    "id": "urn:ngsi-ld:DCACInverter:id:BFP:00402073", 
+    "deviceType": "inverter",
+    "dateCreated": "2005-09-09T21:18:44Z", 
+    "dateModified": "2014-04-21T17:52:28Z",
+    "phaseType": "threePhase",
+    "supplyPhaseNb": 3,
+    "description": {
+        "type": "Property",
+        "value": "common data model for Inverter with three phase AC measurements, DC measurements and measured variables with static metadata"
+    },
+    "dataProvider": "BFP",
+    "owner": [
+        "urn:ngsi-ld:Inverter:items:KSSI:21376961",
+        "urn:ngsi-ld:Inverter:items:YQQI:56248386"
+    ],
+    "seeAlso": [
+        "urn:ngsi-ld:Inverter:items:STCD:23046259",
+        "urn:ngsi-ld:Inverter:items:UJCA:53322929"
+    ],
+    "address": {
+        "streetAddress": "Grow after much house our.",
+        "addressLocality": "Firm yard answer consider second.",
+        "addressRegion": "Also challenge discover event picture onto. Subject machine into lawyer major hold get.",
+        "addressCountry": "House identify inside student along. See right husband weight education get positive assume. Certain environmental worry specific.",
+        "postalCode": "Pm man born hit crime space kitchen treat. Physical method southern provide.",
+        "postOfficeBoxNumber": "Century treat create pattern voice analysis level. Property newspaper rest."
+    },
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            -88.997438,
+            -124.268822
+       ]
+    },
+    "refDevice1": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:Device:Device:Photovoltaic"
+        ]
+    },
+    "refDevice2": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:Device:Device:Battery" 
+        ]
+    },
+    "InverterMeasuredVariables": {
+        "type": "property",
+        "values": {
+            "COS_PHI": null, 
+            "E_DAY": 1208.7836636249997, 
+            "E_INT": 0, 
+            "E_INT_N": 0, 
+            "E_TOTAL": 5233110.7, 
+            "ERROR1": 3601, 
+            "F_AC": 50.024, 
+            "FT_AC_TOTAL": 15809.91, 
+            "I_AC": 0, 
+            "I_AC1": 0.49, 
+            "I_AC2": 0.486, 
+            "I_AC3": 0.5, 
+            "I_DC": 0, 
+            "OT_AC_TOTAL": 34659.51, 
+            "P_AC": 0, 
+            "P_AC_N": 0, 
+            "P_DC": 0, 
+            "Q_AC": 0, 
+            "QS_CI": 100, 
+            "QS_RX": 1116, 
+            "QS_TX": 1116, 
+            "R_ISO": 11.400000000000002, 
+            "S_AC": 0, 
+            "STATE1": 455, 
+            "STATE2": 303, 
+            "STATE3": 303, 
+            "T_WR1": 20.128, 
+            "T_WR2": 34.194, 
+            "T_WR3": 15.014000000000001, 
+            "T_WR4": 24.555999999999997, 
+            "U_AC": 352.54200000000003, 
+            "U_AC_L1L2": 351.336, 
+            "U_AC_L2L3": 350.73799999999994, 
+            "U_AC_L3L1": 349.264, 
+            "U_DC": 3.6919999999999997, 
+            "number": "number"
+        }
+    },
+    "InverterACMeasurement": {
+        "activePower": {
+            "type": "Property",
+            "value": {
+                "L1": 11996.416016,
+                "L2": 9461.501953,
+                "L3": 10242.351562
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "apparentPower": {
+            "type": "Property",
+            "value": {
+                "L1": 13201.412109,
+                "L2": 10755.304688,
+                "L3": 11941.094727
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "reactivePower": {
+            "type": "Property",
+            "value": {
+                "L1": -2612.606934,
+                "L2": -2209.906006,
+                "L3": -3007.81958
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "phaseCurrent": {
+            "type": "Property",
+            "value": {
+                "L1": 56.126038,
+                "L2": 45.894356,
+                "L3": 50.872452,
+                "N": 0.0
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "rms"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "phaseVoltage": {
+            "type": "Property",
+            "value": {
+                "L1": 234.961304,
+                "L2": 234.563477,
+                "L3": 235.354034
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "rms"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "powerFactor": {
+            "type": "Property",
+            "value": {
+                "L1": 0.908817,
+                "L2": 0.879906,
+                "L3": 0.859293
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            },
+            "onlyPositive": {
+                "type": "Property",
+                "value": true
+            }
+        },
+        "displacementPowerFactor": {
+            "type": "Property",
+            "value": {
+                "L1": 0.978013,
+                "L2": 0.973317,
+                "L3": 0.960382
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            },
+            "onlyPositive": {
+                "type": "Property",
+                "value": true
+            }
+        },
+        "frequency": {
+            "type": "Property",
+            "value": 50.020672,
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "phaseToPhaseVoltage": {
+            "type": "Property",
+            "value": {
+                "L12": 406.769196,
+                "L23": 407.081238,
+                "L31": 407.734558
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "rms"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "cascadedSinglePhaseInverter": {
+            "type": "Property",
+            "value": false
+        },
+        "thdCurrent": {
+            "type": "Property",
+            "value": {
+                "L1": 0.38497337,
+                "L2": 0.45807529,
+                "L3": 0.4938652
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "thdVoltage": {
+            "type": "Property",
+            "value": {
+                "L1": 0.01471114,
+                "L2": 0.01600046,
+                "L3": 0.01541459
+            },
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "totalActiveEnergyExport": {
+            "type": "Property",
+            "value": 1059.80176,
+            "observedAt": "2019-01-24T22:00:00.173Z"
+        },
+        "totalActiveEnergyImport": {
+            "type": "Property",
+            "value": 150781.96448,
+            "observedAt": "2019-01-24T22:00:00.173Z"
+        },
+        "totalActivePower": {
+            "type": "Property",
+            "value": 31700.269531,
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "totalApparentPower": {
+            "type": "Property",
+            "value": 36019.089844,
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        },
+        "totalReactiveEnergyExport": {
+            "type": "Property",
+            "value": 93275.02176,
+            "observedAt": "2019-01-24T22:00:00.173Z"
+        },
+        "totalReactiveEnergyImport": {
+            "type": "Property",
+            "value": 20490.3392,
+            "observedAt": "2019-01-24T22:00:00.173Z"
+        },
+        "totalReactivePower": {
+            "type": "Property",
+            "value": -7830.332031,
+            "observedAt": "2019-01-24T22:00:00.173Z",
+            "measurementType": {
+                "type": "Property",
+                "value": "average"
+            },
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1
+            }
+        }
+    },
+    "InverterDCMeasurement":{
+        "mPPTPVVoltageDC": {
+            "min": 188,
+            "max": 440
+        },
+        "nbInputParallelDC": {
+            "A":2,
+            "B":2
+        },
+        "nbMPPTrackersDC": 3,
+        "nominalAmpereDC ": 17,
+        "nominalFrequencyDC": 0,
+        "nominalPowerDC": 4200,
+        "operatingAmpereDC": {
+            "min": 17,
+            "max": 17
+        },
+        "operatingFrequencyDC": {
+            "min": 50,
+            "max": 50
+        },
+        "operatingVoltageDC": {
+            "min": 125,
+            "max": 550
+        },
+        "overVoltageCategory": "III",
+        "startingVoltageDC": 150
+    },
+    "InverterMetadata": {
+        "noiseLevel": 29,
+        "operatingAirHumidity": {
+            "min": 0,
+            "max": 0.95
+        },
+        "operatingTemperature": {
+            "min": -25,
+            "max": 60
+        },
+        "possibilityOfUse": "stationary",
+        "protectionClassSLK": "1",
+        "protectionIK": 10,
+        "protectionIP": "55",
+        "self-consumption": 0.5,
+        "serialNumber": "SEKOPI10327458712",
+        "topology": "without transformer",
+        "typeOfUse": "indoor",
+        "weight": 34  
+    },
+    "@context": [
+        "https://smartdatamodels.org/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/NGSI-LD/BFP/inverter/Examples/inverterKeyValue-jsonld.jsonld"
+    ]
+}
