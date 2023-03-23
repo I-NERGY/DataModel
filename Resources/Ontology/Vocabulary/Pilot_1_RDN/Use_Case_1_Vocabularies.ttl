@@ -19,7 +19,7 @@
                skos:prefLabel "Tangible Thing"@en ;
                skos:altLabel "greifbar Ding"@de .
 
-:IntangibleThing rdf:type skos:Concept.
+:IntangibleThing rdf:type skos:Concept ;
                  skos:prefLabel "Intangible Thing"@en ;
                  skos:altLabel "Immaterielles Ding"@de .
 
@@ -145,4 +145,4 @@ cim:ProtectionEquipment rdf:type owl:Class ;
               :847baec8cd8c4cedb7adba4e1e5b3590 ) .
 
 
-:urn:ngsi-ld:ACMeasurement:RDN:d19d14f164f74fbe94a1ac80df101353 rdf:type RDN:NetLoadData
+:urn:ngsi-ld:ACMeasurement:RDN:d19d14f164f74fbe94a1ac80df101353 rdf:type RDN:NetLoadData .
