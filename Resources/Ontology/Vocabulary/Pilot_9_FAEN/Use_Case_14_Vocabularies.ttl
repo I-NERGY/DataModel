@@ -8,6 +8,8 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+
 
 @base <http://inergyvocabularies.ttl#> .
 
@@ -17,7 +19,7 @@
                skos:prefLabel "Tangible Thing"@en ;
                skos:altLabel "greifbar Ding"@de .
 
-:IntangibleThing rdf:type skos:Concept.
+:IntangibleThing rdf:type skos:Concept ;
                  skos:prefLabel "Intangible Thing"@en ;
                  skos:altLabel "Immaterielles Ding"@de .
 
@@ -29,8 +31,19 @@
                  rdfs:subClassOf owl:Thing .
 
 
-:ComtradeData rdf:type owl:Class ;
-              rdfs:subClassOf :ACMeasurement .
+:LiderCalener rdf:type owl:Class ;
+              rdfs:subClassOf :Simulator ; 
+              owl:description "It is a software simulation tool for energy certification of buildings and for comparing energy demands." .
+
+:CE3X rdf:type owl:Class ;
+              rdfs:subClassOf :Simulator ; 
+              owl:description "CE3X is the CERMA official software for energy certification of existing buildings." .
+
+:CE3 rdf:type owl:Class ;
+              rdfs:subClassOf :Simulator ; 
+              owl:description "CE3 are the official software for energy certification of existing buildings." .
+
+
 
 :ACMeasurement rdf:type owl:Class ;
                rdfs:subClassOf :Measurement .
@@ -143,4 +156,4 @@ cim:ProtectionEquipment rdf:type owl:Class ;
               :847baec8cd8c4cedb7adba4e1e5b3590 ) .
 
 
-:urn:ngsi-ld:ACMeasurement:RDN:d19d14f164f74fbe94a1ac80df101353 rdf:type RDN:NetLoadData
+:urn:ngsi-ld:ACMeasurement:RDN:d19d14f164f74fbe94a1ac80df101353 rdf:type RDN:NetLoadData .
