@@ -180,10 +180,21 @@
             "type": "Property",
             "value": "48",
             "unit": "%"
-        }
-    
+        },
+        "hourlyHeatConsumptionPerBuilding": {
+            "type": "Property",
+            "value": "0.410000000000082",
+            "unit": "MWh",
+            "dateObserved": "10/2/2016",
+            "measurementInterval": {
+                "type": "Property",
+                "value": 1,
+                "unit": "day"
+            },
+            "EQ": "1701.47"
+        }    
     },
-    "energyuseCalculationDataFromEnergyAudit": {
+    "energyUseCalculationDataFromEnergyAudit": {
         "totalArea": {
             "type": "Property",
             "value": "804.2",
@@ -339,12 +350,10 @@
                 "value": "calculated"
             }
         }
-
-
     },
     "@context": [
         "https://smartdatamodels.org/context.jsonld",
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/NGSI-LD/REA/building/Examples/buildingKeyValue-json.json"
+        "https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/DataModel/NGSI-LD/REA/Building/buildingKeyValue-json.json"
     ]
 }
