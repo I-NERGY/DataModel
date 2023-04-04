@@ -10,36 +10,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix brick: <https://brickschema.org/schema/Brick#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix fibo: <https://github.com/edmcouncil/fibo/blob/master/ONTOLOGY_GUIDE.md> .
 @base <http://inergyvocabularies.ttl#> .
 
 
 ###############   TBox     ##################
-:TangibleThing rdf:type skos:Concept ;
+:TangibleThing rdf:type skos:Concept, owl:Class ;
+               rdfs:subClassOf owl:Thing ;
                skos:prefLabel "Tangible Thing"@en ;
-               skos:altLabel "greifbar Ding"@de .
+               skos:altLabel "greifbar Ding"@de ;
+               skos:definition "A physical asset defined in a use case or user requirement description. skos:example is saref:Device"@en .
 
-:IntangibleThing rdf:type skos:Concept ;
+
+:IntangibleThing rdf:type skos:Concept, owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
                  skos:prefLabel "Intangible Thing"@en ;
-                 skos:altLabel "Immaterielles Ding"@de .
-
-
-:TangibleThing rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing .
-
-:IntangibleThing rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing .
-
-
-:ComtradeData rdf:type owl:Class ;
-              rdfs:subClassOf :ACMeasurement .
+                 skos:altLabel "Immaterielles Ding"@de ;
+                 skos:definition "A virtual asset defined in a use case or user requirement description. skos:example is :Data "@en .
 
 :ACMeasurement rdf:type owl:Class ;
                rdfs:subClassOf :Measurement .
 
 :Measurement rdf:type owl:Class ;
              rdfs:subClassOf :Data .
-
-
 
 :Data rdf:type owl:Class ;
       rdfs:subClassOf :IntangibleThing .
@@ -50,14 +43,12 @@
 
 :LoadData rdfs:subClassOf :Data .
 
-:Data rdf:type owl:Class ;
-      rdfs:subClassOf :IntangibleThing .
 
-
-
-
-:ACCircuitBreaker rdf:type owl:Class ;
-                  rdfs:subClassOf :ACBreaker .
+:MDMeter rdf:type owl:Class ;
+         rdfs:subClassOf saref:EnergyMeter ;
+         skos:prefLabel "Intangible Thing"@en ;
+         skos:altLabel "Maximum Demand Meter"@en ;
+         skos:definition "A A bulk meter device for measuring energy consumption of a local energy community or estate"@en .
 
 :ACBreaker rdf:type owl:Class ;
            rdfs:subClassOf cim:Breaker .
