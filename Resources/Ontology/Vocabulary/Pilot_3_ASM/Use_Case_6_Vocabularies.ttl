@@ -1,5 +1,5 @@
 
-@prefix :     <http://inergyvocabularies#> .
+@prefix :     <http://inergyvocabularies.ttl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sargon: <https://sargon-n5geh.netlify.app/ontologies/Sargon.ttl3> .
 @prefix cim: <https://ontology.tno.nl/IEC_CIM/#> .
@@ -8,7 +8,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://inergyvocabularies#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix fibo: <https://github.com/edmcouncil/fibo/blob/master/ONTOLOGY_GUIDE.md> .
+@base <http://inergyvocabularies.ttl#> .
+
 
 
 ###############   TBox     ##################
