@@ -49,14 +49,17 @@
 :DPSim rdf:type owl:Class ;
       rdfs:subClassOf :Simulator ;  
       rdfs:comment "A Dynamic Phasor Simulator" ; 
-      owl:description "DPsim is a real-time capable power system simulator that supports dynamic phasor and electromagnetic transient simulation as well as continuous powerflow"@en  .    
+      owl:description "DPsim is a real-time capable power system simulator that supports dynamic phasor and electromagnetic transient simulation as well as continuous powerflow"@en ;
+      brick:hasPart :SolverLibrary, :VillasWeb, :VillasControler ;
+      rdfs:seeAlso  "https://www.fein-aachen.org/en/projects/dpsim/"@en .   
 
 :Villas rdf:type owl:Class ;
       rdfs:subClassOf :Framework ;  
       rdfs:comment "A web framework" ; 
       owl:description "VILLAS is a web based framework and a toolset for local and geographically distributed real-time co-simulation"@en  ;
       :extends :DPsim ;
-      brick:hasPart :VillasNode, :VillasWeb, :VillasControler .
+      brick:hasPart :VillasNode, :VillasWeb, :VillasControler ;
+      rdfs:seeAlso  "https://www.fein-aachen.org/en/projects/villas-framework/"@en .
 
 
 :ACCircuitBreaker rdf:type owl:Class ;
