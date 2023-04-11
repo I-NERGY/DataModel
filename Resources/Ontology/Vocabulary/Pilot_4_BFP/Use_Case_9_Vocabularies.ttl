@@ -8,7 +8,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix fibo: <https://github.com/edmcouncil/fibo/blob/master/ONTOLOGY_GUIDE.md> .
 @base <http://inergyvocabularies.ttl#> .
 
 
@@ -17,7 +19,7 @@
                skos:prefLabel "Tangible Thing"@en ;
                skos:altLabel "greifbar Ding"@de .
 
-:IntangibleThing rdf:type skos:Concept.
+:IntangibleThing rdf:type skos:Concept ;
                  skos:prefLabel "Intangible Thing"@en ;
                  skos:altLabel "Immaterielles Ding"@de .
 
@@ -112,7 +114,7 @@ cim:ProtectionEquipment rdf:type owl:Class ;
           owl:inverseOf :isContainedBy .
 
 :isPartOf rdf:type owl:ObjectProperty ;
-          rdfs:domain SAREF:Measurement ;
+          rdfs:domain saref:Measurement ;
           rdfs:range  cim:Dataset .
 
 
@@ -143,4 +145,4 @@ cim:ProtectionEquipment rdf:type owl:Class ;
               :847baec8cd8c4cedb7adba4e1e5b3590 ) .
 
 
-:urn:ngsi-ld:ACMeasurement:RDN:d19d14f164f74fbe94a1ac80df101353 rdf:type RDN:NetLoadData
+:urn:ngsi-ld:ACMeasurement:RDN:d19d14f164f74fbe94a1ac80df101353 rdf:type RDN:NetLoadData .

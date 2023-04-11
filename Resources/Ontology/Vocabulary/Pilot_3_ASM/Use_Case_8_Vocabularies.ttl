@@ -8,26 +8,26 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix fibo: <https://github.com/edmcouncil/fibo/blob/master/ONTOLOGY_GUIDE.md> .
 @base <http://inergyvocabularies.ttl#> .
 
 
+
 ###############   TBox     ##################
-:TangibleThing rdf:type skos:Concept ;
+:TangibleThing rdf:type skos:Concept, owl:Class ;
+               rdfs:subClassOf owl:Thing ;
                skos:prefLabel "Tangible Thing"@en ;
-               skos:altLabel "greifbar Ding"@de .
+               skos:altLabel "greifbar Ding"@de ;
+               skos:definition "A physical asset defined in a use case or user requirement description. skos:example is saref:Device"@en .
 
-:IntangibleThing rdf:type skos:Concept.
+
+:IntangibleThing rdf:type skos:Concept, owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
                  skos:prefLabel "Intangible Thing"@en ;
-                 skos:altLabel "Immaterielles Ding"@de .
-
-
-:TangibleThing rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing .
-
-:IntangibleThing rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing .
-
+                 skos:altLabel "Immaterielles Ding"@de ;
+                 skos:definition "A virtual asset defined in a use case or user requirement description. skos:example is :Data "@en .
 
 :ComtradeData rdf:type owl:Class ;
               rdfs:subClassOf :ACMeasurement .
@@ -37,8 +37,6 @@
 
 :Measurement rdf:type owl:Class ;
              rdfs:subClassOf :Data .
-
-
 
 :Data rdf:type owl:Class ;
       rdfs:subClassOf :IntangibleThing .
@@ -52,7 +50,20 @@
 :Data rdf:type owl:Class ;
       rdfs:subClassOf :IntangibleThing .
 
+:DPSim rdf:type owl:Class ;
+      rdfs:subClassOf :Simulator ;  
+      rdfs:comment "A Dynamic Phasor Simulator" ; 
+      owl:description "DPsim is a real-time capable power system simulator that supports dynamic phasor and electromagnetic transient simulation as well as continuous powerflow"@en ;
+      brick:hasPart :SolverLibrary, :VillasWeb, :VillasControler ;
+      rdfs:seeAlso  "https://www.fein-aachen.org/en/projects/dpsim/"@en .   
 
+:Villas rdf:type owl:Class ;
+      rdfs:subClassOf :Framework ;  
+      rdfs:comment "A web framework" ; 
+      owl:description "VILLAS is a web based framework and a toolset for local and geographically distributed real-time co-simulation"@en  ;
+      :extends :DPsim ;
+      brick:hasPart :VillasNode, :VillasWeb, :VillasControler ;
+      rdfs:seeAlso  "https://www.fein-aachen.org/en/projects/villas-framework/"@en .
 
 
 :ACCircuitBreaker rdf:type owl:Class ;
@@ -112,8 +123,14 @@ cim:ProtectionEquipment rdf:type owl:Class ;
           owl:inverseOf :isContainedBy .
 
 :isPartOf rdf:type owl:ObjectProperty ;
-          rdfs:domain SAREF:Measurement ;
+          rdfs:domain saref:Measurement ;
           rdfs:range  cim:Dataset .
+
+:extends rdf:type owl:ObjectProperty ;
+          rdfs:domain :Villas ;
+          rdfs:range :DPsim ;
+          owl:inverseOf :isExtendedBy .
+
 
 
 
