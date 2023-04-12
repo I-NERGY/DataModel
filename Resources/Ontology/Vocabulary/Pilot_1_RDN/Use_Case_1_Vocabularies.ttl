@@ -32,7 +32,8 @@
               :contains :ACMeasurement ;
               brick:hasPart :RealTimeData, :HistoricalData ;
               :provides cim:Dataset ;
-              skos:example [:timestamp "0.0"^^xsd:float ;
+              skos:example 
+                          [ :timestamp "0.0"^^xsd:float ;
                             :I1 “-0.021814502923575674”^^xsd:float ;
                             :I2 “2.7496200741734356”^^xsd:float ;
                             :I3 “4.4767465243556467”^^xsd:float ;
@@ -45,22 +46,27 @@
                             :trigger_delta “sim”^^xsd:string .
                            ].
 
-
 :ACMeasurement rdf:type owl:Class ;
-               rdfs:subClassOf saref:Measurement .
+               rdfs:subClassOf saref:Measurement .      
 
-saref:Measurement rdf:type owl:Class ;
-             rdfs:subClassOf :Data .
+cim:DataSet rdf:type owl:Class ;
+            rdfs:subClassOf :Data ;
+            brick:hasPart saref:Measurement .
 
 :Data rdf:type owl:Class ;
       rdfs:subClassOf :IntangibleThing .
 
 
-:NetLoadData rdf:type owl:Class ;
-             rdfs:subClassOf :LoadData .
 
-:LoadData rdfs:subClassOf :Data .
 
+cim:ProtectionEquipment rdf:type owl:Class ;
+                        rdfs:subClassOf cim:Equipment ;
+                        skos:broader 
+                                   [ brick:hasPart cim:CurrentTransformer ;
+                                     :ACCircuitBreaker ;
+                                     cim:ProtectionSwitch .
+
+                                   ] .
 
 :ACCircuitBreaker rdf:type owl:Class ;
                   rdfs:subClassOf :ACBreaker .
@@ -69,37 +75,34 @@ saref:Measurement rdf:type owl:Class ;
            rdfs:subClassOf cim:Breaker .
 
 cim:Breaker rdf:type owl:Class ;
-            rdfs:subClassOf cim:ProtectedSwitch .
+            rdfs:subClassOf cim:ProtectionSwitch .
 
-cim:ProtectedSwitch rdf:type owl:Class ;
+cim:ProtectionSwitch rdf:type owl:Class ;
            rdfs:subClassOf cim:Switch .
 
 cim:Switch rdf:type owl:Class ;
            rdfs:subClassOf cim:ConductingEquipment .
 
 cim:ConductingEquipment rdf:type owl:Class ;
-                        rdfs:subClassOf cim:PowerSystemResource .           
+                        rdfs:subClassOf cim:Equipment . 
+
+cim:Equipment rdf:type owl:Class ;
+              rdfs:subClassOf cim:PowerSystemResource  .       
 
 cim:PowerSystemResource rdf:type owl:Class ;
                         rdfs:subClassOf cim:IdentifiedObject .
 
 cim:IdentifiedObject rdf:type owl:Class ;
-                        rdfs:subClassOf SARGON:GridRelated .
+                        rdfs:subClassOf sargon:GridRelated .
 
-SARGON:GridRelated rdf:type owl:Class ;
-                        rdfs:subClassOf SAREF:Device .
+sargon:GridRelated rdf:type owl:Class ;
+                        rdfs:subClassOf saref:Device .
 
-SAREF:Device rdf:type owl:Class ;
+saref:Device rdf:type owl:Class ;
              rdfs:subClassOf :TangibleThing .
 
 
-
-cim:ProtectionEquipment rdf:type owl:Class ;
-                        rdfs:subClassOf cim:Equipment ;
-                        :contains :ACBreaker, cim:CurrentTransformer,
-
-
-
+ 
 ###############   RBox     ##################
 
 :produces rdf:type owl:ObjectProperty ;
@@ -118,11 +121,17 @@ cim:ProtectionEquipment rdf:type owl:Class ;
           rdfs:range  :ACMeasurement ;
           owl:inverseOf :isContainedBy .
 
-:isPartOf rdf:type owl:ObjectProperty ;
-          rdfs:domain saref:Measurement ;
-          rdfs:range  cim:Dataset .
+brick:hasPart rdf:type owl:ObjectProperty ;
+          rdfs:domain cim:DataSet, cim:ProtectionEquipment, ;
+          rdfs:range  saref:Measurement, cim:Dataset, :SCADA, :ProtectionRelay, :Oscillograph, :PIED .
 
-
+brick:feeds rdf:type owl:ObjectProperty ;
+          rdfs:domain :SCADA, :ProtectionRelay, :Oscillograph, :PIED 
+          rdfs:range
+          [ :contains :HistoricalData;
+                      :RealTimelData .
+          ] .
+                   
 
 ###############   ABox     ##################
 
