@@ -15,32 +15,42 @@
 
 
 ###############   TBox     ##################
-:TangibleThing rdf:type skos:Concept ;
+:TangibleThing rdf:type skos:Concept, owl:Class ;
+               rdfs:subClassOf owl:Thing ;
                skos:prefLabel "Tangible Thing"@en ;
-               skos:altLabel "greifbar Ding"@de .
+               skos:altLabel "greifbar Ding"@de ;
+               skos:definition "A physical asset defined in a use case or user requirement description that has the capability to produce data or metadata by measurement, weighing or by observation. skos:example is saref:Device"@en .
 
-:IntangibleThing rdf:type skos:Concept ;
+
+:IntangibleThing rdf:type skos:Concept, owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
                  skos:prefLabel "Intangible Thing"@en ;
-                 skos:altLabel "Immaterielles Ding"@de .
+                 skos:altLabel "Immaterielles Ding"@de ;
+                 skos:definition "A virtual asset defined in a use case or user requirement description that has the capability to produce data or metadata by measurement, weighing or by observation. skos:example is :Data "@en .
 
+:ComtradeData rdf:type :Data, owl:Class ;
+              :contains :ACMeasurement ;
+              brick:hasPart :RealTimeData, :HistoricalData ;
+              :provides cim:Dataset ;
+              skos:example [:timestamp "0.0"^^xsd:float ;
+                            :I1 “-0.021814502923575674”^^xsd:float ;
+                            :I2 “2.7496200741734356”^^xsd:float ;
+                            :I3 “4.4767465243556467”^^xsd:float ;
+                            :V1 “230.021814502923575674”^^xsd:float ;
+                            :V2 “232.7496200741734356”^^xsd:float ;
+                            :V3 “231.4767465243556467”^^xsd:float .
+                           ],
+                           [:substation_code "sim"^^xsd:string ;
+                            :endsamp  "30001.0"^^xsd:float ;
+                            :trigger_delta “sim”^^xsd:string .
+                           ].
 
-:TangibleThing rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing .
-
-:IntangibleThing rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing .
-
-
-:ComtradeData rdf:type owl:Class ;
-              rdfs:subClassOf :ACMeasurement .
 
 :ACMeasurement rdf:type owl:Class ;
-               rdfs:subClassOf :Measurement .
+               rdfs:subClassOf saref:Measurement .
 
-:Measurement rdf:type owl:Class ;
+saref:Measurement rdf:type owl:Class ;
              rdfs:subClassOf :Data .
-
-
 
 :Data rdf:type owl:Class ;
       rdfs:subClassOf :IntangibleThing .
@@ -50,11 +60,6 @@
              rdfs:subClassOf :LoadData .
 
 :LoadData rdfs:subClassOf :Data .
-
-:Data rdf:type owl:Class ;
-      rdfs:subClassOf :IntangibleThing .
-
-
 
 
 :ACCircuitBreaker rdf:type owl:Class ;
@@ -125,24 +130,12 @@ cim:ProtectionEquipment rdf:type owl:Class ;
 :2efa1fef551044caa90354721dd39fc5 rdf:type :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData .
 :3a50f0fc9eb7412fa751d4fd9ada04ca rdf:type :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData .
 
-:RDN:ComtradeData rdf:type owl:Class ;
+:RDN:ComtradeData rdf:type :ComtradeData, owl:Class ;
             owl:oneOf
             ( :2efa1fef551044caa90354721dd39fc5
               :3a50f0fc9eb7412fa751d4fd9ada04ca 
               :................................) .
 
-:urn:ngsi-ld:ACMeasurement:RDN:2efa1fef551044caa90354721dd39fc5 rdf:type RDN:ComtradeData
+:urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:2efa1fef551044caa90354721dd39fc5 rdf:type RDN:ComtradeData
 
 
-
-:urn:ngsi-ld:ACMeasurement:RDN:NetLoadData rdf:type owl:Class .
-:d19d14f164f74fbe94a1ac80df101353 rdf:type :urn:ngsi-ld:ACMeasurement:RDN:NetLoadData .
-:847baec8cd8c4cedb7adba4e1e5b3590 rdf:type :urn:ngsi-ld:ACMeasurement:RDN:NetLoadData .
-
-:RDN:NetLoadData rdf:type owl:Class ;
-            owl:oneOf
-            ( :d19d14f164f74fbe94a1ac80df101353
-              :847baec8cd8c4cedb7adba4e1e5b3590 ) .
-
-
-:urn:ngsi-ld:ACMeasurement:RDN:d19d14f164f74fbe94a1ac80df101353 rdf:type RDN:NetLoadData .
