@@ -44,7 +44,11 @@
                            [:substation_code "sim"^^xsd:string ;
                             :endsamp  "30001.0"^^xsd:float ;
                             :trigger_delta “sim”^^xsd:string .
-                           ].
+                           ] ;
+              skos:prefLabel "Comtrade Data"@en ;   
+              skos:definition "COMTRADE (Common format for Transient Data Exchange for power systems) is a file format for storing oscillography and status data related to transient power system disturbances."@en ;
+              rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
+
 
 :ACMeasurement rdf:type owl:Class ;
                rdfs:subClassOf saref:Measurement .      
@@ -63,10 +67,31 @@ cim:ProtectionEquipment rdf:type owl:Class ;
                         rdfs:subClassOf cim:Equipment ;
                         skos:broader 
                                    [ brick:hasPart cim:CurrentTransformer ;
-                                     :ACCircuitBreaker ;
-                                     cim:ProtectionSwitch .
+                                                   :ACCircuitBreaker ;
+                                                   cim:ProtectionSwitch .
+                                   ] ;
+                        brick:hasPart :SCADA, :ProtectionRelay, :Oscillograph, :PIED ;
+                        brick:hasPoint cim:Sensor .
 
-                                   ] .
+:SCADA brick:feeds 
+                  [ :contains :HistoricalData;
+                              :RealTimelData .
+                  ] .
+
+:ProtectionRelay brick:feeds 
+                  [ :contains :HistoricalData;
+                              :RealTimelData .
+                  ] .
+
+:Oscillograph brick:feeds 
+                  [ :contains :HistoricalData;
+                              :RealTimelData .
+                  ] .
+
+:PIED brick:feeds 
+                  [ :contains :HistoricalData;
+                              :RealTimelData .
+                  ] .
 
 :ACCircuitBreaker rdf:type owl:Class ;
                   rdfs:subClassOf :ACBreaker .
@@ -122,15 +147,17 @@ saref:Device rdf:type owl:Class ;
           owl:inverseOf :isContainedBy .
 
 brick:hasPart rdf:type owl:ObjectProperty ;
-          rdfs:domain cim:DataSet, cim:ProtectionEquipment, ;
-          rdfs:range  saref:Measurement, cim:Dataset, :SCADA, :ProtectionRelay, :Oscillograph, :PIED .
+          rdfs:domain cim:DataSet, cim:ProtectionEquipment ;
+          rdfs:range  saref:Measurement, cim:Dataset, :SCADA, :ProtectionRelay, :Oscillograph, :PIED ;
+          owl:inverseOf brick:isPartOf .
 
 brick:feeds rdf:type owl:ObjectProperty ;
-          rdfs:domain :SCADA, :ProtectionRelay, :Oscillograph, :PIED 
+          rdfs:domain :SCADA, :ProtectionRelay, :Oscillograph, :PIED ;
           rdfs:range
           [ :contains :HistoricalData;
                       :RealTimelData .
-          ] .
+          ] ;
+          owl:inverseOf brick:isFeedBy .
                    
 
 ###############   ABox     ##################
@@ -139,12 +166,15 @@ brick:feeds rdf:type owl:ObjectProperty ;
 :2efa1fef551044caa90354721dd39fc5 rdf:type :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData .
 :3a50f0fc9eb7412fa751d4fd9ada04ca rdf:type :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData .
 
-:RDN:ComtradeData rdf:type :ComtradeData, owl:Class ;
-            owl:oneOf
-            ( :2efa1fef551044caa90354721dd39fc5
-              :3a50f0fc9eb7412fa751d4fd9ada04ca 
-              :................................) .
+:RDN:ComtradeData rdf:type owl:Class ;
+                  rdfs:subClassOf :ComtradeData ;
+                  owl:oneOf
+                  ( :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:2efa1fef551044caa90354721dd39fc5
+                    :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:3a50f0fc9eb7412fa751d4fd9ada04ca 
+                    :...........................................................................
+                  ) .
 
-:urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:2efa1fef551044caa90354721dd39fc5 rdf:type RDN:ComtradeData
+                  
+:urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:2efa1fef551044caa90354721dd39fc5 rdf:type RDN:ComtradeData .
 
 
