@@ -46,7 +46,7 @@
                             :trigger_delta “sim”^^xsd:string .
                            ] ;
               skos:prefLabel "Comtrade Data"@en ;   
-              skos:definition "COMTRADE (Common format for Transient Data Exchange for power systems) is a file format for storing oscillography and status data related to transient power system disturbances."@en ;
+              skos:definition "Comtrade Data comes from COMTRADE (Common format for Transient Data Exchange for power systems) which is a file format for storing oscillography and status data related to transient power system disturbances."@en ;
               rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
 
 
