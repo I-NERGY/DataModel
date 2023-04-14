@@ -33,17 +33,17 @@
               brick:hasPart :RealTimeData, :HistoricalData ;
               :provides cim:Dataset ;
               skos:example 
-                          [ :timestamp “2004-06-14T23:34:30”^^xsd:date ;
-                            :I1 “-0.021814502923575674”^^xsd:float ;
-                            :I2 “2.7496200741734356”^^xsd:float ;
-                            :I3 “4.4767465243556467”^^xsd:float ;
-                            :V1 “230.021814502923575674”^^xsd:float ;
-                            :V2 “232.7496200741734356”^^xsd:float ;
-                            :V3 “231.4767465243556467”^^xsd:float 
+                          [ :timestamp "2004-06-14T23:34:30"^^xsd:date ;
+                            :I1 "-0.021814502923575674"^^xsd:float ;
+                            :I2 "2.7496200741734356"^^xsd:float ;
+                            :I3 "4.4767465243556467"^^xsd:float ;
+                            :V1 "230.021814502923575674"^^xsd:float ;
+                            :V2 "232.7496200741734356"^^xsd:float ;
+                            :V3 "231.4767465243556467"^^xsd:float 
                            ],
                            [:substation_code "sim"^^xsd:string ;
                             :endsamp  "30001.0"^^xsd:float ;
-                            :trigger_delta “sim”^^xsd:string 
+                            :trigger_delta "sim"^^xsd:string 
                            ] ;
               skos:prefLabel "Comtrade Data"@en ;   
               skos:definition "Comtrade Data comes from COMTRADE (Common format for Transient Data Exchange for power systems) which is a file format for storing oscillography and status data related to transient power system disturbances."@en ;
@@ -177,7 +177,7 @@ brick:feeds rdf:type owl:ObjectProperty ;
 
 :timestamp a owl:DataProperty ;
             rdfs:domain _:ID3 ;
-            rdfs:range “2004-06-14T23:34:30”^^xsd:date ;
+            rdfs:range "2004-06-14T23:34:30"^^xsd:date ;
             skos:prefLabel " Time stamp "@en ;   
             skos:definition " timestamp is time at which the phase current and phase voltage were measured and the time formart is based on IS08601 dateTime standard."@en ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
@@ -186,42 +186,42 @@ brick:feeds rdf:type owl:ObjectProperty ;
 
 :I1 a owl:DataProperty ;
             rdfs:domain _:ID3 ;
-            rdfs:range “-0.021814502923575674”^^xsd:float ;
+            rdfs:range "-0.021814502923575674"^^xsd:float ;
             skos:prefLabel "I1 is Red phase Current"@en ;   
             skos:definition "The red phase current of the comtrade data."@en ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en . 
 
 :I2 a owl:DataProperty ;
             rdfs:domain _:ID3 ;
-            rdfs:range “2.7496200741734356”^^xsd:float ;
+            rdfs:range "2.7496200741734356"^^xsd:float ;
             skos:prefLabel "I1 is Yellow phase Current"@en ;   
             skos:definition "The Yellow phase current of the comtrade data."@en ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
 
 :I3 a owl:DataProperty ;
             rdfs:domain _:ID3 ;
-            rdfs:range “-0.021814502923575674”^^xsd:float ;
+            rdfs:range "-0.021814502923575674"^^xsd:float ;
             skos:prefLabel "I1 is Blue phase Current"@en ;   
             skos:definition "The Blue phase current of the comtrade data."@en ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .  
 
 :V1 a owl:DataProperty ;
             rdfs:domain _:ID3 ;
-            rdfs:range “-0.021814502923575674”^^xsd:float ;
+            rdfs:range "-0.021814502923575674"^^xsd:float ;
             skos:prefLabel "V1 is Red phase Voltage"@en ;   
             skos:definition "The red phase Voltage of the comtrade data."@en ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en . 
 
 :V2 a owl:DataProperty ;
             rdfs:domain _:ID3 ;
-            rdfs:range “2.7496200741734356”^^xsd:float ;
+            rdfs:range "2.7496200741734356"^^xsd:float ;
             skos:prefLabel "V2 is Yellow phase Voltage"@en ;   
             skos:definition "The Yellow phase Voltage of the comtrade data."@en ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
 
 :V3 a owl:DataProperty ;
             rdfs:domain _:ID3 ;
-            rdfs:range “-0.021814502923575674”^^xsd:float ;
+            rdfs:range "-0.021814502923575674"^^xsd:float ;
             skos:prefLabel "V3 is Blue phase Voltage"@en ;   
             skos:definition "The Blue phase Voltage of the comtrade data."@en ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
@@ -242,7 +242,7 @@ brick:feeds rdf:type owl:ObjectProperty ;
 
 :trigger_delta a owl:DataProperty ;
             rdfs:domain _:ID4 ;
-            rdfs:range “sim”^^xsd:string ;
+            rdfs:range "sim"^^xsd:string ;
             skos:prefLabel "trigger_delta parameter."@en ;   
             skos:definition "The Blue phase Voltage of the comtrade data."@en ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
