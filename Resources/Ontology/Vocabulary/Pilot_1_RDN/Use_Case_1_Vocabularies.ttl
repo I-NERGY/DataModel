@@ -1,5 +1,5 @@
 
-@prefix :     <http://inergyvocabularies.ttl#> .
+@prefix :     <https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/Ontology/Vocabulary/Pilot_1_RDN/Use_Case_1_Vocabularies.ttl> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sargon: <https://sargon-n5geh.netlify.app/ontologies/Sargon.ttl3> .
 @prefix cim: <https://ontology.tno.nl/IEC_CIM/#> .
@@ -11,7 +11,7 @@
 @prefix brick: <https://brickschema.org/schema/Brick#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix fibo: <https://github.com/edmcouncil/fibo/blob/master/ONTOLOGY_GUIDE.md> .
-@base <http://inergyvocabularies.ttl#> .
+@base <https://raw.githubusercontent.com/I-NERGY/DataModel/main/Resources/Ontology/Vocabulary/Pilot_1_RDN/Use_Case_1_Vocabularies.ttl> .
 
 
 ###############   TBox     ##################
@@ -33,17 +33,17 @@
               brick:hasPart :RealTimeData, :HistoricalData ;
               :provides cim:Dataset ;
               skos:example 
-                          [ :timestamp "0.0"^^xsd:float ;
+                          [ :timestamp “2004-06-14T23:34:30”^^xsd:date ;
                             :I1 “-0.021814502923575674”^^xsd:float ;
                             :I2 “2.7496200741734356”^^xsd:float ;
                             :I3 “4.4767465243556467”^^xsd:float ;
                             :V1 “230.021814502923575674”^^xsd:float ;
                             :V2 “232.7496200741734356”^^xsd:float ;
-                            :V3 “231.4767465243556467”^^xsd:float .
+                            :V3 “231.4767465243556467”^^xsd:float 
                            ],
                            [:substation_code "sim"^^xsd:string ;
                             :endsamp  "30001.0"^^xsd:float ;
-                            :trigger_delta “sim”^^xsd:string .
+                            :trigger_delta “sim”^^xsd:string 
                            ] ;
               skos:prefLabel "Comtrade Data"@en ;   
               skos:definition "Comtrade Data comes from COMTRADE (Common format for Transient Data Exchange for power systems) which is a file format for storing oscillography and status data related to transient power system disturbances."@en ;
@@ -66,32 +66,47 @@ cim:DataSet rdf:type owl:Class ;
 cim:ProtectionEquipment rdf:type owl:Class ;
                         rdfs:subClassOf cim:Equipment ;
                         skos:broader 
-                                   [ brick:hasPart cim:CurrentTransformer ;
-                                                   :ACCircuitBreaker ;
-                                                   cim:ProtectionSwitch .
+                                   [ brick:hasPart cim:CurrentTransformer ,
+                                                   :ACCircuitBreaker ,
+                                                   cim:ProtectionSwitch 
                                    ] ;
                         brick:hasPart :SCADA, :ProtectionRelay, :Oscillograph, :PIED ;
                         brick:hasPoint cim:Sensor .
 
+cim:Sensor rdf:type owl:Class ;
+           rdfs:subClassOf cim:AuxiliaryEquipment .
+
+cim:AuxiliaryEquipment rdf:type owl:Class ;
+                       rdfs:subClassOf cim:Equipment .
+
+cim:CurrentTransformer rdf:type cim:Sensor, owl:Class .
+                       
+
 :SCADA brick:feeds 
-                  [ :contains :HistoricalData;
-                              :RealTimelData .
+                  [ :contains :HistoricalData ,
+                              :RealTimelData 
                   ] .
 
 :ProtectionRelay brick:feeds 
-                  [ :contains :HistoricalData;
-                              :RealTimelData .
+                  [ :contains :HistoricalData ,
+                              :RealTimelData 
                   ] .
 
 :Oscillograph brick:feeds 
-                  [ :contains :HistoricalData;
-                              :RealTimelData .
+                  [ :contains :HistoricalData ,
+                              :RealTimelData 
                   ] .
 
 :PIED brick:feeds 
-                  [ :contains :HistoricalData;
-                              :RealTimelData .
+                  [ :contains :HistoricalData ,
+                              :RealTimelData 
                   ] .
+
+_:ID1 brick:hasPart :ACCircuitBreaker, cim:ProtectionSwitch, cim:CurrentTransformer .
+
+
+_:ID2 :contains :HistoricalData, :RealTimelData .
+
 
 :ACCircuitBreaker rdf:type owl:Class ;
                   rdfs:subClassOf :ACBreaker .
@@ -154,17 +169,92 @@ brick:hasPart rdf:type owl:ObjectProperty ;
 brick:feeds rdf:type owl:ObjectProperty ;
           rdfs:domain :SCADA, :ProtectionRelay, :Oscillograph, :PIED ;
           rdfs:range
-          [ :contains :HistoricalData;
-                      :RealTimelData .
+          [ :contains :HistoricalData ,
+                      :RealTimelData 
           ] ;
           owl:inverseOf brick:isFeedBy .
+
+
+:timestamp a owl:DataProperty ;
+            rdfs:domain _:ID3 ;
+            rdfs:range “2004-06-14T23:34:30”^^xsd:date ;
+            skos:prefLabel " Time stamp "@en ;   
+            skos:definition " timestamp is time at which the phase current and phase voltage were measured and the time formart is based on IS08601 dateTime standard."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
+
+
+
+:I1 a owl:DataProperty ;
+            rdfs:domain _:ID3 ;
+            rdfs:range “-0.021814502923575674”^^xsd:float ;
+            skos:prefLabel "I1 is Red phase Current"@en ;   
+            skos:definition "The red phase current of the comtrade data."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en . 
+
+:I2 a owl:DataProperty ;
+            rdfs:domain _:ID3 ;
+            rdfs:range “2.7496200741734356”^^xsd:float ;
+            skos:prefLabel "I1 is Yellow phase Current"@en ;   
+            skos:definition "The Yellow phase current of the comtrade data."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
+
+:I3 a owl:DataProperty ;
+            rdfs:domain _:ID3 ;
+            rdfs:range “-0.021814502923575674”^^xsd:float ;
+            skos:prefLabel "I1 is Blue phase Current"@en ;   
+            skos:definition "The Blue phase current of the comtrade data."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .  
+
+:V1 a owl:DataProperty ;
+            rdfs:domain _:ID3 ;
+            rdfs:range “-0.021814502923575674”^^xsd:float ;
+            skos:prefLabel "V1 is Red phase Voltage"@en ;   
+            skos:definition "The red phase Voltage of the comtrade data."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en . 
+
+:V2 a owl:DataProperty ;
+            rdfs:domain _:ID3 ;
+            rdfs:range “2.7496200741734356”^^xsd:float ;
+            skos:prefLabel "V2 is Yellow phase Voltage"@en ;   
+            skos:definition "The Yellow phase Voltage of the comtrade data."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
+
+:V3 a owl:DataProperty ;
+            rdfs:domain _:ID3 ;
+            rdfs:range “-0.021814502923575674”^^xsd:float ;
+            skos:prefLabel "V3 is Blue phase Voltage"@en ;   
+            skos:definition "The Blue phase Voltage of the comtrade data."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
+
+:substation_code a owl:DataProperty ;
+            rdfs:domain _:ID4 ;
+            rdfs:range  "sim"^^xsd:string ;
+            skos:prefLabel "Sub station code."@en ;   
+            skos:definition "Sub station code parameter from Comtrade Data."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en . 
+
+:endsamp a owl:DataProperty ;
+            rdfs:domain _:ID4 ;
+            rdfs:range "30001.0"^^xsd:float ;
+            skos:prefLabel "endsamp parameter."@en ;   
+            skos:definition "endsamp parameter from Comtrade Data."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
+
+:trigger_delta a owl:DataProperty ;
+            rdfs:domain _:ID4 ;
+            rdfs:range “sim”^^xsd:string ;
+            skos:prefLabel "trigger_delta parameter."@en ;   
+            skos:definition "The Blue phase Voltage of the comtrade data."@en ;
+            rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
+ 
+
+       
                    
 
 ###############   ABox     ##################
 
 :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData rdf:type owl:Class .
-:2efa1fef551044caa90354721dd39fc5 rdf:type :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData .
-:3a50f0fc9eb7412fa751d4fd9ada04ca rdf:type :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData .
+:urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:2efa1fef551044caa90354721dd39fc5 rdf:type RDN:ComtradeData .
 
 :RDN:ComtradeData rdf:type owl:Class ;
                   rdfs:subClassOf :ComtradeData ;
@@ -175,6 +265,6 @@ brick:feeds rdf:type owl:ObjectProperty ;
                   ) .
 
                   
-:urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:2efa1fef551044caa90354721dd39fc5 rdf:type RDN:ComtradeData .
+
 
 
