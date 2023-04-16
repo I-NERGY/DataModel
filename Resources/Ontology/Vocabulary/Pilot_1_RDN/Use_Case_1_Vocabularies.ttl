@@ -32,23 +32,27 @@
               :contains :ACMeasurement ;
               brick:hasPart :RealTimeData, :HistoricalData ;
               :provides cim:Dataset ;
-              skos:example 
-                          [ :timestamp "2004-06-14T23:34:30"^^xsd:date ;
-                            :I1 "-0.021814502923575674"^^xsd:float ;
-                            :I2 "2.7496200741734356"^^xsd:float ;
-                            :I3 "4.4767465243556467"^^xsd:float ;
-                            :V1 "230.021814502923575674"^^xsd:float ;
-                            :V2 "232.7496200741734356"^^xsd:float ;
-                            :V3 "231.4767465243556467"^^xsd:float 
-                           ],
-                           [:substation_code "sim"^^xsd:string ;
-                            :endsamp  "30001.0"^^xsd:float ;
-                            :trigger_delta "sim"^^xsd:string 
-                           ] ;
               skos:prefLabel "Comtrade Data"@en ;   
               skos:definition "Comtrade Data comes from COMTRADE (Common format for Transient Data Exchange for power systems) which is a file format for storing oscillography and status data related to transient power system disturbances."@en ;
               rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
 
+             
+:RDNComtradeData rdf:type owl:Class ;
+                 rdfs:subClassOf :ComtradeData ;
+                 skos:example 
+                             [ :timestamp "2004-06-14T23:34:30"^^xsd:date ;
+                               :I1 "-0.021814502923575674"^^xsd:float ;
+                               :I2 "2.7496200741734356"^^xsd:float ;
+                               :I3 "4.4767465243556467"^^xsd:float ;
+                               :V1 "230.021814502923575674"^^xsd:float ;
+                               :V2 "232.7496200741734356"^^xsd:float ;
+                               :V3 "231.4767465243556467"^^xsd:float 
+                              ],
+                              [:substation_code "sim"^^xsd:string ;
+                               :endsamp  "30001.0"^^xsd:float ;
+                               :trigger_delta "sim"^^xsd:string 
+                              ] .
+              
 
 :ACMeasurement rdf:type owl:Class ;
                rdfs:subClassOf saref:Measurement .      
@@ -184,6 +188,10 @@ brick:feeds rdf:type owl:ObjectProperty ;
 
 
 
+
+
+
+
 :I1 a owl:DataProperty ;
             rdfs:domain _:ID3 ;
             rdfs:range "-0.021814502923575674"^^xsd:float ;
@@ -247,23 +255,29 @@ brick:feeds rdf:type owl:ObjectProperty ;
             skos:definition "The Blue phase Voltage of the comtrade data."@en ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
  
-
-       
-                   
+              
 
 ###############   ABox     ##################
 
-:urn:ngsi-ld:ACMeasurement:RDN:ComtradeData rdf:type owl:Class .
-:urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:2efa1fef551044caa90354721dd39fc5 rdf:type RDN:ComtradeData .
-
-:RDN:ComtradeData rdf:type owl:Class ;
+:RDNComtradeData rdf:type owl:Class ;
                   rdfs:subClassOf :ComtradeData ;
                   owl:oneOf
-                  ( :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:2efa1fef551044caa90354721dd39fc5
-                    :urn:ngsi-ld:ACMeasurement:RDN:ComtradeData:3a50f0fc9eb7412fa751d4fd9ada04ca 
-                    :...........................................................................
+                  ( :urn:ngsi-ld:ACMeasurement:ComtradeData:RDNComtradeData:2efa1fef551044caa90354721dd39fc5
+                    :urn:ngsi-ld:ACMeasurement:ComtradeData:RDNComtradeData:3a50f0fc9eb7412fa751d4fd9ada04ca 
                   ) .
 
+:urn:ngsi-ld:ACMeasurement:ComtradeData:RDNComtradeData:2efa1fef551044caa90354721dd39fc5 rdf:type :RDNComtradeData .
+
+
+_:ID3 a :RDNComtradeData ;
+      owl:sameAs :urn:ngsi-ld:ACMeasurement:ComtradeData:RDNComtradeData:2efa1fef551044caa90354721dd39fc5 .
+
+
+
+_:ID4 a :RDNComtradeData ;
+      owl:sameAs :urn:ngsi-ld:ACMeasurement:ComtradeData:RDNComtradeData:3a50f0fc9eb7412fa751d4fd9ada04ca .
+
+   
                   
 
 
