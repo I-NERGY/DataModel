@@ -187,11 +187,6 @@ brick:feeds rdf:type owl:ObjectProperty ;
             rdfs:seeAlso  "https://standards.ieee.org/standard/C37.111-2013.html"@en .   
 
 
-
-
-
-
-
 :I1 a owl:DataProperty ;
             rdfs:domain _:ID3 ;
             rdfs:range "-0.021814502923575674"^^xsd:float ;
@@ -271,7 +266,6 @@ brick:feeds rdf:type owl:ObjectProperty ;
 
 _:ID3 a :RDNComtradeData ;
       owl:sameAs :urn:ngsi-ld:ACMeasurement:ComtradeData:RDNComtradeData:2efa1fef551044caa90354721dd39fc5 .
-
 
 
 _:ID4 a :RDNComtradeData ;
